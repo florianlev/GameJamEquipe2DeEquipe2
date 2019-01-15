@@ -9,6 +9,8 @@ public class PlayerControl : MonoBehaviour
 
     public string horizontalCtrl = "Horizontal_P1";
     public string verticalCtrl = "Vertical_P1";
+    public string takeCtrl = "take_P1";
+
 
     private CharacterController characterController;
 
@@ -28,6 +30,8 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         //Mouvement du perso
+
+        //if (Input.GetButtonDown(takeCtrl))
 
         movementVector.x = Input.GetAxis(horizontalCtrl) * movementSpeed;
         movementVector.z = Input.GetAxis(verticalCtrl) * movementSpeed;
