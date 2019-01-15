@@ -5,7 +5,6 @@ using UnityEngine;
 public class Ghost : Enemy
 {
     // Start is called before the first frame update
-    public int speed = 0;
 
     void Start()
     {

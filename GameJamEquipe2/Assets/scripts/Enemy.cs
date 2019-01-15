@@ -6,6 +6,7 @@ public abstract class Enemy : MonoBehaviour
 {
 
     public int speed = 0;
+    public int power = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -17,5 +18,15 @@ public abstract class Enemy : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void attack()
+    {
+
+    }
+
+    void death()
+    {
+
     }
 }
