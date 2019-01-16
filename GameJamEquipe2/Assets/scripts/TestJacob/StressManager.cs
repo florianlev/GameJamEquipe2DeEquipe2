@@ -13,6 +13,7 @@ public class StressManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Diminution du stress si rien ne le stress présentement
         if (CurrentStress > 0 && !IsStressing)
         {
             CurrentStress -= Time.deltaTime / StressReductionRate;
@@ -20,14 +21,12 @@ public class StressManager : MonoBehaviour
                 CurrentStress = 0;
         }
 
+        //Augmentation du stress selon le facteur de stress
         CurrentStress += stressFactor * Time.deltaTime;
 
     }
-    public void suddenStress(float income)
-    {
-        CurrentStress += income;
-    }
-
+   
+    //sert a augmenter le taux de stress / Seconde
     public void SlowStressIncrease(float NewStress)
     {
         stressFactor += NewStress;
@@ -36,20 +35,18 @@ public class StressManager : MonoBehaviour
             IsStressing = true;
         
         
-        if (CurrentStress >= MaxStress)
-            GameOver();
+        
 
     }
+    //sert a diminuer le stress / Seconde
     public void StressDecrease(float FactorRemove)
     {
         stressFactor -= FactorRemove;
+        //Vérifie si le personnage stress
         if (stressFactor == 0)
             IsStressing = false;
 
     }
-    public void GameOver()
-    {
-
-    }
+    
 
 }
