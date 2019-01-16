@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6518603457992584748}
-  m_LocalRotation: {x: 0.24755466, y: -0, z: -0, w: 0.9688739}
+  m_LocalRotation: {x: 0.24755707, y: 0, z: 0, w: 0.9688734}
   m_LocalPosition: {x: 0, y: 6.7, z: -13.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -98,6 +98,6 @@ MonoBehaviour:
   players:
   - {fileID: 0}
   - {fileID: 0}
-  yBias: 6
+  yBias: 8.5
   zBias: 5
   speed: 5
