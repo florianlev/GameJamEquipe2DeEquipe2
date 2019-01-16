@@ -9,13 +9,14 @@ public class PlayerControl : MonoBehaviour
 
     public string horizontalCtrl = "Horizontal_P1";
     public string verticalCtrl = "Vertical_P1";
-    public string takeCtrl = "take_P1";
+    public string takeCtrl = "Take_P1";
+    public string interractionCtrl = "Action_P1";
+
 
 
     private CharacterController characterController;
 
     public float movementSpeed = 15;
-
     private float gravity = 40;
 
 
@@ -23,6 +24,9 @@ public class PlayerControl : MonoBehaviour
     public MasterObject objectInHand;
     public Transform transformObjectInHand;
 
+    public Collider interractionCollider;
+
+    public List<GameObject> gameObjectsInterractable;
 
     // Start is called before the first frame update
     void Start()
@@ -47,9 +51,12 @@ public class PlayerControl : MonoBehaviour
 
         characterController.Move(movementVector * Time.deltaTime);
 
+        //rotation
+        transform.rotation = Quaternion.LookRotation(new Vector3(movementVector.x, 0, movementVector.z));
+
 
         //Action
-
+        //take object
         if (Input.GetButtonDown(takeCtrl))
         {
             if (tableInteractable)
@@ -74,6 +81,30 @@ public class PlayerControl : MonoBehaviour
             }
         }
 
+        //use object
+        if (Input.GetButtonDown(interractionCtrl))
+        {
+            //Debug.Log("use");
+            foreach (GameObject gameObject in gameObjectsInterractable)
+            {
+                if (gameObject == null)
+                {
+                    gameObjectsInterractable.Remove(gameObject);
+                }
+                else
+                {
+                    if (gameObject.GetComponent<Enemy>())
+                    {
+                        //Debug.Log("object have Enemy");
+                        //Debug.Log(objectInHand.GetType());
+                        GameObject enemyCopy = gameObject;
+                        gameObject.GetComponent<Enemy>().Interracted(objectInHand);
+                        objectInHand.Interraction(enemyCopy.GetComponent<Enemy>());
+                    }
+                }
+            }
+        }
+
     }
 
 
@@ -83,7 +114,7 @@ public class PlayerControl : MonoBehaviour
         {
             tableInteractable = collision.gameObject.GetComponent<Table>();
             //tableInteractable.EnterInteractable();
-            Debug.Log("enter collision");
+            //Debug.Log("enter collision");
         }
     }
 
@@ -100,6 +131,28 @@ public class PlayerControl : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        gameObjectsInterractable.Add(other.gameObject);
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        
+        int i = 0;
+        foreach (GameObject gameObject in gameObjectsInterractable)
+        {
+            if (other.gameObject == gameObject)
+            {
+                gameObjectsInterractable.Remove(gameObject);
+            }
+            i++;
+        }
+        
+        //gameObjectsInterractable.Remove(gameObject);
+
     }
 
 
@@ -123,6 +176,7 @@ public class PlayerControl : MonoBehaviour
         }
         objectInHand = tableInteractable.PickItemOnTable();
         objectInHand.transform.position = transformObjectInHand.position;
+        objectInHand.transform.rotation = transformObjectInHand.rotation;
         objectInHand.transform.parent = transformObjectInHand;
     }
 

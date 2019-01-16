@@ -6,7 +6,6 @@ public class Wolf : Enemy
 {
     // Start is called before the first frame update
 
-    public int speed = 0;
 
     void Start()
     {
@@ -17,5 +16,16 @@ public class Wolf : Enemy
     void Update()
     {
         
+    }
+
+    public override void Interracted(MasterObject interractedObject)
+    {
+        base.Interracted(interractedObject);
+
+        if (interractedObject.GetType() == typeof(Pieu))
+        {
+            death();
+        }
+
     }
 }

@@ -50,7 +50,6 @@ public class Table : MonoBehaviour
         MasterObject objectToReturn = objectOnTable;
         objectOnTable = null;
 
-        Debug.Log(objectOnTable);
 
         return objectToReturn;
     }

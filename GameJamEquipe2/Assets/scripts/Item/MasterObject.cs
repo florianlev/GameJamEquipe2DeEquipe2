@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MasterObject : MonoBehaviour
 {
+
+    public int numberCharge;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,9 +30,15 @@ public class MasterObject : MonoBehaviour
     }
 
 
-    public void Interraction()
+    public virtual void Interraction(Enemy enemyInterractedWith)
     {
         //TO DO stuff
+        //Debug.Log("interraction with " + enemyInterractedWith + " from masterObject");
+        numberCharge--;
+        if (numberCharge == 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 }
