@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
 
-    public virtual int speed { get; set; }
+    public int speed;
     public float power;
 
     private StressManager stressManager;
