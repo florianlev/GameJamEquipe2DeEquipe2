@@ -27,7 +27,7 @@ public class StressManager : MonoBehaviour
         if (!IsStressing && CurrentStress >= 0)
         {
 
-            Debug.Log("TEST");
+
             CurrentStress -= Time.deltaTime / StressReductionRate;
             stressBar.value = calculateStress();
 

@@ -26,7 +26,7 @@ public class Ghost : Enemy
 
         if (interractedObject.GetType() == typeof(Cross))
         {
-            death();
+            //death();
         }
 
     }

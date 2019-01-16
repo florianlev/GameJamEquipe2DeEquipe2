@@ -6,6 +6,8 @@ public class Wolf : Enemy
 {
     // Start is called before the first frame update
 
+    private float timeBeforeDestruction = 4f;
+
 
     void Start()
     {
@@ -24,8 +26,24 @@ public class Wolf : Enemy
 
         if (interractedObject.GetType() == typeof(Pieu))
         {
-            death();
+            
+            StartCoroutine(delaySpawnParticle());
+
+            
+
+
         }
 
+    }
+    IEnumerator delaySpawnParticle()
+    {
+        GameObject particle = Instantiate(particleDeath, transform.position, transform.rotation);
+        var emission = particle.GetComponent<ParticleSystem>().emission;
+        yield return new WaitForSeconds(3);
+        emission.enabled = false;
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        yield return new WaitForSeconds(4);
+        Destroy(particle);
+        death();
     }
 }

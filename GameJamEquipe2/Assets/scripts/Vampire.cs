@@ -24,7 +24,7 @@ public class Vampire : Enemy
 
         if (interractedObject.GetType() == typeof(Garlic))
         {
-            death();
+            //death();
         }
 
     }

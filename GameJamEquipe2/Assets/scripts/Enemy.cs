@@ -10,6 +10,8 @@ public abstract class Enemy : MonoBehaviour
 
     private StressManager stressManager;
     GameObject stressManagerObject;
+    public GameObject particleDeath;
+
 
     // Start is called before the first frame update
     void Start()

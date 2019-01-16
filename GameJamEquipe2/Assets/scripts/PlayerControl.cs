@@ -84,7 +84,7 @@ public class PlayerControl : MonoBehaviour
         //use object
         if (Input.GetButtonDown(interractionCtrl))
         {
-            //Debug.Log("use");
+            Debug.Log("use");
             foreach (GameObject gameObject in gameObjectsInterractable)
             {
                 if (gameObject == null)
@@ -95,7 +95,7 @@ public class PlayerControl : MonoBehaviour
                 {
                     if (gameObject.GetComponent<Enemy>())
                     {
-                        //Debug.Log("object have Enemy");
+                        Debug.Log("object have Enemy");
                         //Debug.Log(objectInHand.GetType());
                         GameObject enemyCopy = gameObject;
                         gameObject.GetComponent<Enemy>().Interracted(objectInHand);
