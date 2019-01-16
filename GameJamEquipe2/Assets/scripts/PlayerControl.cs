@@ -178,6 +178,7 @@ public class PlayerControl : MonoBehaviour
                 {
                     if (gameObject.GetComponent<Enemy>())
                     {
+                        animator.SetTrigger("attack");
                         Debug.Log("object have Enemy");
                         //Debug.Log(objectInHand.GetType());
                         GameObject enemyCopy = gameObject;
