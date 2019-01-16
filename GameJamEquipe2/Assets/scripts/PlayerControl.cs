@@ -6,6 +6,7 @@ public class PlayerControl : MonoBehaviour
 {
 
     private Vector3 movementVector;
+    private Vector3 lookDirection;
 
     public string horizontalCtrl = "Horizontal_P1";
     public string verticalCtrl = "Vertical_P1";
@@ -73,8 +74,13 @@ public class PlayerControl : MonoBehaviour
             StartCoroutine(Dash(0.10f));
         }
         //Mouvement du perso
-        movementVector.x = Input.GetAxis(horizontalCtrl);// * movementSpeed;
-        movementVector.z = Input.GetAxis(verticalCtrl); //* movementSpeed;
+
+        float horizontalInput = Input.GetAxis(horizontalCtrl);
+        float verticalInput = Input.GetAxis(verticalCtrl);
+
+        movementVector.x = horizontalInput;// * movementSpeed;
+
+        movementVector.z = verticalInput; //* movementSpeed;
         movementVector.y = 0;
 
 
@@ -86,8 +92,20 @@ public class PlayerControl : MonoBehaviour
 
        characterController.Move(movementVector * Time.deltaTime * movementSpeed);
 
+
         //rotation
-        transform.rotation = Quaternion.LookRotation(new Vector3(movementVector.x, 0, movementVector.z));
+
+
+        if (characterController.velocity.x != 0)
+        {
+            lookDirection.x = characterController.velocity.x;    
+        }
+
+        if (characterController.velocity.z != 0)
+            lookDirection.z = characterController.velocity.z;
+
+        if (lookDirection.x != 0 || lookDirection.z != 0)
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookDirection), 0.3f);
 
 
         //Action
@@ -97,13 +115,11 @@ public class PlayerControl : MonoBehaviour
             /**put object from hand on the table*/
             if (objectInHand && tableInteractable && tableInteractable.IsAnyItemOnTable() == false)
             {
-                Debug.Log("1");
                 PutObjectOnTable();
             }
             /**pickup object from table*/
             else if (objectInHand == null && tableInteractable)// && tableInteractable.IsAnyItemOnTable() == true)
             {
-                Debug.Log("2");
 
                 PickupObjectFromTable();
             }
@@ -116,14 +132,12 @@ public class PlayerControl : MonoBehaviour
             }*/
             if (objectInHand != null && tableInteractable == null)
             {
-                Debug.Log("allo?");
                 objectInHand.SetParent(null);
                 objectInHand.transform.position = this.gameObject.transform.position + this.gameObject.transform.forward;
                 objectInHand = null;
             }
             else if (objectInHand == null && tableInteractable == null && objectOnFloorInteractable)
             {
-                Debug.Log("pick from floor?");
                 PickupObjectFromFloor();
             }
         }
