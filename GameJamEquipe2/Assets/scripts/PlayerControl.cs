@@ -60,12 +60,13 @@ public class PlayerControl : MonoBehaviour
             if (currentCooldown > dashCooldownTime)
                 currentCooldown = dashCooldownTime;
         }
-            
-        
 
+
+        Debug.Log(Input.GetAxis("Dash_P1"));
         //Dash
-        if (Input.GetButtonDown("Dash_P1") && currentCooldown == dashCooldownTime)
+        if ((Input.GetButtonDown("Dash_P1") || Input.GetAxis("Dash_P1") > 0) && currentCooldown == dashCooldownTime)
         {
+            Debug.Log("allo?");
             isDashing = true;
             currentCooldown = 0;
             movementSpeed += boostFromDash;
