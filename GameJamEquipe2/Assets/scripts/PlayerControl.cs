@@ -14,6 +14,7 @@ public class PlayerControl : MonoBehaviour
     public string interractionCtrl = "Action_P1";
     public string dashCtrl = "Dash_P1";
 
+    private Animator animator;
 
 
     private CharacterController characterController;
@@ -42,6 +43,7 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = gameObject.GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
         initialSpeed = movementSpeed;
     }
@@ -72,6 +74,14 @@ public class PlayerControl : MonoBehaviour
             currentCooldown = 0;
             movementSpeed += boostFromDash;
             StartCoroutine(Dash(0.10f));
+            animator.SetBool("isRun", true);
+
+        }
+
+        else
+        {
+            animator.SetBool("isRun", false);
+
         }
         //Mouvement du perso
 
@@ -84,6 +94,9 @@ public class PlayerControl : MonoBehaviour
         movementVector.y = 0;
 
 
+        
+
+
         if (movementVector.magnitude > 1)
             movementVector.Normalize();
 
@@ -92,6 +105,19 @@ public class PlayerControl : MonoBehaviour
 
        characterController.Move(movementVector * Time.deltaTime * movementSpeed);
 
+        if (horizontalInput != 0 || verticalInput != 0)
+        {
+            Debug.Log(animator.GetBool("isWalk"));
+
+            animator.SetBool("isWalk", true);
+         
+
+        }
+        else
+        {
+            animator.SetBool("isWalk", false);
+
+        }
 
         //rotation
 
