@@ -32,6 +32,8 @@ public class PlayerControl : MonoBehaviour
     public MasterObject objectInHand;
     public Transform transformObjectInHand;
 
+    public MasterObject objectOnFloorInteractable;
+
     public Collider interractionCollider;
 
     public List<GameObject> gameObjectsInterractable;
@@ -79,10 +81,10 @@ public class PlayerControl : MonoBehaviour
         if (movementVector.magnitude > 1)
             movementVector.Normalize();
 
-       // movementVector.y -= gravity * Time.deltaTime;
+       movementVector.y -= gravity * Time.deltaTime;
 
 
-        characterController.Move(movementVector * Time.deltaTime * movementSpeed);
+       characterController.Move(movementVector * Time.deltaTime * movementSpeed);
 
         //rotation
         transform.rotation = Quaternion.LookRotation(new Vector3(movementVector.x, 0, movementVector.z));
@@ -92,25 +94,37 @@ public class PlayerControl : MonoBehaviour
         //take object
         if (Input.GetButtonDown(takeCtrl))
         {
-            if (tableInteractable)
+            /**put object from hand on the table*/
+            if (objectInHand && tableInteractable && tableInteractable.IsAnyItemOnTable() == false)
             {
-                /**put object from hand on the table*/
-                if (objectInHand && tableInteractable.IsAnyItemOnTable() == false)
-                {
-                    PutObjectOnTable();
-                }
-                /**pickup object from table*/
-                else if (objectInHand == null)// && tableInteractable.IsAnyItemOnTable() == true)
-                {
-                    PickupObjectFromTable();
-                }
+                Debug.Log("1");
+                PutObjectOnTable();
+            }
+            /**pickup object from table*/
+            else if (objectInHand == null && tableInteractable)// && tableInteractable.IsAnyItemOnTable() == true)
+            {
+                Debug.Log("2");
 
-                /**pickup object from source table*/
-                /*else if (objectInHand == null && tableInteractable.GetType() == typeof(SourceTable))
-                {
-                    SourceTable copyTable = (SourceTable)tableInteractable;
-                    objectInHand = copyTable.PickRessourceObject();
-                }*/
+                PickupObjectFromTable();
+            }
+
+            /**pickup object from source table*/
+            /*else if (objectInHand == null && tableInteractable.GetType() == typeof(SourceTable))
+            {
+                SourceTable copyTable = (SourceTable)tableInteractable;
+                objectInHand = copyTable.PickRessourceObject();
+            }*/
+            if (objectInHand != null && tableInteractable == null)
+            {
+                Debug.Log("allo?");
+                objectInHand.SetParent(null);
+                objectInHand.transform.position = this.gameObject.transform.position + this.gameObject.transform.forward;
+                objectInHand = null;
+            }
+            else if (objectInHand == null && tableInteractable == null && objectOnFloorInteractable)
+            {
+                Debug.Log("pick from floor?");
+                PickupObjectFromFloor();
             }
         }
 
@@ -143,12 +157,17 @@ public class PlayerControl : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("enter collision with " + collision.gameObject.name);
+        //Debug.Log("enter collision with " + collision.gameObject.name);
 
         if (collision.gameObject.GetComponent<Table>())
         {
             tableInteractable = collision.gameObject.GetComponent<Table>();
             //tableInteractable.EnterInteractable();
+        }
+
+        if (collision.gameObject.GetComponent<MasterObject>())
+        {
+            objectOnFloorInteractable = collision.gameObject.GetComponent<MasterObject>();
         }
     }
 
@@ -161,6 +180,18 @@ public class PlayerControl : MonoBehaviour
                 if (tableInteractable.gameObject == collision.gameObject)
                 {
                     tableInteractable = null;
+                    //collision.gameObject.GetComponent<Table>().ExitInteractable();
+                }
+            }
+        }
+
+        if (collision.gameObject.GetComponent<MasterObject>())
+        {
+            if (objectOnFloorInteractable)
+            {
+                if (objectOnFloorInteractable.gameObject == collision.gameObject)
+                {
+                    objectOnFloorInteractable = null;
                     //collision.gameObject.GetComponent<Table>().ExitInteractable();
                 }
             }
@@ -211,7 +242,17 @@ public class PlayerControl : MonoBehaviour
         objectInHand = tableInteractable.PickItemOnTable();
         objectInHand.transform.position = transformObjectInHand.position;
         objectInHand.transform.rotation = transformObjectInHand.rotation;
-        objectInHand.transform.parent = transformObjectInHand;
+        objectInHand.SetParent(transformObjectInHand);
+        //objectInHand.transform.parent = transformObjectInHand;
+    }
+
+    private void PickupObjectFromFloor()
+    {
+        objectInHand = objectOnFloorInteractable;
+        objectInHand.transform.position = transformObjectInHand.position;
+        objectInHand.transform.rotation = transformObjectInHand.rotation;
+        objectInHand.SetParent(transformObjectInHand);
+        objectOnFloorInteractable = null;
     }
 
     private IEnumerator Dash(float a_Delay)

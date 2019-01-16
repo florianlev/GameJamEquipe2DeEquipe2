@@ -27,6 +27,16 @@ public class MasterObject : MonoBehaviour
     public void SetParent(Transform transformParent)
     {
         this.gameObject.transform.parent = transformParent;
+        if (transformParent != null)
+        {
+            this.GetComponent<Rigidbody>().isKinematic = true;
+            this.GetComponent<Rigidbody>().useGravity = false;
+        }
+        else
+        {
+            this.GetComponent<Rigidbody>().isKinematic = false;
+            this.GetComponent<Rigidbody>().useGravity = true;
+        }
     }
 
 
