@@ -12,7 +12,7 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TimeText = GetComponent<Text>();
+        TimeText = GetComponentInChildren<Text>();
     }
 
     // Update is called once per frame
