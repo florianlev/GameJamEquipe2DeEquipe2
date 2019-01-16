@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class StressManager : MonoBehaviour
@@ -12,12 +13,14 @@ public class StressManager : MonoBehaviour
     public float StressReductionRate = 0.5f;
     public bool IsStressing = false;
 
+    private Timer timer;
     public Slider stressBar;
 
     // Update is called once per frame
 
     void Start()
     {
+        timer = FindObjectOfType<Timer>();
         stressBar.value = calculateStress();
 
     }
@@ -26,8 +29,6 @@ public class StressManager : MonoBehaviour
     {
         if (!IsStressing && CurrentStress >= 0)
         {
-
-
             CurrentStress -= Time.deltaTime / StressReductionRate;
             stressBar.value = calculateStress();
 
@@ -46,8 +47,8 @@ public class StressManager : MonoBehaviour
 
         if(CurrentStress >= 100)
         {
-            // TO DO : GameOver
-            CurrentStress = 100;
+            timer.playerIsAlive = false;
+            SceneManager.LoadScene("GameOver");
         }
 
     }
@@ -56,7 +57,7 @@ public class StressManager : MonoBehaviour
     {
         IsStressing = false;
     }
-
+    
 
     float calculateStress()
     {
