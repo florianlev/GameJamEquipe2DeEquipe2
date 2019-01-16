@@ -22,9 +22,11 @@ public class SourceTable : Table
     public override MasterObject PickItemOnTable()
     {
         if (IsAnyItemOnTable())
-            base.PickItemOnTable();
+        {
+            return base.PickItemOnTable();
+        }
 
-        return ressourceObject;
+        return Instantiate(ressourceObject); 
 
     }
 

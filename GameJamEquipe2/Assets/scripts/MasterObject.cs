@@ -16,21 +16,14 @@ public class MasterObject : MonoBehaviour
         
     }
 
-    public virtual void PickedUp()
+    public void SetActive(bool activeStatus)
     {
-        this.gameObject.SetActive(false);
+        this.gameObject.SetActive(activeStatus);
     }
 
-    public virtual void PlaceOnTable(Transform parent)
+    public void SetParent(Transform transformParent)
     {
-        this.gameObject.SetActive(true);
-        this.gameObject.transform.parent = parent;
-    }
-
-    public virtual void DropOnFloor(Transform position)
-    {
-        this.gameObject.SetActive(true);
-        this.gameObject.transform.position = position.position;
+        this.gameObject.transform.parent = transformParent;
     }
 
 }
