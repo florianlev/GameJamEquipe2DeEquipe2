@@ -11,13 +11,21 @@ public class PlayerControl : MonoBehaviour
     public string verticalCtrl = "Vertical_P1";
     public string takeCtrl = "Take_P1";
     public string interractionCtrl = "Action_P1";
+    public string dashCtrl = "Dash_P1";
 
 
 
     private CharacterController characterController;
 
     public float movementSpeed = 15;
+    public float boostFromDash = 5;
+    public float boostTime = 0.5f;
+    public float currentCooldown = 0;
+    public float dashCooldownTime = 1;
+    private float initialSpeed;
     private float gravity = 40;
+    private bool isDashing = false;
+
 
 
     public Table tableInteractable;
@@ -32,17 +40,38 @@ public class PlayerControl : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-
+        initialSpeed = movementSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*if (Input.GetButtonDown(dashCtrl))
+            Debug.Log("DAHSHS");*/
+
 
         //if (Input.GetButtonDown(takeCtrl))
 
-        //Mouvement du perso
+        //CoolDown du dash
+        if(currentCooldown < dashCooldownTime)
+        {
+            
+            currentCooldown += Time.deltaTime;
+            if (currentCooldown > dashCooldownTime)
+                currentCooldown = dashCooldownTime;
+        }
+            
+        
 
+        //Dash
+        if (Input.GetButtonDown("Dash_P1") && currentCooldown == dashCooldownTime)
+        {
+            isDashing = true;
+            currentCooldown = 0;
+            movementSpeed += boostFromDash;
+            StartCoroutine(Dash(0.10f));
+        }
+        //Mouvement du perso
         movementVector.x = Input.GetAxis(horizontalCtrl) * movementSpeed;
         movementVector.z = Input.GetAxis(verticalCtrl) * movementSpeed;
 
@@ -178,6 +207,19 @@ public class PlayerControl : MonoBehaviour
         objectInHand.transform.position = transformObjectInHand.position;
         objectInHand.transform.rotation = transformObjectInHand.rotation;
         objectInHand.transform.parent = transformObjectInHand;
+    }
+
+    private IEnumerator Dash(float a_Delay)
+    {
+        yield return new WaitForSeconds(a_Delay);
+        movementSpeed = movementSpeed / 1.5f;
+
+        if (movementSpeed < initialSpeed)
+            movementSpeed = initialSpeed;
+        if(movementSpeed > initialSpeed)
+            StartCoroutine(Dash(0.25f));
+
+
     }
 
 
