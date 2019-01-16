@@ -26,4 +26,10 @@ public class MasterObject : MonoBehaviour
         this.gameObject.transform.parent = transformParent;
     }
 
+
+    public void Interraction()
+    {
+        //TO DO stuff
+    }
+
 }
