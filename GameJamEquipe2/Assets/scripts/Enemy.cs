@@ -6,14 +6,15 @@ public abstract class Enemy : MonoBehaviour
 {
 
     public virtual int speed { get; set; }
-    public virtual int power { get; set; }
+    public float power;
 
     private StressManager stressManager;
+    GameObject stressManagerObject;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -25,13 +26,24 @@ public abstract class Enemy : MonoBehaviour
     
     void OnTriggerStay(Collider collider)
     {
-        GameObject stressManagerObject = GameObject.FindWithTag("Stress");
-        stressManager = stressManagerObject.GetComponent<StressManager>();
-
+        if(stressManagerObject == null)
+        {
+            stressManagerObject = GameObject.FindWithTag("Stress");
+            stressManager = stressManagerObject.GetComponent<StressManager>();
+        }
+     
         if (collider.gameObject.tag == "zone1")
         {
+            Debug.Log(stressManager);
+
             stressManager.SlowStressIncrease(power);
         }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        stressManager.onExitZoneStress();
+
     }
 
     void attack()

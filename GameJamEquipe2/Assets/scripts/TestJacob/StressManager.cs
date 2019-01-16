@@ -24,45 +24,39 @@ public class StressManager : MonoBehaviour
 
     void Update()
     {
-        //Diminution du stress si rien ne le stress présentement
-        if (CurrentStress > 0 && !IsStressing)
+        if (!IsStressing && CurrentStress >= 0)
         {
-            CurrentStress += Time.deltaTime / StressReductionRate;
-            if (CurrentStress < 0)
-                CurrentStress = 0;
+
+            Debug.Log("TEST");
+            CurrentStress -= Time.deltaTime / StressReductionRate;
+            stressBar.value = calculateStress();
+
         }
-
-        //Augmentation du stress selon le facteur de stress
-        stressBar.value = calculateStress();
-
 
     }
 
 
     //sert a augmenter le taux de stress / Seconde
-    public void SlowStressIncrease(float NewStress)
+    public void SlowStressIncrease(float newStress)
     {
-        stressFactor += NewStress;
-
-        if (!IsStressing && stressFactor > 0)
-            IsStressing = true;
-
-        Debug.Log(CurrentStress);
-        CurrentStress -= stressFactor * Time.deltaTime;
+        IsStressing = true;
+        CurrentStress += Time.deltaTime * newStress;
 
         stressBar.value = calculateStress();
 
+        if(CurrentStress >= 100)
+        {
+            // TO DO : GameOver
+            CurrentStress = 100;
+        }
+
     }
 
-    //sert a diminuer le stress / Seconde
-    public void StressDecrease(float FactorRemove)
+    public void onExitZoneStress()
     {
-        stressFactor -= FactorRemove;
-        //Vérifie si le personnage stress
-        if (stressFactor == 0)
-            IsStressing = false;
-
+        IsStressing = false;
     }
+
 
     float calculateStress()
     {
