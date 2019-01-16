@@ -48,9 +48,24 @@ public abstract class Enemy : MonoBehaviour
 
     }
 
-    public virtual void Interracted(MasterObject interractedObject)
+    public void Interracted(MasterObject interractedObject)
     {
         //Debug.Log("message from enemy interacted");
+
+        StartCoroutine(delaySpawnParticle());
+
+    }
+
+    IEnumerator delaySpawnParticle()
+    {
+        GameObject particle = Instantiate(particleDeath, transform.position, transform.rotation);
+        var emission = particle.GetComponent<ParticleSystem>().emission;
+        yield return new WaitForSeconds(3);
+        emission.enabled = false;
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        yield return new WaitForSeconds(4);
+        Destroy(particle);
+        death();
     }
 
     void attack()

@@ -20,7 +20,7 @@ public class Wolf : Enemy
         
     }
 
-    public override void Interracted(MasterObject interractedObject)
+    /*public override void Interracted(MasterObject interractedObject)
     {
         base.Interracted(interractedObject);
 
@@ -34,8 +34,8 @@ public class Wolf : Enemy
 
         }
 
-    }
-    IEnumerator delaySpawnParticle()
+    }*/
+    /*IEnumerator delaySpawnParticle()
     {
         GameObject particle = Instantiate(particleDeath, transform.position, transform.rotation);
         var emission = particle.GetComponent<ParticleSystem>().emission;
@@ -45,5 +45,7 @@ public class Wolf : Enemy
         yield return new WaitForSeconds(4);
         Destroy(particle);
         death();
-    }
+    }*/
+
+
 }
