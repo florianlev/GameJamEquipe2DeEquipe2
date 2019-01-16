@@ -46,13 +46,18 @@ public abstract class Enemy : MonoBehaviour
 
     }
 
+    public virtual void Interracted(MasterObject interractedObject)
+    {
+        //Debug.Log("message from enemy interacted");
+    }
+
     void attack()
     {
 
     }
 
-    void death()
+    protected void death()
     {
-
+        Destroy(this.gameObject);
     }
 }

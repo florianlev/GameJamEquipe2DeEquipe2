@@ -17,4 +17,17 @@ public class Ghost : Enemy
 
         transform.position = Vector3.MoveTowards(transform.position, destination.position, step);
     }
+
+    public override void Interracted(MasterObject interractedObject)
+    {
+        base.Interracted(interractedObject);
+
+        Debug.Log(interractedObject.GetType());
+
+        if (interractedObject.GetType() == typeof(Cross))
+        {
+            death();
+        }
+
+    }
 }
