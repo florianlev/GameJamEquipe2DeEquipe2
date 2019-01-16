@@ -26,17 +26,18 @@ public class Table : MonoBehaviour
      * 
      * @return Si l'object a été placer ou pas
      */
-    public virtual bool PutObjectOnTable(MasterObject newObjectOnTable)
+    public virtual void PutObjectOnTable(MasterObject newObjectOnTable)
     {
         if (objectOnTable != null)
         {
-            return false;
+            Debug.LogError("object already on table");
+            return;
         }
 
         objectOnTable = newObjectOnTable;
-        objectOnTable.PlaceOnTable(transformPointForObject);
-        return true;
-        
+        //objectOnTable.PlaceOnTable(transformPointForObject);
+        objectOnTable.transform.position = transformPointForObject.position;
+        objectOnTable.SetParent(transformPointForObject);
     }
 
     /** prend un object de sur la table
@@ -48,6 +49,8 @@ public class Table : MonoBehaviour
 
         MasterObject objectToReturn = objectOnTable;
         objectOnTable = null;
+
+        Debug.Log(objectOnTable);
 
         return objectToReturn;
     }
