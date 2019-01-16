@@ -62,24 +62,27 @@ public class PlayerControl : MonoBehaviour
         }
 
 
-        Debug.Log(Input.GetAxis("Dash_P1"));
         //Dash
         if ((Input.GetButtonDown("Dash_P1") || Input.GetAxis("Dash_P1") > 0) && currentCooldown == dashCooldownTime)
         {
-            Debug.Log("allo?");
             isDashing = true;
             currentCooldown = 0;
             movementSpeed += boostFromDash;
             StartCoroutine(Dash(0.10f));
         }
         //Mouvement du perso
-        movementVector.x = Input.GetAxis(horizontalCtrl) * movementSpeed;
-        movementVector.z = Input.GetAxis(verticalCtrl) * movementSpeed;
+        movementVector.x = Input.GetAxis(horizontalCtrl);// * movementSpeed;
+        movementVector.z = Input.GetAxis(verticalCtrl); //* movementSpeed;
+        movementVector.y = 0;
 
 
-        movementVector.y -= gravity * Time.deltaTime;
+        if (movementVector.magnitude > 1)
+            movementVector.Normalize();
 
-        characterController.Move(movementVector * Time.deltaTime);
+       // movementVector.y -= gravity * Time.deltaTime;
+
+
+        characterController.Move(movementVector * Time.deltaTime * movementSpeed);
 
         //rotation
         transform.rotation = Quaternion.LookRotation(new Vector3(movementVector.x, 0, movementVector.z));
@@ -140,11 +143,12 @@ public class PlayerControl : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("enter collision with " + collision.gameObject.name);
+
         if (collision.gameObject.GetComponent<Table>())
         {
             tableInteractable = collision.gameObject.GetComponent<Table>();
             //tableInteractable.EnterInteractable();
-            //Debug.Log("enter collision");
         }
     }
 
