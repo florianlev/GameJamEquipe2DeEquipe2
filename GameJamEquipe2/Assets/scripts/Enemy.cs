@@ -5,8 +5,10 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
 
-    public int speed = 0;
-    public int power = 0;
+    public virtual int speed { get; set; }
+    public virtual int power { get; set; }
+
+    private StressManager stressManager;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +20,18 @@ public abstract class Enemy : MonoBehaviour
     void Update()
     {
         
+    }
+
+    
+    void OnTriggerStay(Collider collider)
+    {
+        GameObject stressManagerObject = GameObject.FindWithTag("Stress");
+        stressManager = stressManagerObject.GetComponent<StressManager>();
+
+        if (collider.gameObject.tag == "zone1")
+        {
+            stressManager.SlowStressIncrease(power);
+        }
     }
 
     void attack()

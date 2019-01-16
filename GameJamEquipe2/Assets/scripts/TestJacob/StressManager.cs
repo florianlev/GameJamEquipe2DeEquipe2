@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class StressManager : MonoBehaviour
 {
@@ -10,22 +12,33 @@ public class StressManager : MonoBehaviour
     public float StressReductionRate = 0.5f;
     public bool IsStressing = false;
 
+    public Slider stressBar;
+
     // Update is called once per frame
+
+    void Start()
+    {
+        stressBar.value = calculateStress();
+
+    }
+
     void Update()
     {
         //Diminution du stress si rien ne le stress présentement
         if (CurrentStress > 0 && !IsStressing)
         {
-            CurrentStress -= Time.deltaTime / StressReductionRate;
+            CurrentStress += Time.deltaTime / StressReductionRate;
             if (CurrentStress < 0)
                 CurrentStress = 0;
         }
 
         //Augmentation du stress selon le facteur de stress
-        CurrentStress += stressFactor * Time.deltaTime;
+        stressBar.value = calculateStress();
+
 
     }
-   
+
+
     //sert a augmenter le taux de stress / Seconde
     public void SlowStressIncrease(float NewStress)
     {
@@ -33,11 +46,14 @@ public class StressManager : MonoBehaviour
 
         if (!IsStressing && stressFactor > 0)
             IsStressing = true;
-        
-        
-        
+
+        Debug.Log(CurrentStress);
+        CurrentStress -= stressFactor * Time.deltaTime;
+
+        stressBar.value = calculateStress();
 
     }
+
     //sert a diminuer le stress / Seconde
     public void StressDecrease(float FactorRemove)
     {
@@ -47,6 +63,13 @@ public class StressManager : MonoBehaviour
             IsStressing = false;
 
     }
+
+    float calculateStress()
+    {
+        return CurrentStress / MaxStress;
+    }
+
+
     
 
 }
