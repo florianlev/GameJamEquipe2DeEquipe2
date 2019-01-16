@@ -48,15 +48,14 @@ public abstract class Enemy : MonoBehaviour
 
     }
 
-    public void Interracted(MasterObject interractedObject)
+    public virtual void Interracted(MasterObject interractedObject)
     {
         //Debug.Log("message from enemy interacted");
 
-        StartCoroutine(delaySpawnParticle());
 
     }
 
-    IEnumerator delaySpawnParticle()
+    public IEnumerator delaySpawnParticle()
     {
         GameObject particle = Instantiate(particleDeath, transform.position, transform.rotation);
         var emission = particle.GetComponent<ParticleSystem>().emission;

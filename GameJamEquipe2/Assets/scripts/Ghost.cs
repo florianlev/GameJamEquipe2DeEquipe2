@@ -19,4 +19,18 @@ public class Ghost : Enemy
     }
 
 
+    public override void Interracted(MasterObject interractedObject)
+    {
+        base.Interracted(interractedObject);
+
+        if (interractedObject.GetType() == typeof(Cross))
+        {
+
+            StartCoroutine(delaySpawnParticle());
+
+        }
+
+    }
+
+
 }
