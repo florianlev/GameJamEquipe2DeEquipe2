@@ -18,5 +18,17 @@ public class Vampire : Enemy
         
     }
 
+    public override void Interracted(MasterObject interractedObject)
+    {
+        base.Interracted(interractedObject);
+
+        if (interractedObject.GetType() == typeof(Garlic))
+        {
+
+            StartCoroutine(delaySpawnParticle());
+
+        }
+
+    }
 
 }

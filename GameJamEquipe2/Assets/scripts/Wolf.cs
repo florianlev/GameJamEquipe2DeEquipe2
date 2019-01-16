@@ -20,7 +20,7 @@ public class Wolf : Enemy
         
     }
 
-    /*public override void Interracted(MasterObject interractedObject)
+    public override void Interracted(MasterObject interractedObject)
     {
         base.Interracted(interractedObject);
 
@@ -29,23 +29,10 @@ public class Wolf : Enemy
             
             StartCoroutine(delaySpawnParticle());
 
-            
-
-
         }
 
-    }*/
-    /*IEnumerator delaySpawnParticle()
-    {
-        GameObject particle = Instantiate(particleDeath, transform.position, transform.rotation);
-        var emission = particle.GetComponent<ParticleSystem>().emission;
-        yield return new WaitForSeconds(3);
-        emission.enabled = false;
-        gameObject.GetComponent<MeshRenderer>().enabled = false;
-        yield return new WaitForSeconds(4);
-        Destroy(particle);
-        death();
-    }*/
+    }
+
 
 
 }
