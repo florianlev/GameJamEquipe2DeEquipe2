@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -150,11 +151,12 @@ public class PlayerControl : MonoBehaviour
                 SourceTable copyTable = (SourceTable)tableInteractable;
                 objectInHand = copyTable.PickRessourceObject();
             }*/
-            if (objectInHand != null && tableInteractable == null)
+
+            //drop floor
+            else if (objectInHand != null && tableInteractable == null)
             {
-                objectInHand.SetParent(null);
-                objectInHand.transform.position = this.gameObject.transform.position + this.gameObject.transform.forward;
-                objectInHand = null;
+
+                PutObjectFromFloor();
             }
             else if (objectInHand == null && tableInteractable == null && objectOnFloorInteractable)
             {
@@ -188,6 +190,13 @@ public class PlayerControl : MonoBehaviour
 
     }
 
+    private void PutObjectFromFloor()
+    {
+        animator.SetBool("isTake", false);
+        objectInHand.SetParent(null);
+        objectInHand.transform.position = this.gameObject.transform.position + this.gameObject.transform.forward;
+        objectInHand = null;
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -256,6 +265,7 @@ public class PlayerControl : MonoBehaviour
 
 
     private void PutObjectOnTable()
+
     {
         if (tableInteractable == null || objectInHand == null)
         {
@@ -264,6 +274,8 @@ public class PlayerControl : MonoBehaviour
         }
         tableInteractable.PutObjectOnTable(objectInHand);
         objectInHand = null;
+
+        animator.SetBool("isTake", false);
     }
 
     private void PickupObjectFromTable()
@@ -273,6 +285,11 @@ public class PlayerControl : MonoBehaviour
             Debug.LogError("PlayerMovement (PickupObjectFromTable) : no table in range)");
             return;
         }
+        animator.SetBool("isTake", true);
+        animator.SetTrigger("grab");
+
+        animator.SetInteger("compteurTake", 0);
+
         objectInHand = tableInteractable.PickItemOnTable();
         objectInHand.transform.position = transformObjectInHand.position;
         objectInHand.transform.rotation = transformObjectInHand.rotation;
@@ -282,6 +299,11 @@ public class PlayerControl : MonoBehaviour
 
     private void PickupObjectFromFloor()
     {
+
+        animator.SetBool("isTake", true);
+        animator.SetTrigger("grab");
+
+
         objectInHand = objectOnFloorInteractable;
         objectInHand.transform.position = transformObjectInHand.position;
         objectInHand.transform.rotation = transformObjectInHand.rotation;
