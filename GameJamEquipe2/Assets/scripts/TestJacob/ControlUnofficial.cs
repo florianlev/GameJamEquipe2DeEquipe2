@@ -15,8 +15,8 @@ public class ControlUnofficial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float MovX = Input.GetAxis("Horizontal");
-        float MovZ = Input.GetAxis("Vertical");
+        float MovX = Input.GetAxis("Horizontal_P1");
+        float MovZ = Input.GetAxis("Vertical_P1");
 
         Vector3 speed = new Vector3(MovX * movementSpeeed, 0, MovZ * movementSpeeed);
 
