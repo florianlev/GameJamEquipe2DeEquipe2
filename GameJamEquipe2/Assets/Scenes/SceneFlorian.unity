@@ -1171,7 +1171,12 @@ PrefabInstance:
     - target: {fileID: 7053356189854110574, guid: 9f3a0312d79fc304e93f3b767d20f5a1,
         type: 3}
       propertyPath: boostTime
-      value: 3
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7053356189854110574, guid: 9f3a0312d79fc304e93f3b767d20f5a1,
+        type: 3}
+      propertyPath: dashCooldownTime
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f3a0312d79fc304e93f3b767d20f5a1, type: 3}

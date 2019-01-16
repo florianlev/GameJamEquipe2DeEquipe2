@@ -73,16 +73,10 @@ public class PlayerControl : MonoBehaviour
             isDashing = true;
             currentCooldown = 0;
             movementSpeed += boostFromDash;
-            StartCoroutine(Dash(0.10f));
-            animator.SetBool("isRun", true);
+            StartCoroutine(Dash(boostTime));
 
         }
 
-        else
-        {
-            animator.SetBool("isRun", false);
-
-        }
         //Mouvement du perso
 
         float horizontalInput = Input.GetAxis(horizontalCtrl);
@@ -297,13 +291,18 @@ public class PlayerControl : MonoBehaviour
 
     private IEnumerator Dash(float a_Delay)
     {
+        animator.SetBool("isRun", true);
+
         yield return new WaitForSeconds(a_Delay);
-        movementSpeed = movementSpeed / 1.5f;
+        movementSpeed = initialSpeed;
 
         if (movementSpeed < initialSpeed)
             movementSpeed = initialSpeed;
-        if(movementSpeed > initialSpeed)
-            StartCoroutine(Dash(0.25f));
+        /*if(movementSpeed > initialSpeed)
+            StartCoroutine(Dash(0.25f));*/
+
+        animator.SetBool("isRun", false);
+
 
 
     }
