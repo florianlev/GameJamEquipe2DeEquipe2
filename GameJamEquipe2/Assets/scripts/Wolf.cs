@@ -44,6 +44,13 @@ public class Wolf : Enemy
 
         }
     }
+
+    void OnTriggerExit(Collider other)
+    {
+        _navMeshAgent.speed = 3;
+        this.gameObject.GetComponent<Animator>().SetBool("enMarche", true);
+
+    }
     public override void Interracted(MasterObject interractedObject)
     {
         base.Interracted(interractedObject);
