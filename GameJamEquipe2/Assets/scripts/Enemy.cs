@@ -10,7 +10,7 @@ public abstract class Enemy : MonoBehaviour
     public int speed;
     public float power;
 
-    private Animator animator;
+    protected Animator animator;
     private StressManager stressManager;
     GameObject stressManagerObject;
     public GameObject particleDeath;

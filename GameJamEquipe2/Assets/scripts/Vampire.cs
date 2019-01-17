@@ -39,6 +39,13 @@ public class Vampire : Enemy
         }
     }
 
+    void OnTriggerExit(Collider other)
+    {
+        _navMeshAgent.speed = 3;
+        this.gameObject.GetComponent<Animator>().SetBool("isWalk", true);
+
+    }
+
     public override void Interracted(MasterObject interractedObject)
     {
         base.Interracted(interractedObject);

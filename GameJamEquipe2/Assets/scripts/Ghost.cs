@@ -45,7 +45,10 @@ public class Ghost : Enemy
             speed = 0;
         }
     }
-
+    void OnTriggerExit(Collider other)
+    {
+        speed = 3;
+    }
     public override void Interracted(MasterObject interractedObject)
     {
         base.Interracted(interractedObject);

@@ -105,18 +105,27 @@ public class PlayerControl : MonoBehaviour
 
 
         characterController.Move(movementVector * Time.deltaTime * movementSpeed);
-        
-        
+
+
         if (characterController.velocity != Vector3.zero)
         {
-            if (isDashing)
+            if (isDashing && (audioSource.isPlaying == false || audioSource.clip != audioRun))
             {
                 audioSource.clip = audioRun;
+                audioSource.Play();
+
             }
-            else
+            else if (isDashing == false && (audioSource.isPlaying == false || audioSource.clip != audioWalk))
             {
                 audioSource.clip = audioWalk;
+                audioSource.Play();
+
             }
+        }
+
+        else if (characterController.velocity == Vector3.zero && audioSource.clip != audioRun)
+        {
+            audioSource.Stop();
         }
 
 
