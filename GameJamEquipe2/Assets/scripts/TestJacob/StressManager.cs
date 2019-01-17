@@ -15,6 +15,11 @@ public class StressManager : MonoBehaviour
 
     private Timer timer;
     public Slider stressBar;
+    private Animator animator;
+    GameObject aiObject;
+    private AI Ai;
+
+
 
     // Update is called once per frame
 
@@ -22,7 +27,7 @@ public class StressManager : MonoBehaviour
     {
         timer = FindObjectOfType<Timer>();
         stressBar.value = calculateStress();
-
+        animator = gameObject.GetComponent<Animator>();
     }
 
     void Update()
@@ -48,7 +53,11 @@ public class StressManager : MonoBehaviour
         if(CurrentStress >= 100)
         {
             timer.playerIsAlive = false;
-            SceneManager.LoadScene("GameOver");
+            animator.SetTrigger("wakeUp");
+            aiObject = GameObject.FindWithTag("client");
+            Ai = aiObject.GetComponent<AI>();
+            Ai.setDestination();
+            //SceneManager.LoadScene("GameOver");
         }
 
     }

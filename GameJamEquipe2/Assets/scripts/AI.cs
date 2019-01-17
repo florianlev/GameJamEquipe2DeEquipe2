@@ -12,6 +12,8 @@ public class AI : MonoBehaviour
     Transform _destination;
 
     NavMeshAgent _navMeshAgent;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,13 +23,13 @@ public class AI : MonoBehaviour
         {
             Debug.LogError("Le nav mesh n'est pas attacher a : " + gameObject.name);
         }
-        else
+        else if(gameObject.tag != "client")
         {
             setDestination();
         }
     }
 
-    private void setDestination()
+    public void setDestination()
     {
         if (_destination != null)
         {

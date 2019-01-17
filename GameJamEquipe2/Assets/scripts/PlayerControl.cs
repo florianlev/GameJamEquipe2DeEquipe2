@@ -102,8 +102,6 @@ public class PlayerControl : MonoBehaviour
 
         if (horizontalInput != 0 || verticalInput != 0)
         {
-            Debug.Log(animator.GetBool("isWalk"));
-
             animator.SetBool("isWalk", true);
          
 
