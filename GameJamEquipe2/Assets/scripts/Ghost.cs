@@ -13,6 +13,7 @@ public class Ghost : Enemy
     private AudioSource audioSource;
     public AudioClip ghostHowl;
 
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -35,8 +36,15 @@ public class Ghost : Enemy
 
     }
 
-   
 
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.name == "zoneLit")
+        {
+
+            speed = 0;
+        }
+    }
 
     public override void Interracted(MasterObject interractedObject)
     {
@@ -47,6 +55,28 @@ public class Ghost : Enemy
             StartCoroutine(delaySpawnParticle());
 
         }
+
+    }
+
+    IEnumerator delaySpawnParticle()
+    {
+        isDead = true;
+        GameObject particle = Instantiate(particleDeath, transform.position, transform.rotation);
+        var emission = particle.GetComponent<ParticleSystem>().emission;
+
+
+        this.gameObject.GetComponent<Animator>().SetTrigger("dead");
+
+        this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
+
+        yield return new WaitForSeconds(timeBeforeHiddenMesh);
+        emission.enabled = false;
+        this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+
+        yield return new WaitForSeconds(timeBeforeDestroyObject);
+        Destroy(particle);
+        death();
+
 
     }
 

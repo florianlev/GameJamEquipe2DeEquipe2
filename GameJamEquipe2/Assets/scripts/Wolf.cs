@@ -41,6 +41,28 @@ public class Wolf : Enemy
 
     }
 
+    IEnumerator delaySpawnParticle()
+    {
+        isDead = true;
+        GameObject particle = Instantiate(particleDeath, transform.position, transform.rotation);
+        var emission = particle.GetComponent<ParticleSystem>().emission;
+
+
+        //this.gameObject.GetComponent<Animator>().SetTrigger("dead");
+
+        this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
+
+        yield return new WaitForSeconds(timeBeforeHiddenMesh);
+        emission.enabled = false;
+        this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+
+        yield return new WaitForSeconds(timeBeforeDestroyObject);
+        Destroy(particle);
+        death();
+
+
+    }
+
     protected override void death()
     {
         audioSource.clip = audioDeathHowl;

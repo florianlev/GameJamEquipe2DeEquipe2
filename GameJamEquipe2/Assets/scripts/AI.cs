@@ -12,7 +12,6 @@ public class AI : MonoBehaviour
     Transform _destination;
 
     NavMeshAgent _navMeshAgent;
-    private Animator animator;
 
 
 
@@ -20,8 +19,6 @@ public class AI : MonoBehaviour
     void Start()
     {
         _navMeshAgent = this.GetComponent<NavMeshAgent>();
-        animator = gameObject.GetComponent<Animator>();
-        animator.SetBool("isWalk", true);
         if (_navMeshAgent == null)
         {
             Debug.LogError("Le nav mesh n'est pas attacher a : " + gameObject.name);

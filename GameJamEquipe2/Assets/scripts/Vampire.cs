@@ -1,21 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Vampire : Enemy
 {
     // Start is called before the first frame update
 
 
+
+
+    NavMeshAgent _navMeshAgent;
+
     void Start()
     {
+        _navMeshAgent = this.GetComponent<NavMeshAgent>();
+        if (_navMeshAgent.speed > 0)
+        {
+            this.gameObject.GetComponent<Animator>().SetBool("isWalk", true);
+        }
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+    }
 
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.name == "zoneLit")
+        {
+            Debug.Log("test");
+            _navMeshAgent.speed = 0;
+            this.gameObject.GetComponent<Animator>().SetBool("isWalk", false);
+
+        }
     }
 
     public override void Interracted(MasterObject interractedObject)
@@ -28,6 +49,26 @@ public class Vampire : Enemy
             StartCoroutine(delaySpawnParticle());
 
         }
+
+    }
+
+    IEnumerator delaySpawnParticle()
+    {
+        isDead = true;
+        GameObject particle = Instantiate(particleDeath, transform.position, transform.rotation);
+        var emission = particle.GetComponent<ParticleSystem>().emission;
+
+
+        this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
+
+        yield return new WaitForSeconds(timeBeforeHiddenMesh);
+        this.gameObject.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+        emission.enabled = false;
+
+        yield return new WaitForSeconds(timeBeforeDestroyObject);
+        Destroy(particle);
+        death();
+
 
     }
 

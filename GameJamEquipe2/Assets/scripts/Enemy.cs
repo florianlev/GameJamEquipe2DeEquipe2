@@ -10,12 +10,10 @@ public abstract class Enemy : MonoBehaviour
     public int speed;
     public float power;
 
-    public Animator animator;
+    private Animator animator;
     private StressManager stressManager;
     GameObject stressManagerObject;
     public GameObject particleDeath;
-
-    private NavMeshAgent navMesh;
 
     public float timeBeforeHiddenMesh = 3;
     public float timeBeforeDestroyObject = 4;
@@ -27,18 +25,13 @@ public abstract class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = gameObject.GetComponent<Animator>();
-        if(animator == null)
+        //animator = gameObject.GetComponent<Animator>();
+        /*if(animator == null)
         {
             animator = gameObject.GetComponentInChildren<Animator>();
-        }
+        }*/
        
-        navMesh = gameObject.GetComponent<NavMeshAgent>();
 
-        if (this.gameObject.GetType() != typeof(Ghost))
-        {
-            animator.SetBool("isWalk", true);
-        }
 
     }
 
@@ -70,20 +63,7 @@ public abstract class Enemy : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider collider)
-    {
-        if (collider.gameObject.name == "zoneLit")
-        {
-
-            speed = 0;
-
-            if(this.gameObject.tag == "enemy")
-            {
-                navMesh.speed = 0;
-                animator.SetBool("isWalk", false);
-            }
-        }
-    }
+ 
 
     public virtual void Interracted(MasterObject interractedObject)
     {
@@ -92,16 +72,16 @@ public abstract class Enemy : MonoBehaviour
 
     }
 
-    public IEnumerator delaySpawnParticle()
+    /*public IEnumerator delaySpawnParticle()
     {
         isDead = true;
         GameObject particle = Instantiate(particleDeath, transform.position, transform.rotation);
         var emission = particle.GetComponent<ParticleSystem>().emission;
 
-        if (this.gameObject.GetType() ==  typeof(Ghost))
+        /*if (this.gameObject.GetType() ==  typeof(Ghost))
         {
-            animator.SetTrigger("dead");
         }
+        animator.SetTrigger("dead");
 
         this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
 
@@ -114,7 +94,7 @@ public abstract class Enemy : MonoBehaviour
         death();
 
 
-    }
+    }*/
 
     void attack()
     {
