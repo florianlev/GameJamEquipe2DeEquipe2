@@ -193,7 +193,7 @@ public class PlayerControl : MonoBehaviour
 
     private void PutObjectFromFloor()
     {
-        animator.SetBool("isTake", false);
+        animator.SetLayerWeight(1, 0);
         objectInHand.SetParent(null);
         objectInHand.transform.position = this.gameObject.transform.position + this.gameObject.transform.forward;
         objectInHand = null;
@@ -276,7 +276,7 @@ public class PlayerControl : MonoBehaviour
         tableInteractable.PutObjectOnTable(objectInHand);
         objectInHand = null;
 
-        animator.SetBool("isTake", false);
+        animator.SetLayerWeight(1, 0);
     }
 
     private void PickupObjectFromTable()
@@ -286,7 +286,7 @@ public class PlayerControl : MonoBehaviour
             Debug.LogError("PlayerMovement (PickupObjectFromTable) : no table in range)");
             return;
         }
-        animator.SetBool("isTake", true);
+        animator.SetLayerWeight(1, 1);
         animator.SetTrigger("grab");
 
         animator.SetInteger("compteurTake", 0);
@@ -301,7 +301,7 @@ public class PlayerControl : MonoBehaviour
     private void PickupObjectFromFloor()
     {
 
-        animator.SetBool("isTake", true);
+        animator.SetLayerWeight(1, 1);
         animator.SetTrigger("grab");
 
 

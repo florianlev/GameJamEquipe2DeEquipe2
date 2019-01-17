@@ -2321,7 +2321,7 @@ MonoBehaviour:
   boostFromDash: 5
   boostTime: 1.75
   currentCooldown: 0
-  dashCooldownTime: 2
+  dashCooldownTime: 4
   tableInteractable: {fileID: 0}
   objectInHand: {fileID: 0}
   transformObjectInHand: {fileID: 2736072007788649956}
@@ -2728,10 +2728,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2736072009023589285}
     m_Modifications:
-    - target: {fileID: 100000, guid: 2a850290fb3772244ad3864d47f377a6, type: 3}
-      propertyPath: m_Name
-      value: Mural_Shelf
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2a850290fb3772244ad3864d47f377a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.5078993
@@ -2775,6 +2771,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 2a850290fb3772244ad3864d47f377a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2a850290fb3772244ad3864d47f377a6, type: 3}
+      propertyPath: m_Name
+      value: Mural_Shelf
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a850290fb3772244ad3864d47f377a6, type: 3}
