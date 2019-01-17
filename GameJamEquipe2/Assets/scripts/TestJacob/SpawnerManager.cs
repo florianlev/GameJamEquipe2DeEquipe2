@@ -58,11 +58,11 @@ public class SpawnerManager : MonoBehaviour
     private IEnumerator spawnVampire(float a_Delay)
     {
         yield return new WaitForSeconds(a_Delay);
-        float t_NewDelay = Random.Range(ghostMinSpawnTime, ghostMaxSpawnTime);
-        int t_SpawnPoint = Random.Range(0, ghostSpawns.Count);
-        Instantiate(ghostPrefab, ghostSpawns[t_SpawnPoint].transform.position, Quaternion.identity);
+        float t_NewDelay = Random.Range(vampireMinSpawnTime, vampireMaxSpawnTime);
+        int t_SpawnPoint = Random.Range(0, vampireSpawns.Count);
+        Instantiate(vampirePrefab, vampireSpawns[t_SpawnPoint].transform.position, Quaternion.identity);
 
-        StartCoroutine(spawnGhost(t_NewDelay));
+        StartCoroutine(spawnVampire(t_NewDelay));
     }
 
 }

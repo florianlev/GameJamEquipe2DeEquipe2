@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+
 
 public abstract class Enemy : MonoBehaviour
 {
@@ -8,10 +10,12 @@ public abstract class Enemy : MonoBehaviour
     public int speed;
     public float power;
 
-    private Animator animator;
+    public Animator animator;
     private StressManager stressManager;
     GameObject stressManagerObject;
     public GameObject particleDeath;
+
+    private NavMeshAgent navMesh;
 
     public float timeBeforeHiddenMesh = 3;
     public float timeBeforeDestroyObject = 4;
@@ -28,6 +32,14 @@ public abstract class Enemy : MonoBehaviour
         {
             animator = gameObject.GetComponentInChildren<Animator>();
         }
+       
+        navMesh = gameObject.GetComponent<NavMeshAgent>();
+
+        if (this.gameObject.GetType() != typeof(Ghost))
+        {
+            animator.SetBool("isWalk", true);
+        }
+
     }
 
     // Update is called once per frame
@@ -58,6 +70,21 @@ public abstract class Enemy : MonoBehaviour
 
     }
 
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.name == "zoneLit")
+        {
+
+            speed = 0;
+
+            if(this.gameObject.tag == "enemy")
+            {
+                navMesh.speed = 0;
+                animator.SetBool("isWalk", false);
+            }
+        }
+    }
+
     public virtual void Interracted(MasterObject interractedObject)
     {
         //Debug.Log("message from enemy interacted");
@@ -71,7 +98,11 @@ public abstract class Enemy : MonoBehaviour
         GameObject particle = Instantiate(particleDeath, transform.position, transform.rotation);
         var emission = particle.GetComponent<ParticleSystem>().emission;
 
-        animator.SetTrigger("dead");
+        if (this.gameObject.GetType() ==  typeof(Ghost))
+        {
+            animator.SetTrigger("dead");
+        }
+
         this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
 
         yield return new WaitForSeconds(timeBeforeHiddenMesh);
