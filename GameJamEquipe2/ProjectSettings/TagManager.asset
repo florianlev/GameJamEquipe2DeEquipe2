@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shootable
+  - smoke
+  - zone1
+  - Stress
+  - zoneLit
   layers:
   - Default
   - TransparentFX

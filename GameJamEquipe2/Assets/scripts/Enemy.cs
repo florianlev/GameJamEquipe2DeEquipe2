@@ -8,15 +8,24 @@ public abstract class Enemy : MonoBehaviour
     public int speed;
     public float power;
 
+    private Animator animator;
     private StressManager stressManager;
     GameObject stressManagerObject;
     public GameObject particleDeath;
+
+    public float timeBeforeHiddenMesh = 3;
+    public float timeBeforeDestroyObject = 4;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        animator = gameObject.GetComponent<Animator>();
+        if(animator == null)
+        {
+            animator = gameObject.GetComponentInChildren<Animator>();
+        }
     }
 
     // Update is called once per frame
@@ -59,10 +68,15 @@ public abstract class Enemy : MonoBehaviour
     {
         GameObject particle = Instantiate(particleDeath, transform.position, transform.rotation);
         var emission = particle.GetComponent<ParticleSystem>().emission;
-        yield return new WaitForSeconds(3);
+
+        animator.SetTrigger("dead");
+        this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
+
+        yield return new WaitForSeconds(timeBeforeHiddenMesh);
         emission.enabled = false;
-        gameObject.GetComponent<MeshRenderer>().enabled = false;
-        yield return new WaitForSeconds(4);
+        this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+
+        yield return new WaitForSeconds(timeBeforeDestroyObject);
         Destroy(particle);
         death();
     }

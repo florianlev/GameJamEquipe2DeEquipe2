@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f1b6f7fcdae526d44893d68f84e323c0
+guid: a0d0991ceb69a214c93d57c138ff60c1
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -99,8 +99,8 @@ ModelImporter:
     400092: T2_Ghost_spineK_ctrl
     2100000: 'Material #2'
     4300000: T2_Ghost_mesh
-    7400000: Idle
-    7400002: Death
+    7400000: Death
+    7400002: Idle
     9500000: //RootNode
     13700000: T2_Ghost_mesh
   externalObjects: {}
@@ -132,10 +132,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle
-      takeName: Idle
-      firstFrame: 1
-      lastFrame: 78
+      name: Death
+      takeName: Death
+      firstFrame: 121
+      lastFrame: 150
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -160,18 +160,18 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Death
-      takeName: Death
-      firstFrame: 121
-      lastFrame: 150
+      name: Idle
+      takeName: Idle
+      firstFrame: 1
+      lastFrame: 120
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0

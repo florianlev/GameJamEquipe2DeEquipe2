@@ -8,6 +8,7 @@ public class Ghost : Enemy
 
 
     public Transform destination;
+    private Vector3 lookDirection;
 
 
     // Update is called once per frame
@@ -16,6 +17,17 @@ public class Ghost : Enemy
         float step = speed * Time.deltaTime;
 
         transform.position = Vector3.MoveTowards(transform.position, destination.position, step);
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(destination.position), 0.3f);
+
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.name == "zoneLit")
+        {
+
+            speed = 0;
+        }
     }
 
 
