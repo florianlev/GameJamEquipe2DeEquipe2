@@ -9,6 +9,7 @@ TagManager:
   - zone1
   - Stress
   - zoneLit
+  - client
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - Lighting
   - Ground
   - Postprocessing
-  - 
-  - 
+  - ClientSleep
+  - lit
   - 
   - 
   - 

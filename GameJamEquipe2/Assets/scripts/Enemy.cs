@@ -39,14 +39,12 @@ public abstract class Enemy : MonoBehaviour
     {
         if(stressManagerObject == null)
         {
-            stressManagerObject = GameObject.FindWithTag("Stress");
+            stressManagerObject = GameObject.FindWithTag("client");
             stressManager = stressManagerObject.GetComponent<StressManager>();
         }
      
         if (collider.gameObject.tag == "zone1")
         {
-            Debug.Log(stressManager);
-
             stressManager.SlowStressIncrease(power);
         }
     }
