@@ -1,17 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Wolf : Enemy
 {
     // Start is called before the first frame update
 
-    private float timeBeforeDestruction = 4f;
+    //private float timeBeforeDestruction = 4f;
 
     public AudioClip audioHowl;
     public AudioClip audioDeathHowl;
 
     private AudioSource audioSource;
+    NavMeshAgent _navMeshAgent;
+    //private Animator animator;
 
 
     void Start()
@@ -20,6 +23,11 @@ public class Wolf : Enemy
 
         audioSource.clip = audioHowl;
         audioSource.Play();
+           animator = gameObject.GetComponent<Animator>();
+
+       _navMeshAgent = this.GetComponent<NavMeshAgent>();
+        Debug.Log(animator);
+        animator.SetBool("enMarche", true);
     }
 
     // Update is called once per frame
@@ -27,7 +35,15 @@ public class Wolf : Enemy
     {
         
     }
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.name == "zoneLit")
+        {
+            _navMeshAgent.speed = 0;
+            this.gameObject.GetComponent<Animator>().SetBool("enMarche", false);
 
+        }
+    }
     public override void Interracted(MasterObject interractedObject)
     {
         base.Interracted(interractedObject);
@@ -41,6 +57,8 @@ public class Wolf : Enemy
 
     }
 
+    
+
     IEnumerator delaySpawnParticle()
     {
         isDead = true;
@@ -48,13 +66,11 @@ public class Wolf : Enemy
         var emission = particle.GetComponent<ParticleSystem>().emission;
 
 
-        //this.gameObject.GetComponent<Animator>().SetTrigger("dead");
-
         this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
 
         yield return new WaitForSeconds(timeBeforeHiddenMesh);
+        this.gameObject.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
         emission.enabled = false;
-        this.gameObject.GetComponent<MeshRenderer>().enabled = false;
 
         yield return new WaitForSeconds(timeBeforeDestroyObject);
         Destroy(particle);
@@ -63,12 +79,7 @@ public class Wolf : Enemy
 
     }
 
-    protected override void death()
-    {
-        audioSource.clip = audioDeathHowl;
-        audioSource.Play();
-        base.death();
-    }
+
 
 
 
