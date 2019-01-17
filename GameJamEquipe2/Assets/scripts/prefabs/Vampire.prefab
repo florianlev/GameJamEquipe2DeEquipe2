@@ -1,0 +1,4885 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &176058624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4675039561330354824}
+  - component: {fileID: 1152095341331784201}
+  - component: {fileID: 176058626}
+  - component: {fileID: 176058625}
+  - component: {fileID: 176058627}
+  - component: {fileID: 176058628}
+  - component: {fileID: 176058629}
+  m_Layer: 0
+  m_Name: Vampire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4675039561330354824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176058624}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.26, y: -1.2, z: 2.06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2895335230273668587}
+  - {fileID: 74936673807829498}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1152095341331784201
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176058624}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: dd74244a1f544c34a946b61f12567395, type: 3}
+  m_Controller: {fileID: 9100000, guid: 9fa87b908e187804a96997c33d36e116, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!54 &176058626
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176058624}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!136 &176058625
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176058624}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.485232
+  m_Height: 1.6737697
+  m_Direction: 1
+  m_Center: {x: 0.017229319, y: 0.8152596, z: -0.031997323}
+--- !u!114 &176058627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176058624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef41bbb632be3f04990143efa125065c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destination: {fileID: 6306403696822550263, guid: d218b175bdc490048b5252c1ab75cb25,
+    type: 3}
+--- !u!195 &176058628
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176058624}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &176058629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176058624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f198ca09f2b5dc04781e4a468942d78d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  power: 3
+  particleDeath: {fileID: 1000010823978654, guid: 3228a22491941734bb83ad691d17fcb9,
+    type: 3}
+  timeBeforeHiddenMesh: 3
+  timeBeforeDestroyObject: 4
+  isDead: 0
+--- !u!1 &91009835878574593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8974747902076497241}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_heel_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8974747902076497241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91009835878574593}
+  m_LocalRotation: {x: 0, y: 0, z: 0.08715573, w: 0.9961947}
+  m_LocalPosition: {x: -0.5634336, y: 5.714755, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6632213656172342419}
+  m_Father: {fileID: 457699698469656541}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &236506532883601201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7095347896717826302}
+  m_Layer: 0
+  m_Name: T2_CapeBack_ctrl_004
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7095347896717826302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236506532883601201}
+  m_LocalRotation: {x: 0, y: -0, z: -0.064985804, w: 0.9978862}
+  m_LocalPosition: {x: -3.793724, y: -0.000001907349, z: 0.000003814697}
+  m_LocalScale: {x: 0.6526883, y: 0.6526883, z: 0.6526883}
+  m_Children:
+  - {fileID: 6329061295239957531}
+  m_Father: {fileID: 4320015219590864654}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &290267209026120777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4862869476719684217}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_FingerEnd_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4862869476719684217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290267209026120777}
+  m_LocalRotation: {x: 0, y: -0, z: -0.000000074505806, w: 1}
+  m_LocalPosition: {x: -2.6186962, y: -0.0000019073486, z: 0.0000009536743}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 471694518151310492}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &294033241739231719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4667293597915883134}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_toeEnd_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4667293597915883134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294033241739231719}
+  m_LocalRotation: {x: 0, y: 7.7715617e-16, z: -0, w: 1}
+  m_LocalPosition: {x: -2.7603648, y: 0.0000005364418, z: 0.0000009536743}
+  m_LocalScale: {x: 0.9999999, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2310873913493362850}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &297777464041456115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6731204563912825923}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_armEnd_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6731204563912825923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297777464041456115}
+  m_LocalRotation: {x: 0.00000024586913, y: 0.00000022351738, z: 0.000000014901103,
+    w: 1}
+  m_LocalPosition: {x: -11.526278, y: -0.0000019073486, z: -0.0000038146973}
+  m_LocalScale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 258974460250871690}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &564598311244897569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7403945807707473485}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_toeRoll_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7403945807707473485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564598311244897569}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.843261, y: -11.08159, z: 0}
+  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
+  m_Children:
+  - {fileID: 5329761682681003678}
+  - {fileID: 1920487536084680508}
+  m_Father: {fileID: 6395422702468562050}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &601579160497615667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9125862992722643149}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_pelvis_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9125862992722643149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601579160497615667}
+  m_LocalRotation: {x: 0.7070978, y: -0.0035553048, z: 0.7070979, w: -0.0035513504}
+  m_LocalPosition: {x: -0, y: 0, z: 0.000001907349}
+  m_LocalScale: {x: 0.5927947, y: 0.5927947, z: 0.5927946}
+  m_Children:
+  - {fileID: 3449093822633892376}
+  m_Father: {fileID: 2418250134046845944}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &769395283376092194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6527115910473635656}
+  m_Layer: 0
+  m_Name: T2_Cape_r_ctrl_003
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6527115910473635656
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769395283376092194}
+  m_LocalRotation: {x: 0, y: -0, z: -0.15049314, w: 0.9886111}
+  m_LocalPosition: {x: -4.231486, y: 0.00001430511, z: -0.000003814697}
+  m_LocalScale: {x: 0.6526882, y: 0.6526881, z: 0.6526883}
+  m_Children:
+  - {fileID: 4890647787625292772}
+  m_Father: {fileID: 6246529697511726224}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &771129214194613600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7796078613974612261}
+  m_Layer: 0
+  m_Name: T2_CapeBack_bone_06
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7796078613974612261
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771129214194613600}
+  m_LocalRotation: {x: 0.000000037701955, y: -0.000000023042208, z: 0.000000077806504,
+    w: 1}
+  m_LocalPosition: {x: 0.0000038146973, y: -0.0000019073486, z: 0}
+  m_LocalScale: {x: 1.5321251, y: 1.5321251, z: 1.5321251}
+  m_Children:
+  - {fileID: 7567150701895620524}
+  m_Father: {fileID: 5678112256931952324}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &807358425912743117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9155657521573532587}
+  m_Layer: 0
+  m_Name: T2_Cape_r_ctrl_008
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9155657521573532587
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807358425912743117}
+  m_LocalRotation: {x: -0.0000000014333799, y: -0.000000032598305, z: -0.043928545,
+    w: 0.9990347}
+  m_LocalPosition: {x: -7.10013, y: 0.0000004768372, z: -0.000001907349}
+  m_LocalScale: {x: 0.6526882, y: 0.6526883, z: 0.6526883}
+  m_Children:
+  - {fileID: 2114432493819968108}
+  m_Father: {fileID: 968415215866920477}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1121867529129638914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4620848122848034437}
+  m_Layer: 0
+  m_Name: T2_CapeBack_ctrl_012
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4620848122848034437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121867529129638914}
+  m_LocalRotation: {x: 0, y: -0, z: -0.035770573, w: 0.99936}
+  m_LocalPosition: {x: -2.662043, y: 0, z: 0}
+  m_LocalScale: {x: 0.6526882, y: 0.6526882, z: 0.6526883}
+  m_Children:
+  - {fileID: 200737821524015158}
+  m_Father: {fileID: 5570235039678958305}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1174398131793898682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8586149329102337095}
+  m_Layer: 0
+  m_Name: T2_CapeBack_bone_09
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8586149329102337095
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174398131793898682}
+  m_LocalRotation: {x: 0.000000038793665, y: -0.000000025005873, z: -0.000000009725812,
+    w: 1}
+  m_LocalPosition: {x: -0.0000038146973, y: 0.0000019073486, z: 0}
+  m_LocalScale: {x: 1.5321249, y: 1.5321249, z: 1.532125}
+  m_Children:
+  - {fileID: 5656658673215606988}
+  m_Father: {fileID: 280143408273902499}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1366221523789820600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8462036988567448407}
+  m_Layer: 0
+  m_Name: T2_CapeBack_ctrl_003
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8462036988567448407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366221523789820600}
+  m_LocalRotation: {x: 0, y: -0, z: -0.11008889, w: 0.99392176}
+  m_LocalPosition: {x: -3.204185, y: 0.000001907349, z: 0.000003814697}
+  m_LocalScale: {x: 0.6526882, y: 0.6526882, z: 0.6526883}
+  m_Children:
+  - {fileID: 4320015219590864654}
+  m_Father: {fileID: 1190239435705717270}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1385786725969114181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6113497518429107020}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_footEnd_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6113497518429107020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385786725969114181}
+  m_LocalRotation: {x: 0.000000048428788, y: -0.00000024214384, z: 1.1726732e-14,
+    w: 1}
+  m_LocalPosition: {x: -6.844948, y: -0.0000002384186, z: -0.000001907349}
+  m_LocalScale: {x: 1, y: 0.9999998, z: 0.9999998}
+  m_Children:
+  - {fileID: 8542600276325129406}
+  m_Father: {fileID: 1595317777357424676}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1402341056406021673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2052951364426957867}
+  m_Layer: 0
+  m_Name: T2_Cape_l_bone_05
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2052951364426957867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402341056406021673}
+  m_LocalRotation: {x: 0.000000046197613, y: 0.000000014588719, z: -0.000000019451626,
+    w: 1}
+  m_LocalPosition: {x: 0.0000038146973, y: 0, z: 0.0000009536743}
+  m_LocalScale: {x: 1.5321249, y: 1.5321252, z: 1.5321251}
+  m_Children:
+  - {fileID: 4345427697350489865}
+  m_Father: {fileID: 7640327318449768830}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1682087007831879832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4320015219590864654}
+  m_Layer: 0
+  m_Name: T2_CapeBack_bone_03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4320015219590864654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682087007831879832}
+  m_LocalRotation: {x: 0.00000003436792, y: -0.00000001510103, z: -0.000000019451628,
+    w: 1}
+  m_LocalPosition: {x: -0.0000076293945, y: 0, z: 9.094947e-13}
+  m_LocalScale: {x: 1.532125, y: 1.532125, z: 1.532125}
+  m_Children:
+  - {fileID: 7095347896717826302}
+  m_Father: {fileID: 8462036988567448407}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1697492508681975262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7425986900212764240}
+  m_Layer: 0
+  m_Name: T2_Vampire_spineD_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7425986900212764240
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697492508681975262}
+  m_LocalRotation: {x: 0.0028801498, y: 0.7191506, z: 0.0035470992, w: 0.69483924}
+  m_LocalPosition: {x: 0.3187032, y: 0.0001790524, z: -0.005474091}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3360234171688171751}
+  - {fileID: 7896266540181515941}
+  - {fileID: 5533115719546820133}
+  - {fileID: 2952702460843873500}
+  - {fileID: 2559564296833000930}
+  - {fileID: 7356763512550849913}
+  m_Father: {fileID: 1869930406622427919}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1712044001406805160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2895335230273668587}
+  m_Layer: 0
+  m_Name: T2_Vampire_GlobalSRT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2895335230273668587
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712044001406805160}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 0.0254, y: 0.0254, z: 0.0254}
+  m_Children:
+  - {fileID: 6060328412348876384}
+  - {fileID: 457699698469656541}
+  - {fileID: 7649276945917183781}
+  m_Father: {fileID: 4675039561330354824}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1716398241154124185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6246529697511726224}
+  m_Layer: 0
+  m_Name: T2_Cape_r_bone_02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6246529697511726224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716398241154124185}
+  m_LocalRotation: {x: -0.00000023585096, y: -0.0000000048628883, z: -0.000000077806504,
+    w: 1}
+  m_LocalPosition: {x: 0.0000038146973, y: 0, z: 0}
+  m_LocalScale: {x: 1.532125, y: 1.532125, z: 1.532125}
+  m_Children:
+  - {fileID: 6527115910473635656}
+  m_Father: {fileID: 1873963429574154211}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1725939088452350146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6275037361760451022}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_clav_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6275037361760451022
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725939088452350146}
+  m_LocalRotation: {x: 0.19091205, y: 0.680847, z: 0.7047288, w: 0.057943}
+  m_LocalPosition: {x: -0.0000002384186, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 94331432614608734}
+  m_Father: {fileID: 2559564296833000930}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1768629703204064784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6587899579438183983}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_legUp_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6587899579438183983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768629703204064784}
+  m_LocalRotation: {x: -0.0010103062, y: 0.06299429, z: -0.029414598, w: 0.9975798}
+  m_LocalPosition: {x: 5.472349, y: -0.8553956, z: 3.972745}
+  m_LocalScale: {x: 1, y: 1, z: 0.9999999}
+  m_Children:
+  - {fileID: 5720063755685892768}
+  m_Father: {fileID: 3449093822633892376}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2012489623172853622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5729205527833684247}
+  m_Layer: 0
+  m_Name: T2_Cape_l_bone_10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5729205527833684247
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012489623172853622}
+  m_LocalRotation: {x: -0.00000024892, y: 1.2104749e-15, z: -0.0000000048629074, w: 1}
+  m_LocalPosition: {x: -0, y: 0.0000038146973, z: 0.0000009536743}
+  m_LocalScale: {x: 1.5321249, y: 1.5321252, z: 1.5321249}
+  m_Children:
+  - {fileID: 5340070285462390372}
+  m_Father: {fileID: 725447285414053794}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2104638918990473571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6338301250498553558}
+  m_Layer: 0
+  m_Name: T2_CapeBack_ctrl_005
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6338301250498553558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104638918990473571}
+  m_LocalRotation: {x: 0, y: 0, z: 0.002208708, w: 0.99999756}
+  m_LocalPosition: {x: -4.602917, y: 0, z: 0.000003814697}
+  m_LocalScale: {x: 0.6526884, y: 0.6526884, z: 0.6526883}
+  m_Children:
+  - {fileID: 3952817560815451515}
+  m_Father: {fileID: 6329061295239957531}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2152917291504494682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5570235039678958305}
+  m_Layer: 0
+  m_Name: T2_CapeBack_bone_11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5570235039678958305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2152917291504494682}
+  m_LocalRotation: {x: 0.000000037001534, y: -0.000000021659952, z: 8.014515e-16,
+    w: 1}
+  m_LocalPosition: {x: 0.0000019073486, y: -0.0000019073486, z: 0}
+  m_LocalScale: {x: 1.5321251, y: 1.5321251, z: 1.5321251}
+  m_Children:
+  - {fileID: 4620848122848034437}
+  m_Father: {fileID: 1179204327704137745}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2205980181678341274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6098829576585496201}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_legEnd_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6098829576585496201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2205980181678341274}
+  m_LocalRotation: {x: -0.0000001341104, y: -0.000000048428767, z: -0.000000014901165,
+    w: 1}
+  m_LocalPosition: {x: -13.02127, y: 0, z: -0.000001907349}
+  m_LocalScale: {x: 1, y: 1, z: 0.9999999}
+  m_Children: []
+  m_Father: {fileID: 5720063755685892768}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2210535260735796720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1321036758593231415}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_leg_ikChain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1321036758593231415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2210535260735796720}
+  m_LocalRotation: {x: 0.4197197, y: -0.5227586, z: 0.3290748, w: 0.66503274}
+  m_LocalPosition: {x: -0.000003099442, y: -0.000004529953, z: -0.000006198883}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7330885179997387066}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2222882387942201144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2387681408038881281}
+  m_Layer: 0
+  m_Name: T2_Cape_r_ctrl_010
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2387681408038881281
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2222882387942201144}
+  m_LocalRotation: {x: -4.869895e-10, y: -0.000000032049595, z: -0.015193118, w: 0.9998846}
+  m_LocalPosition: {x: -5.959484, y: -0.000002384186, z: -0.0000009536743}
+  m_LocalScale: {x: 0.6526882, y: 0.6526881, z: 0.6526883}
+  m_Children:
+  - {fileID: 8536279959316995562}
+  m_Father: {fileID: 8470811279647716406}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2597960001589169693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5237714795054929049}
+  m_Layer: 0
+  m_Name: T2_Vampire_spineB_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5237714795054929049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2597960001589169693}
+  m_LocalRotation: {x: 0.01110073, y: 0.71907043, z: 0.011488644, w: 0.6947536}
+  m_LocalPosition: {x: 0.0000009536743, y: 0.000002503395, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8173465529129960304}
+  m_Father: {fileID: 3104979265321783332}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2645598396182460863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7330885179997387066}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_footEnd_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7330885179997387066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2645598396182460863}
+  m_LocalRotation: {x: -0.00000000372529, y: -0.0000000018626449, z: -0.000000044703484,
+    w: 1}
+  m_LocalPosition: {x: -6.849182, y: 0.0000004768372, z: -0.000001430511}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1321036758593231415}
+  m_Father: {fileID: 4974751747438742762}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2681584399094494266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8276682550858278575}
+  m_Layer: 0
+  m_Name: T2_Cape_r_ctrl_007
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8276682550858278575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2681584399094494266}
+  m_LocalRotation: {x: 0.0007941895, y: -0.0710693, z: 0.011143345, w: 0.9974088}
+  m_LocalPosition: {x: -5.136974, y: -0.000002861023, z: 0.000001907349}
+  m_LocalScale: {x: 0.6526883, y: 0.6526884, z: 0.6526882}
+  m_Children:
+  - {fileID: 968415215866920477}
+  m_Father: {fileID: 3296369914996782679}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2698143596759529290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4677147644202581082}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_hand_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4677147644202581082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2698143596759529290}
+  m_LocalRotation: {x: -0.43242806, y: 0.61532295, z: 0.45158786, w: -0.4800542}
+  m_LocalPosition: {x: -11.52627, y: -0.00000667572, z: -0.00002670288}
+  m_LocalScale: {x: 1.67725, y: 1.67725, z: 1.67725}
+  m_Children:
+  - {fileID: 5959097013963758601}
+  m_Father: {fileID: 258974460250871690}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2765829097345320698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1507092678133520635}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_leg_upVector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1507092678133520635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2765829097345320698}
+  m_LocalRotation: {x: 0, y: 0, z: 0.08715573, w: 0.9961947}
+  m_LocalPosition: {x: 4.71497, y: -14.2844, z: 16.21601}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 457699698469656541}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2815891236022189333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7356763512550849913}
+  m_Layer: 0
+  m_Name: T2_Vampire_spineEnd_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7356763512550849913
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2815891236022189333}
+  m_LocalRotation: {x: -0.00000040139997, y: -0.000000042840924, z: 0.00000019464642,
+    w: 1}
+  m_LocalPosition: {x: -7.961407, y: -0.000002741814, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7130215454270057023}
+  m_Father: {fileID: 7425986900212764240}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2847625730738530189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290840784721742411}
+  m_Layer: 0
+  m_Name: T2_Cape_r_ctrl_006
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1290840784721742411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2847625730738530189}
+  m_LocalRotation: {x: -0.011252518, y: -0.06869619, z: -0.1612557, w: 0.98445463}
+  m_LocalPosition: {x: -4.876087, y: -0.00003385544, z: 0}
+  m_LocalScale: {x: 0.6526882, y: 0.6526883, z: 0.6526883}
+  m_Children:
+  - {fileID: 3296369914996782679}
+  m_Father: {fileID: 8238421799030704927}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2942492431634906062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1248160483275008363}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_leg_upVector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1248160483275008363
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942492431634906062}
+  m_LocalRotation: {x: 0, y: -0, z: -0.087155744, w: 0.9961947}
+  m_LocalPosition: {x: -5.011622, y: -14.23209, z: 16.21601}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7649276945917183781}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2960239650839132747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 200737821524015158}
+  m_Layer: 0
+  m_Name: T2_CapeBack_bone_12
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &200737821524015158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2960239650839132747}
+  m_LocalRotation: {x: 0.00000003866389, y: -0.00000002478313, z: -0.000000009725813,
+    w: 1}
+  m_LocalPosition: {x: 0.0000019073486, y: 0, z: 0}
+  m_LocalScale: {x: 1.5321248, y: 1.5321248, z: 1.532125}
+  m_Children:
+  - {fileID: 7250818881488960753}
+  m_Father: {fileID: 4620848122848034437}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3128118840564959555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7330374146912499742}
+  m_Layer: 0
+  m_Name: T2_CapeBack_bone_07
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7330374146912499742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3128118840564959555}
+  m_LocalRotation: {x: 0.00000003765565, y: -0.000000022954028, z: 8.643488e-16, w: 1}
+  m_LocalPosition: {x: -0, y: -0.0000019073486, z: 0}
+  m_LocalScale: {x: 1.5321255, y: 1.5321255, z: 1.5321251}
+  m_Children:
+  - {fileID: 4448335503865334771}
+  m_Father: {fileID: 7567150701895620524}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3164312909542027504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5720063755685892768}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_legLow_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5720063755685892768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3164312909542027504}
+  m_LocalRotation: {x: -4.1440712e-10, y: 0.0000000037021697, z: 0.11124154, w: 0.9937934}
+  m_LocalPosition: {x: -13.28595, y: 0.000001192093, z: 0}
+  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
+  m_Children:
+  - {fileID: 6098829576585496201}
+  m_Father: {fileID: 6587899579438183983}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3185339810829093484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 940690295547333170}
+  m_Layer: 0
+  m_Name: T2_CapeBack_bone_13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &940690295547333170
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3185339810829093484}
+  m_LocalRotation: {x: 0.000000038113864, y: -0.000000023808067, z: 9.074174e-16,
+    w: 1}
+  m_LocalPosition: {x: -0, y: -0.0000038146973, z: -1.8189894e-12}
+  m_LocalScale: {x: 1.5321251, y: 1.5321251, z: 1.532125}
+  m_Children:
+  - {fileID: 7429155453692034893}
+  m_Father: {fileID: 7250818881488960753}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3217104547680594963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6055931324986112839}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_hand_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6055931324986112839
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3217104547680594963}
+  m_LocalRotation: {x: -0.0000000033136325, y: 0.7071065, z: 0.0000000033136294, w: 0.7071071}
+  m_LocalPosition: {x: 0.000001907349, y: 0.000002861023, z: 0}
+  m_LocalScale: {x: 0.5962141, y: 0.5962141, z: 0.5962141}
+  m_Children:
+  - {fileID: 96284583175204415}
+  - {fileID: 6050737233577870800}
+  m_Father: {fileID: 2015585695544509972}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3227432048691163686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3262732910874969530}
+  m_Layer: 0
+  m_Name: T2_Cape_r_ctrl_005
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3262732910874969530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3227432048691163686}
+  m_LocalRotation: {x: -5.9180816e-17, y: -6.3217325e-17, z: 0.032960635, w: 0.99945664}
+  m_LocalPosition: {x: -6.2001, y: -0.0000009536743, z: 0.000003814697}
+  m_LocalScale: {x: 0.6526884, y: 0.6526885, z: 0.6526883}
+  m_Children:
+  - {fileID: 8238421799030704927}
+  m_Father: {fileID: 5209377991042598133}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3266805176013448483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2158886992147896190}
+  m_Layer: 0
+  m_Name: T2_Vampire_spineA_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2158886992147896190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3266805176013448483}
+  m_LocalRotation: {x: 0.00016907074, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.7314227, z: -0.1378021}
+  m_LocalScale: {x: 0.5927945, y: 0.5927945, z: 0.5927946}
+  m_Children:
+  - {fileID: 830566863826679296}
+  m_Father: {fileID: 2418250134046845944}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3336714905531785622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2886858907289565506}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_handEnd_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2886858907289565506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3336714905531785622}
+  m_LocalRotation: {x: 0.0000000027939682, y: 0.000000014901161, z: -4.163337e-17,
+    w: 1}
+  m_LocalPosition: {x: -4.4326897, y: 0, z: -0.000002861023}
+  m_LocalScale: {x: 0.99999994, y: 0.9999998, z: 0.99999994}
+  m_Children: []
+  m_Father: {fileID: 5959097013963758601}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3363171251301063244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 367370455029431163}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_toe_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &367370455029431163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3363171251301063244}
+  m_LocalRotation: {x: 0.00000008742271, y: -0.00000006930386, z: -0.0000004785118,
+    w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1.59985, y: 1.59985, z: 1.5998499}
+  m_Children:
+  - {fileID: 8094517218081650327}
+  m_Father: {fileID: 1920487536084680508}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3496619316635037424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 968415215866920477}
+  m_Layer: 0
+  m_Name: T2_Cape_r_bone_07
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &968415215866920477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3496619316635037424}
+  m_LocalRotation: {x: -0.00000024800818, y: -4.8241614e-15, z: 0.000000019451623,
+    w: 1}
+  m_LocalPosition: {x: -0.0000076293945, y: -0.0000038146973, z: 0.00000047683716}
+  m_LocalScale: {x: 1.5321254, y: 1.5321252, z: 1.532125}
+  m_Children:
+  - {fileID: 9155657521573532587}
+  m_Father: {fileID: 8276682550858278575}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3498373549493753799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6632213656172342419}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_toeRoll_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6632213656172342419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3498373549493753799}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.360415, y: -11.08159, z: 0}
+  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
+  m_Children:
+  - {fileID: 6934766778618467332}
+  - {fileID: 3459403980674603397}
+  m_Father: {fileID: 8974747902076497241}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3526641499768159998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5583194872285650555}
+  m_Layer: 0
+  m_Name: T2_Vampire_spineC_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5583194872285650555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3526641499768159998}
+  m_LocalRotation: {x: 0.0056077586, y: 0.71913445, z: 0.0061815167, w: 0.6948208}
+  m_LocalPosition: {x: 0.1587095, y: 0.00009083748, z: -0.002723694}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1869930406622427919}
+  m_Father: {fileID: 8173465529129960304}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3607038396700894020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3104979265321783332}
+  m_Layer: 0
+  m_Name: T2_Vampire_spineB_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3104979265321783332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3607038396700894020}
+  m_LocalRotation: {x: 0.006891322, y: -0.70707303, z: 0.0068913195, w: 0.70707333}
+  m_LocalPosition: {x: -5.260153, y: -0.000003457069, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5237714795054929049}
+  m_Father: {fileID: 830566863826679296}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3616642570295261442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 74936673807829498}
+  - component: {fileID: 5465366123129739480}
+  m_Layer: 0
+  m_Name: T2_Vampire_mesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &74936673807829498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3616642570295261442}
+  m_LocalRotation: {x: 0.043619398, y: -0, z: -0, w: 0.99904823}
+  m_LocalPosition: {x: -0, y: 0, z: 0.046677466}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_Children: []
+  m_Father: {fileID: 4675039561330354824}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &5465366123129739480
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3616642570295261442}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: dd74244a1f544c34a946b61f12567395, type: 3}
+  - {fileID: 2100002, guid: dd74244a1f544c34a946b61f12567395, type: 3}
+  - {fileID: 2100004, guid: dd74244a1f544c34a946b61f12567395, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 4300000, guid: dd74244a1f544c34a946b61f12567395, type: 3}
+  m_Bones:
+  - {fileID: 3219936499347895061}
+  - {fileID: 5644477951216368815}
+  - {fileID: 4493575378778121509}
+  - {fileID: 2886858907289565506}
+  - {fileID: 5959097013963758601}
+  - {fileID: 258974460250871690}
+  - {fileID: 1380266977358466782}
+  - {fileID: 8899765417251836121}
+  - {fileID: 2074936014509141309}
+  - {fileID: 7425986900212764240}
+  - {fileID: 5583194872285650555}
+  - {fileID: 432273247853408775}
+  - {fileID: 9125862992722643149}
+  - {fileID: 830566863826679296}
+  - {fileID: 5158723381756694954}
+  - {fileID: 1595317777357424676}
+  - {fileID: 5237714795054929049}
+  - {fileID: 7438620121869206236}
+  - {fileID: 6275037361760451022}
+  - {fileID: 2310873913493362850}
+  - {fileID: 6055931324986112839}
+  - {fileID: 6921133377358456011}
+  - {fileID: 3357462014567624610}
+  - {fileID: 471694518151310492}
+  - {fileID: 6587899579438183983}
+  - {fileID: 5720063755685892768}
+  - {fileID: 4974751747438742762}
+  - {fileID: 367370455029431163}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 830566863826679296}
+  m_AABB:
+    m_Center: {x: -0.34745407, y: 3.1267753, z: -0.56426144}
+    m_Extent: {x: 34.636467, y: 14.368834, z: 26.00961}
+  m_DirtyAABB: 0
+--- !u!1 &3668467626912291844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4345427697350489865}
+  m_Layer: 0
+  m_Name: T2_Cape_l_ctrl_006
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4345427697350489865
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3668467626912291844}
+  m_LocalRotation: {x: 0.011252538, y: -0.06869606, z: 0.16125545, w: 0.9844547}
+  m_LocalPosition: {x: -4.876091, y: 0.00003671646, z: -0.000003814697}
+  m_LocalScale: {x: 0.6526883, y: 0.6526881, z: 0.6526883}
+  m_Children:
+  - {fileID: 5171473135378932964}
+  m_Father: {fileID: 2052951364426957867}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3802041068754526786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2096080814916732960}
+  m_Layer: 0
+  m_Name: T2_Cape_l_bone_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2096080814916732960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3802041068754526786}
+  m_LocalRotation: {x: -0.0000000024314537, y: -0.0000000048629074, z: 0.00000007780652,
+    w: 1}
+  m_LocalPosition: {x: -0.0000038146973, y: 0, z: 0.0000038146973}
+  m_LocalScale: {x: 1.5321249, y: 1.5321248, z: 1.532125}
+  m_Children:
+  - {fileID: 946274198543302738}
+  m_Father: {fileID: 3360234171688171751}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3821602524139686276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 725447285414053794}
+  m_Layer: 0
+  m_Name: T2_Cape_l_ctrl_010
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &725447285414053794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3821602524139686276}
+  m_LocalRotation: {x: -6.029495e-17, y: -6.215561e-17, z: 0.015193416, w: 0.9998846}
+  m_LocalPosition: {x: -5.95949, y: 0.000004291534, z: 0.0000009536743}
+  m_LocalScale: {x: 0.6526881, y: 0.6526881, z: 0.6526882}
+  m_Children:
+  - {fileID: 5729205527833684247}
+  m_Father: {fileID: 8439862571585047939}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3858067711553025982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7222824197327832524}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_armEnd_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7222824197327832524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3858067711553025982}
+  m_LocalRotation: {x: -0.0000003799796, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.526278, y: -0.0000009536743, z: 0.0000019073486}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3357462014567624610}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3883577097153782400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8470811279647716406}
+  m_Layer: 0
+  m_Name: T2_Cape_r_bone_09
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8470811279647716406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3883577097153782400}
+  m_LocalRotation: {x: -0.0000002212622, y: -0.00000003404033, z: -0.000000034040344,
+    w: 1}
+  m_LocalPosition: {x: -0, y: 0.0000038146973, z: 0.0000014305115}
+  m_LocalScale: {x: 1.5321255, y: 1.5321252, z: 1.5321251}
+  m_Children:
+  - {fileID: 2387681408038881281}
+  m_Father: {fileID: 741219041414144053}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4042369785541097846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4448335503865334771}
+  m_Layer: 0
+  m_Name: T2_CapeBack_ctrl_008
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4448335503865334771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4042369785541097846}
+  m_LocalRotation: {x: 0, y: 0, z: 0.0043606623, w: 0.9999905}
+  m_LocalPosition: {x: -4.570757, y: -0.00001430511, z: 0}
+  m_LocalScale: {x: 0.6526882, y: 0.6526882, z: 0.6526883}
+  m_Children:
+  - {fileID: 321787716905042455}
+  m_Father: {fileID: 7330374146912499742}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4108828389147057128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7877727966545131290}
+  m_Layer: 0
+  m_Name: T2_CapeBack_boneEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7877727966545131290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4108828389147057128}
+  m_LocalRotation: {x: 2.4868997e-14, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.2633233, y: -0.0000038146973, z: 0.0000001743465}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4029329866787573197}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4199107000320406316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2418305627648593505}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_fingerB_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2418305627648593505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4199107000320406316}
+  m_LocalRotation: {x: -0.09506133, y: -0.7006876, z: -0.09506129, w: 0.70068794}
+  m_LocalPosition: {x: -2.169319, y: -0.00008964539, z: 0.000003814697}
+  m_LocalScale: {x: 1.67725, y: 1.67725, z: 1.67725}
+  m_Children:
+  - {fileID: 471694518151310492}
+  m_Father: {fileID: 6921133377358456011}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4328928412224101995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7567150701895620524}
+  m_Layer: 0
+  m_Name: T2_CapeBack_ctrl_007
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7567150701895620524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4328928412224101995}
+  m_LocalRotation: {x: -0.00000023841851, y: -2.4016347e-10, z: 0.0010073185, w: 0.9999995}
+  m_LocalPosition: {x: -3.708411, y: 0.0000009536743, z: 0.0000002384186}
+  m_LocalScale: {x: 0.6526882, y: 0.6526883, z: 0.6526883}
+  m_Children:
+  - {fileID: 7330374146912499742}
+  m_Father: {fileID: 7796078613974612261}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4456463349580292492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2015585695544509972}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_hand_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2015585695544509972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4456463349580292492}
+  m_LocalRotation: {x: 0.45328477, y: 0.6347374, z: -0.42386594, w: -0.46041182}
+  m_LocalPosition: {x: -11.52627, y: -0.000008583069, z: -0.000005722046}
+  m_LocalScale: {x: 1.677249, y: 1.67725, z: 1.67725}
+  m_Children:
+  - {fileID: 6055931324986112839}
+  m_Father: {fileID: 3357462014567624610}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4487521432914664634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1920487536084680508}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_toe_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1920487536084680508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4487521432914664634}
+  m_LocalRotation: {x: 0.4932908, y: 0.5066205, z: 0.4932906, w: 0.50662035}
+  m_LocalPosition: {x: 0.0670681, y: 2.725842, z: 0.6220827}
+  m_LocalScale: {x: 0.6250587, y: 0.6250587, z: 0.6250586}
+  m_Children:
+  - {fileID: 367370455029431163}
+  m_Father: {fileID: 7403945807707473485}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4493231909677138036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6655637953072876120}
+  m_Layer: 0
+  m_Name: T2_Cape_r_bone_11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6655637953072876120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4493231909677138036}
+  m_LocalRotation: {x: -0.0000000013969833, y: 0.0000000074505815, z: -0.000000085681684,
+    w: 1}
+  m_LocalPosition: {x: -4.4124694, y: 0, z: 0.00000059604645}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8536279959316995562}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4495826864797732755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7250818881488960753}
+  m_Layer: 0
+  m_Name: T2_CapeBack_ctrl_013
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7250818881488960753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4495826864797732755}
+  m_LocalRotation: {x: 0, y: 0, z: 0.011318202, w: 0.999936}
+  m_LocalPosition: {x: -3.228925, y: -0.0000667572, z: 0}
+  m_LocalScale: {x: 0.6526883, y: 0.6526883, z: 0.6526883}
+  m_Children:
+  - {fileID: 940690295547333170}
+  m_Father: {fileID: 200737821524015158}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4570365566107937521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3449093822633892376}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_pelvisEnd_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3449093822633892376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4570365566107937521}
+  m_LocalRotation: {x: 2.1643802e-13, y: -3.552723e-15, z: -0.000000042840846, w: 1}
+  m_LocalPosition: {x: -6.954487, y: 0.0000005960464, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 432273247853408775}
+  - {fileID: 6587899579438183983}
+  m_Father: {fileID: 9125862992722643149}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4593105246588295293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6934766778618467332}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_footRoll_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6934766778618467332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4593105246588295293}
+  m_LocalRotation: {x: -0.5236068, y: 0.41929898, z: 0.6643663, w: -0.32960847}
+  m_LocalPosition: {x: -0.1236229, y: 2.725842, z: 0.6220832}
+  m_LocalScale: {x: 0.9999999, y: 1, z: 0.9999999}
+  m_Children:
+  - {fileID: 1595317777357424676}
+  m_Father: {fileID: 6632213656172342419}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4594527422091948518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5656658673215606988}
+  m_Layer: 0
+  m_Name: T2_CapeBack_ctrl_010
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5656658673215606988
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4594527422091948518}
+  m_LocalRotation: {x: 0, y: 0, z: 0.03267422, w: 0.99946606}
+  m_LocalPosition: {x: -4.083418, y: -0.000002861023, z: 0}
+  m_LocalScale: {x: 0.6526882, y: 0.6526882, z: 0.6526883}
+  m_Children:
+  - {fileID: 7309673521979941189}
+  m_Father: {fileID: 8586149329102337095}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4670271135421349694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 258974460250871690}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_forearm_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &258974460250871690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4670271135421349694}
+  m_LocalRotation: {x: 0.00000032694507, y: -0.7071065, z: 0.00000032694476, w: 0.7071071}
+  m_LocalPosition: {x: -0.000003814697, y: 0, z: -0.000001907349}
+  m_LocalScale: {x: 0.5962139, y: 0.5962141, z: 0.5962142}
+  m_Children:
+  - {fileID: 6731204563912825923}
+  - {fileID: 4677147644202581082}
+  m_Father: {fileID: 4996506285751523391}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4750080460659376479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5209377991042598133}
+  m_Layer: 0
+  m_Name: T2_Cape_r_bone_04
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5209377991042598133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4750080460659376479}
+  m_LocalRotation: {x: -0.00000024314537, y: -0.000000004862879, z: -0.00000011670978,
+    w: 1}
+  m_LocalPosition: {x: -0.0000076293945, y: 0, z: -0.0000009536743}
+  m_LocalScale: {x: 1.5321249, y: 1.5321246, z: 1.532125}
+  m_Children:
+  - {fileID: 3262732910874969530}
+  m_Father: {fileID: 2186741062084638404}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4773149188194514008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5855604801541956441}
+  m_Layer: 0
+  m_Name: T2_Cape_l_bone_07
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5855604801541956441
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4773149188194514008}
+  m_LocalRotation: {x: 0.000000049844786, y: -0.0000000048629083, z: -0.000000038903252,
+    w: 1}
+  m_LocalPosition: {x: 0.0000038146973, y: 0, z: -0.00000047683716}
+  m_LocalScale: {x: 1.532125, y: 1.5321248, z: 1.5321248}
+  m_Children:
+  - {fileID: 1099250466729658595}
+  m_Father: {fileID: 6135971541984631903}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4782789671790580368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4890647787625292772}
+  m_Layer: 0
+  m_Name: T2_Cape_r_bone_03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4890647787625292772
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4782789671790580368}
+  m_LocalRotation: {x: 0.000000102121014, y: -0.000000021883094, z: -0.00000021396782,
+    w: 1}
+  m_LocalPosition: {x: 0.0000038146973, y: 0.0000038146973, z: -0.0000019073486}
+  m_LocalScale: {x: 1.5321251, y: 1.5321252, z: 1.5321249}
+  m_Children:
+  - {fileID: 2186741062084638404}
+  m_Father: {fileID: 6527115910473635656}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4831278562813027170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3296369914996782679}
+  m_Layer: 0
+  m_Name: T2_Cape_r_bone_06
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3296369914996782679
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4831278562813027170}
+  m_LocalRotation: {x: -1.5196584e-10, y: 7.5982935e-11, z: -0.0000000680807, w: 1}
+  m_LocalPosition: {x: 0.0000076293945, y: 0, z: 0}
+  m_LocalScale: {x: 1.5321246, y: 1.5321249, z: 1.532125}
+  m_Children:
+  - {fileID: 8276682550858278575}
+  m_Father: {fileID: 1290840784721742411}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4842816638518378701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5171473135378932964}
+  m_Layer: 0
+  m_Name: T2_Cape_l_bone_06
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5171473135378932964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4842816638518378701}
+  m_LocalRotation: {x: 0.00000010681298, y: -0.00000007423529, z: 0.0000001458872,
+    w: 1}
+  m_LocalPosition: {x: -0, y: -0.0000076293945, z: 0.00000047683716}
+  m_LocalScale: {x: 1.5321249, y: 1.5321252, z: 1.5321251}
+  m_Children:
+  - {fileID: 6135971541984631903}
+  m_Father: {fileID: 4345427697350489865}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4856927322877811818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1099250466729658595}
+  m_Layer: 0
+  m_Name: T2_Cape_l_ctrl_008
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1099250466729658595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4856927322877811818}
+  m_LocalRotation: {x: -0.0000002352476, y: -0.00000007735525, z: 0.043928545, w: 0.9990347}
+  m_LocalPosition: {x: -7.100132, y: -0.00000333786, z: -0.000003814697}
+  m_LocalScale: {x: 0.6526884, y: 0.6526885, z: 0.6526884}
+  m_Children:
+  - {fileID: 2807570556504450854}
+  m_Father: {fileID: 5855604801541956441}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4903657245291542901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3459403980674603397}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_toe_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3459403980674603397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4903657245291542901}
+  m_LocalRotation: {x: 0.50662047, y: 0.49329072, z: -0.5066204, w: -0.49329063}
+  m_LocalPosition: {x: -0.1236248, y: 2.725843, z: 0.6220832}
+  m_LocalScale: {x: 0.6250587, y: 0.6250587, z: 0.6250586}
+  m_Children:
+  - {fileID: 2310873913493362850}
+  m_Father: {fileID: 6632213656172342419}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4948921808309481446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7825223800875851268}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_fingerB_ctrl001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7825223800875851268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4948921808309481446}
+  m_LocalRotation: {x: 0.095061824, y: -0.7006875, z: 0.09506177, w: 0.7006879}
+  m_LocalPosition: {x: -2.16931, y: 0.00008583069, z: -0.00001144409}
+  m_LocalScale: {x: 1.67725, y: 1.67725, z: 1.67725}
+  m_Children:
+  - {fileID: 1380266977358466782}
+  m_Father: {fileID: 8899765417251836121}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4978318085999332210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4493575378778121509}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_arm_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4493575378778121509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4978318085999332210}
+  m_LocalRotation: {x: -0.0000033425142, y: -0.70704454, z: -0.00938289, w: 0.70710677}
+  m_LocalPosition: {x: -0.000001907349, y: 0.0000002384186, z: -0.000001907349}
+  m_LocalScale: {x: 0.5962139, y: 0.5962142, z: 0.5962142}
+  m_Children:
+  - {fileID: 8205905450707866451}
+  m_Father: {fileID: 94331432614608734}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4999584639714376557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3219936499347895061}
+  m_Layer: 0
+  m_Name: T2_Vampire_head_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3219936499347895061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4999584639714376557}
+  m_LocalRotation: {x: -0.12995443, y: -0.6950625, z: 0.00000008021758, w: 0.7071068}
+  m_LocalPosition: {x: -0.0000038146973, y: 0.000002144836, z: -0.0000076293945}
+  m_LocalScale: {x: 0.7110606, y: 0.71106064, z: 0.71106064}
+  m_Children:
+  - {fileID: 6964524992981048078}
+  m_Father: {fileID: 2343226676448163409}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5003254653915548410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8819142882881341892}
+  m_Layer: 0
+  m_Name: T2_Cape_l_ctrl_009
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8819142882881341892
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5003254653915548410}
+  m_LocalRotation: {x: -0.00000023840359, y: -0.000000002676417, z: 0.011225705, w: 0.999937}
+  m_LocalPosition: {x: -6.813438, y: 0.0001010895, z: 0}
+  m_LocalScale: {x: 0.6526883, y: 0.6526884, z: 0.6526881}
+  m_Children:
+  - {fileID: 8439862571585047939}
+  m_Father: {fileID: 2807570556504450854}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5026780783543397814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3357462014567624610}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_forearm_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3357462014567624610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5026780783543397814}
+  m_LocalRotation: {x: 0.0000000706908, y: -0.7071066, z: 0.00000007069075, w: 0.70710707}
+  m_LocalPosition: {x: -0.000001907349, y: 0.000002861023, z: -0.000001907349}
+  m_LocalScale: {x: 0.5962139, y: 0.5962141, z: 0.5962141}
+  m_Children:
+  - {fileID: 7222824197327832524}
+  - {fileID: 2015585695544509972}
+  m_Father: {fileID: 8205905450707866451}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5072679174542206134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8536279959316995562}
+  m_Layer: 0
+  m_Name: T2_Cape_r_bone_10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8536279959316995562
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5072679174542206134}
+  m_LocalRotation: {x: 0.00000004893298, y: -0.000000014588725, z: -0.00000011184685,
+    w: 1}
+  m_LocalPosition: {x: 0.0000009536743, y: 0, z: -0.00000023841858}
+  m_LocalScale: {x: 1.5321252, y: 1.5321255, z: 1.5321251}
+  m_Children:
+  - {fileID: 6655637953072876120}
+  m_Father: {fileID: 2387681408038881281}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5088650763129813166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8578256994173131931}
+  m_Layer: 0
+  m_Name: T2_Cape_l_bone_03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8578256994173131931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5088650763129813166}
+  m_LocalRotation: {x: 0.000000009725814, y: -0.000000026745981, z: 0.00000007780649,
+    w: 1}
+  m_LocalPosition: {x: -0, y: 0.0000038146973, z: 0}
+  m_LocalScale: {x: 1.5321252, y: 1.5321251, z: 1.5321249}
+  m_Children:
+  - {fileID: 4465909525262933485}
+  m_Father: {fileID: 4227175763524797455}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5103650036811495293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6060328412348876384}
+  m_Layer: 0
+  m_Name: T2_Vampire_cog_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6060328412348876384
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5103650036811495293}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: -0.4356079, z: 30.85333}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2418250134046845944}
+  m_Father: {fileID: 2895335230273668587}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5204146564967182105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8238421799030704927}
+  m_Layer: 0
+  m_Name: T2_Cape_r_bone_05
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8238421799030704927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5204146564967182105}
+  m_LocalRotation: {x: 0.000000004862905, y: -0.00000002917744, z: -0.00000005835488,
+    w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1.532125, y: 1.5321249, z: 1.5321251}
+  m_Children:
+  - {fileID: 1290840784721742411}
+  m_Father: {fileID: 3262732910874969530}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5242182362990334905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8173465529129960304}
+  m_Layer: 0
+  m_Name: T2_Vampire_spineC_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8173465529129960304
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5242182362990334905}
+  m_LocalRotation: {x: -0.010983251, y: -0.7190726, z: -0.011367264, w: 0.6947552}
+  m_LocalPosition: {x: -4.612343, y: -0.000005722046, z: -0.1587144}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5583194872285650555}
+  m_Father: {fileID: 5237714795054929049}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5310297195662531404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6395422702468562050}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_heel_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6395422702468562050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5310297195662531404}
+  m_LocalRotation: {x: 0, y: -0, z: -0.087155744, w: 0.9961947}
+  m_LocalPosition: {x: -0.1353402, y: 5.837967, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7403945807707473485}
+  m_Father: {fileID: 7649276945917183781}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5467118173725815475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8899765417251836121}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_fingerA_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8899765417251836121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5467118173725815475}
+  m_LocalRotation: {x: 0.00000019605658, y: 0.70710665, z: -0.00000019605649, w: 0.70710695}
+  m_LocalPosition: {x: -0.000002861023, y: 0.0000009536743, z: 0.000005722046}
+  m_LocalScale: {x: 0.5962138, y: 0.5962141, z: 0.5962141}
+  m_Children:
+  - {fileID: 7825223800875851268}
+  m_Father: {fileID: 4786596936675500573}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5508054251409225224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4996506285751523391}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_forearm_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4996506285751523391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5508054251409225224}
+  m_LocalRotation: {x: -0.16043344, y: 0.688666, z: 0.16043334, w: 0.6886664}
+  m_LocalPosition: {x: -12.90435, y: 0.0000002384186, z: 0.000005722046}
+  m_LocalScale: {x: 1.67725, y: 1.67725, z: 1.67725}
+  m_Children:
+  - {fileID: 258974460250871690}
+  m_Father: {fileID: 5644477951216368815}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5544509682989343878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8094517218081650327}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_toeEnd_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8094517218081650327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5544509682989343878}
+  m_LocalRotation: {x: 0.000000059604638, y: 1.1546318e-14, z: -6.882141e-22, w: 1}
+  m_LocalPosition: {x: -2.7603645, y: 0, z: -0.0000009536743}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 367370455029431163}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5590886578659510737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4974751747438742762}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_foot_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4974751747438742762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5590886578659510737}
+  m_LocalRotation: {x: 0.00000028312206, y: -0.000000050291472, z: -0.00000019371514,
+    w: 1}
+  m_LocalPosition: {x: 0.0000009536743, y: -0.0000002384186, z: 0.0000004768372}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7330885179997387066}
+  m_Father: {fileID: 5329761682681003678}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5596217107384709660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2807570556504450854}
+  m_Layer: 0
+  m_Name: T2_Cape_l_bone_08
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2807570556504450854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5596217107384709660}
+  m_LocalRotation: {x: -0.0000000024314535, y: 2.3647856e-17, z: -0.00000000972581,
+    w: 1}
+  m_LocalPosition: {x: -0, y: -0.0000038146973, z: 0.0000009536743}
+  m_LocalScale: {x: 1.5321254, y: 1.5321251, z: 1.5321255}
+  m_Children:
+  - {fileID: 8819142882881341892}
+  m_Father: {fileID: 1099250466729658595}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5632387745855303548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8205905450707866451}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_forearm_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8205905450707866451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5632387745855303548}
+  m_LocalRotation: {x: 0.16043337, y: 0.68866605, z: -0.16043329, w: 0.68866634}
+  m_LocalPosition: {x: -12.90436, y: -0.000005483627, z: -0.000007629395}
+  m_LocalScale: {x: 1.67725, y: 1.67725, z: 1.677251}
+  m_Children:
+  - {fileID: 3357462014567624610}
+  m_Father: {fileID: 4493575378778121509}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5856875084735928243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7130215454270057023}
+  m_Layer: 0
+  m_Name: T2_Vampire_neck_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7130215454270057023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5856875084735928243}
+  m_LocalRotation: {x: -0.0028793565, y: -0.7191506, z: -0.003546634, w: 0.69483924}
+  m_LocalPosition: {x: 0.01891708, y: 0.0004333258, z: -0.5499154}
+  m_LocalScale: {x: 1.164475, y: 1.164475, z: 1.164475}
+  m_Children:
+  - {fileID: 7438620121869206236}
+  m_Father: {fileID: 7356763512550849913}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5996663305381082432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4465909525262933485}
+  m_Layer: 0
+  m_Name: T2_Cape_l_ctrl_004
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4465909525262933485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5996663305381082432}
+  m_LocalRotation: {x: -0.0014671955, y: 0.03586908, z: 0.040843666, w: 0.99852043}
+  m_LocalPosition: {x: -6.04285, y: 0, z: 0}
+  m_LocalScale: {x: 0.6526883, y: 0.6526883, z: 0.6526884}
+  m_Children:
+  - {fileID: 5497626285717863019}
+  m_Father: {fileID: 8578256994173131931}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6084871987832053967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7896266540181515941}
+  m_Layer: 0
+  m_Name: T2_Cape_r_ctrl_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7896266540181515941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6084871987832053967}
+  m_LocalRotation: {x: 0.371438, y: 0.6415707, z: -0.6045551, w: 0.2914344}
+  m_LocalPosition: {x: -8.090086, y: -4.058554, z: 6.105103}
+  m_LocalScale: {x: 0.6526881, y: 0.6526881, z: 0.6526885}
+  m_Children:
+  - {fileID: 4940742978569659134}
+  m_Father: {fileID: 7425986900212764240}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6093551178934925988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5497626285717863019}
+  m_Layer: 0
+  m_Name: T2_Cape_l_bone_04
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5497626285717863019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6093551178934925988}
+  m_LocalRotation: {x: 0.00000006808069, y: -0.000000019451628, z: 1.3242802e-15,
+    w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1.532125, y: 1.5321251, z: 1.532125}
+  m_Children:
+  - {fileID: 7640327318449768830}
+  m_Father: {fileID: 4465909525262933485}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6115821850868911277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2310873913493362850}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_toe_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2310873913493362850
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6115821850868911277}
+  m_LocalRotation: {x: 1.131123e-24, y: -9.715362e-16, z: 0.0000000011642624, w: 1}
+  m_LocalPosition: {x: -0.0000009536743, y: 0.00000023841858, z: 0}
+  m_LocalScale: {x: 1.59985, y: 1.5998499, z: 1.5998498}
+  m_Children:
+  - {fileID: 4667293597915883134}
+  m_Father: {fileID: 3459403980674603397}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6160975205731320138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5329761682681003678}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_footRoll_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5329761682681003678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6160975205731320138}
+  m_LocalRotation: {x: -0.4197197, y: 0.5227586, z: -0.32907462, w: 0.66503286}
+  m_LocalPosition: {x: 0.06706905, y: 2.725843, z: 0.6220832}
+  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
+  m_Children:
+  - {fileID: 4974751747438742762}
+  m_Father: {fileID: 7403945807707473485}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6179812509312685025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6135971541984631903}
+  m_Layer: 0
+  m_Name: T2_Cape_l_ctrl_007
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6135971541984631903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6179812509312685025}
+  m_LocalRotation: {x: -0.0007940052, y: -0.07106942, z: -0.011143298, w: 0.9974088}
+  m_LocalPosition: {x: -5.136976, y: -0.0000004768372, z: -0.000005722046}
+  m_LocalScale: {x: 0.6526883, y: 0.6526881, z: 0.6526883}
+  m_Children:
+  - {fileID: 5855604801541956441}
+  m_Father: {fileID: 5171473135378932964}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6218111882905300542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 96284583175204415}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_fingerA_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &96284583175204415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6218111882905300542}
+  m_LocalRotation: {x: -0.0024899342, y: -0.7326348, z: -0.06867094, w: 0.6771443}
+  m_LocalPosition: {x: -4.740099, y: -0.2954197, z: 0.0430603}
+  m_LocalScale: {x: 1.67725, y: 1.67725, z: 1.67725}
+  m_Children:
+  - {fileID: 6921133377358456011}
+  m_Father: {fileID: 6055931324986112839}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6250004916978652219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 741219041414144053}
+  m_Layer: 0
+  m_Name: T2_Cape_r_ctrl_009
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &741219041414144053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6250004916978652219}
+  m_LocalRotation: {x: 0.00000029337014, y: -0.000000037001005, z: -0.011225705, w: 0.999937}
+  m_LocalPosition: {x: -6.81344, y: -0.0001006126, z: -0.000003814697}
+  m_LocalScale: {x: 0.6526882, y: 0.6526883, z: 0.6526883}
+  m_Children:
+  - {fileID: 8470811279647716406}
+  m_Father: {fileID: 2114432493819968108}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6349406064026710056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2074936014509141309}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_clav_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2074936014509141309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6349406064026710056}
+  m_LocalRotation: {x: -0.6808469, y: -0.19091183, z: 0.057942834, w: 0.70472884}
+  m_LocalPosition: {x: -0.00000023841858, y: 0.0000038146973, z: 0}
+  m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
+  m_Children: []
+  m_Father: {fileID: 2952702460843873500}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6358297990334089008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2418250134046845944}
+  m_Layer: 0
+  m_Name: T2_Vampire_pelvis_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2418250134046845944
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6358297990334089008}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1.686925, y: 1.686925, z: 1.686925}
+  m_Children:
+  - {fileID: 9125862992722643149}
+  - {fileID: 2158886992147896190}
+  m_Father: {fileID: 6060328412348876384}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6417365021434867338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4940742978569659134}
+  m_Layer: 0
+  m_Name: T2_Cape_r_bone_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4940742978569659134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6417365021434867338}
+  m_LocalRotation: {x: 0.000000038903266, y: 0.000000048629055, z: -0.0000002917744,
+    w: 1}
+  m_LocalPosition: {x: 0.0000038146973, y: 0.0000076293945, z: -0.0000047683716}
+  m_LocalScale: {x: 1.532125, y: 1.5321252, z: 1.5321249}
+  m_Children:
+  - {fileID: 1873963429574154211}
+  m_Father: {fileID: 7896266540181515941}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6471988246115728863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8439862571585047939}
+  m_Layer: 0
+  m_Name: T2_Cape_l_bone_09
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8439862571585047939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6471988246115728863}
+  m_LocalRotation: {x: 0.00000020971282, y: -0.000000029177428, z: 0.000000014588722,
+    w: 1}
+  m_LocalPosition: {x: -0.0000038146973, y: -0.0000038146973, z: 0.0000011920929}
+  m_LocalScale: {x: 1.5321252, y: 1.5321251, z: 1.5321251}
+  m_Children:
+  - {fileID: 725447285414053794}
+  m_Father: {fileID: 8819142882881341892}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6672743024149205053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5158723381756694954}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_legLow_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5158723381756694954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6672743024149205053}
+  m_LocalRotation: {x: 0.000000038043954, y: -0.000000011755612, z: -0.11124154, w: 0.9937934}
+  m_LocalPosition: {x: -13.28594, y: -0.000001430511, z: 0.000002384186}
+  m_LocalScale: {x: 1, y: 1, z: 0.9999998}
+  m_Children:
+  - {fileID: 3263737065364441811}
+  m_Father: {fileID: 432273247853408775}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6683851121027867555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5323438531098178687}
+  m_Layer: 0
+  m_Name: T2_CapeBack_ctrl_002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5323438531098178687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6683851121027867555}
+  m_LocalRotation: {x: 0, y: -0, z: -0.16876231, w: 0.9856568}
+  m_LocalPosition: {x: -2.56002, y: -0.000002861023, z: 0}
+  m_LocalScale: {x: 0.6526882, y: 0.6526882, z: 0.6526883}
+  m_Children:
+  - {fileID: 1190239435705717270}
+  m_Father: {fileID: 7658195374147601805}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6754190346531902966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 280143408273902499}
+  m_Layer: 0
+  m_Name: T2_CapeBack_ctrl_009
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &280143408273902499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6754190346531902966}
+  m_LocalRotation: {x: 0, y: -0, z: -0.028081404, w: 0.99960566}
+  m_LocalPosition: {x: -3.448816, y: 0.000001907349, z: 0}
+  m_LocalScale: {x: 0.6526883, y: 0.6526883, z: 0.6526883}
+  m_Children:
+  - {fileID: 8586149329102337095}
+  m_Father: {fileID: 321787716905042455}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6760940480834865742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 471694518151310492}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_fingerB_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &471694518151310492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6760940480834865742}
+  m_LocalRotation: {x: -0.00000021649066, y: 0.7071067, z: 0.00000021649062, w: 0.7071068}
+  m_LocalPosition: {x: -0.00000047683716, y: 0, z: 0}
+  m_LocalScale: {x: 0.59621406, y: 0.59621406, z: 0.5962138}
+  m_Children:
+  - {fileID: 4862869476719684217}
+  m_Father: {fileID: 2418305627648593505}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6790462904829615202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5959097013963758601}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_hand_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5959097013963758601
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6790462904829615202}
+  m_LocalRotation: {x: 0, y: 0.70710665, z: 0, w: 0.70710695}
+  m_LocalPosition: {x: -0.000001430511, y: 0.000008583069, z: -0.000001907349}
+  m_LocalScale: {x: 0.5962138, y: 0.5962141, z: 0.5962142}
+  m_Children:
+  - {fileID: 4786596936675500573}
+  - {fileID: 2886858907289565506}
+  m_Father: {fileID: 4677147644202581082}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6829225299244697483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5340070285462390372}
+  m_Layer: 0
+  m_Name: T2_Cape_l_bone_11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5340070285462390372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6829225299244697483}
+  m_LocalRotation: {x: 0.000000006519258, y: 3.1329102e-15, z: 0.0000004805624, w: 1}
+  m_LocalPosition: {x: -4.41247, y: 0, z: 0.000002026558}
+  m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5729205527833684247}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6858358402343913567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3360234171688171751}
+  m_Layer: 0
+  m_Name: T2_Cape_l_ctrl_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3360234171688171751
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6858358402343913567}
+  m_LocalRotation: {x: 0.26949668, y: -0.6174721, z: 0.6507355, w: 0.35020423}
+  m_LocalPosition: {x: -7.615593, y: -4.047699, z: -7.688198}
+  m_LocalScale: {x: 0.652688, y: 0.6526882, z: 0.6526882}
+  m_Children:
+  - {fileID: 2096080814916732960}
+  m_Father: {fileID: 7425986900212764240}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7021368827885899007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4786596936675500573}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_fingerA_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4786596936675500573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7021368827885899007}
+  m_LocalRotation: {x: 0.002489204, y: -0.73263466, z: 0.06867045, w: 0.67714447}
+  m_LocalPosition: {x: -4.740124, y: 0.2994976, z: 0.04279518}
+  m_LocalScale: {x: 1.67725, y: 1.677249, z: 1.67725}
+  m_Children:
+  - {fileID: 8899765417251836121}
+  m_Father: {fileID: 5959097013963758601}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7058824097881331728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 946274198543302738}
+  m_Layer: 0
+  m_Name: T2_Cape_l_ctrl_002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &946274198543302738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7058824097881331728}
+  m_LocalRotation: {x: -0.00000022088241, y: -0.00000030190438, z: 0.059376106, w: 0.9982357}
+  m_LocalPosition: {x: -3.551207, y: 0.000002145767, z: -0.00001144409}
+  m_LocalScale: {x: 0.6526883, y: 0.6526884, z: 0.6526883}
+  m_Children:
+  - {fileID: 3134630039776406619}
+  m_Father: {fileID: 2096080814916732960}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7241795037621603714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 457699698469656541}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_foot_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &457699698469656541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7241795037621603714}
+  m_LocalRotation: {x: 0, y: -0, z: -0.087155744, w: 0.9961947}
+  m_LocalPosition: {x: -8.155876, y: -1.332825, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8974747902076497241}
+  - {fileID: 1507092678133520635}
+  m_Father: {fileID: 2895335230273668587}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7407143706490106344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3263737065364441811}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_legEnd_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3263737065364441811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7407143706490106344}
+  m_LocalRotation: {x: -0.00000026356426, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: -13.02127, y: -0.000001192093, z: -0.000001907349}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5158723381756694954}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7426325790625668806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3952817560815451515}
+  m_Layer: 0
+  m_Name: T2_CapeBack_bone_05
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3952817560815451515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7426325790625668806}
+  m_LocalRotation: {x: 0.00000003663149, y: -0.000000020883405, z: -0.00000008753232,
+    w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5321249, y: 1.5321249, z: 1.532125}
+  m_Children:
+  - {fileID: 5678112256931952324}
+  m_Father: {fileID: 6338301250498553558}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7428633308194722183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4029329866787573197}
+  m_Layer: 0
+  m_Name: T2_CapeBack_bone_14
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4029329866787573197
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7428633308194722183}
+  m_LocalRotation: {x: 0.00000003697071, y: -0.000000021596549, z: -0.000000009725812,
+    w: 1}
+  m_LocalPosition: {x: 0.0000009536743, y: 0.0000038146973, z: 0}
+  m_LocalScale: {x: 1.5321249, y: 1.5321249, z: 1.532125}
+  m_Children:
+  - {fileID: 7877727966545131290}
+  m_Father: {fileID: 7429155453692034893}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7515186000713462926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 830566863826679296}
+  m_Layer: 0
+  m_Name: T2_Vampire_spineA_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &830566863826679296
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7515186000713462926}
+  m_LocalRotation: {x: -0.006771854, y: 0.70707446, z: -0.0067716655, w: 0.70707434}
+  m_LocalPosition: {x: -0.0000002944931, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 1}
+  m_Children:
+  - {fileID: 3104979265321783332}
+  m_Father: {fileID: 2158886992147896190}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7519774584699865302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5644477951216368815}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_arm_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5644477951216368815
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7519774584699865302}
+  m_LocalRotation: {x: -0.0000028719032, y: -0.70704466, z: 0.009376111, w: 0.70710677}
+  m_LocalPosition: {x: 0.000001907349, y: -0.0000004768372, z: 0}
+  m_LocalScale: {x: 0.5962142, y: 0.5962142, z: 0.596214}
+  m_Children:
+  - {fileID: 4996506285751523391}
+  m_Father: {fileID: 5559237258480287257}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7581715059400022936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 432273247853408775}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_legUp_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &432273247853408775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7581715059400022936}
+  m_LocalRotation: {x: 0.99757975, y: -0.029415226, z: 0.062994994, w: -0.001011567}
+  m_LocalPosition: {x: 5.472338, y: -0.8553491, z: -4.317222}
+  m_LocalScale: {x: 1, y: 0.9999999, z: 1}
+  m_Children:
+  - {fileID: 5158723381756694954}
+  m_Father: {fileID: 3449093822633892376}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7597446762640482957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2952702460843873500}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_clav_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2952702460843873500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7597446762640482957}
+  m_LocalRotation: {x: -0.48928905, y: 0.5110242, z: -0.5060084, w: -0.4933619}
+  m_LocalPosition: {x: -5.474277, y: -0.2745348, z: -2.262154}
+  m_LocalScale: {x: 0.9999998, y: 1, z: 0.9999999}
+  m_Children:
+  - {fileID: 5559237258480287257}
+  - {fileID: 2074936014509141309}
+  m_Father: {fileID: 7425986900212764240}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7881346396758334657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7658195374147601805}
+  m_Layer: 0
+  m_Name: T2_CapeBack_bone_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7658195374147601805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7881346396758334657}
+  m_LocalRotation: {x: 0.000000043711392, y: 0.000000043711385, z: 0.000000058354885,
+    w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1.532125, y: 1.532125, z: 1.532125}
+  m_Children:
+  - {fileID: 5323438531098178687}
+  m_Father: {fileID: 5533115719546820133}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7884842352257235374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5533115719546820133}
+  m_Layer: 0
+  m_Name: T2_CapeBack_ctrl_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5533115719546820133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7884842352257235374}
+  m_LocalRotation: {x: -0.015767492, y: 0.00686469, z: 0.9073738, w: -0.41997266}
+  m_LocalPosition: {x: -7.119862, y: 5.059538, z: -0.5598412}
+  m_LocalScale: {x: 0.6526883, y: 0.652688, z: 0.6526881}
+  m_Children:
+  - {fileID: 7658195374147601805}
+  m_Father: {fileID: 7425986900212764240}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7912984384610747335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 94331432614608734}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_arm_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &94331432614608734
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7912984384610747335}
+  m_LocalRotation: {x: 0.025954317, y: 0.35711053, z: -0.13300188, w: 0.92418015}
+  m_LocalPosition: {x: -7.157828, y: -0.000003814697, z: -0.00001144409}
+  m_LocalScale: {x: 1.67725, y: 1.67725, z: 1.67725}
+  m_Children:
+  - {fileID: 4493575378778121509}
+  m_Father: {fileID: 6275037361760451022}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8003825739885297343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5559237258480287257}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_arm_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5559237258480287257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8003825739885297343}
+  m_LocalRotation: {x: -0.6947513, y: 0.16549602, z: -0.108521916, w: 0.6914873}
+  m_LocalPosition: {x: -6.587996, y: -2.445339, z: -1.361291}
+  m_LocalScale: {x: 1.67725, y: 1.67725, z: 1.67725}
+  m_Children:
+  - {fileID: 5644477951216368815}
+  m_Father: {fileID: 2952702460843873500}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8097044112834486609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1179204327704137745}
+  m_Layer: 0
+  m_Name: T2_CapeBack_ctrl_011
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1179204327704137745
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8097044112834486609}
+  m_LocalRotation: {x: 0, y: 0, z: 0.00570461, w: 0.9999837}
+  m_LocalPosition: {x: -3.254765, y: 0.000001907349, z: 0}
+  m_LocalScale: {x: 0.6526881, y: 0.6526881, z: 0.6526883}
+  m_Children:
+  - {fileID: 5570235039678958305}
+  m_Father: {fileID: 7309673521979941189}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8361579807747585397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7438620121869206236}
+  m_Layer: 0
+  m_Name: T2_Vampire_neck_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7438620121869206236
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8361579807747585397}
+  m_LocalRotation: {x: 0.06567315, y: 0.70405054, z: 0.06567305, w: 0.70405036}
+  m_LocalPosition: {x: -0.00000000372529, y: 0, z: 0.000003814697}
+  m_LocalScale: {x: 0.8587559, y: 0.8587559, z: 0.858756}
+  m_Children:
+  - {fileID: 2343226676448163409}
+  m_Father: {fileID: 7130215454270057023}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8439538405652399548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5678112256931952324}
+  m_Layer: 0
+  m_Name: T2_CapeBack_ctrl_006
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5678112256931952324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8439538405652399548}
+  m_LocalRotation: {x: 0, y: -0, z: -0.024361977, w: 0.9997032}
+  m_LocalPosition: {x: -3.805561, y: 0.00004768372, z: 0.000003814697}
+  m_LocalScale: {x: 0.6526883, y: 0.6526883, z: 0.6526883}
+  m_Children:
+  - {fileID: 7796078613974612261}
+  m_Father: {fileID: 3952817560815451515}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8444396419425239725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7429155453692034893}
+  m_Layer: 0
+  m_Name: T2_CapeBack_ctrl_014
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7429155453692034893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8444396419425239725}
+  m_LocalRotation: {x: 0, y: 0, z: 0.02516958, w: 0.9996832}
+  m_LocalPosition: {x: -2.114092, y: -0.0000009536743, z: 0}
+  m_LocalScale: {x: 0.6526883, y: 0.6526883, z: 0.6526883}
+  m_Children:
+  - {fileID: 4029329866787573197}
+  m_Father: {fileID: 940690295547333170}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8463358716069024755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1873963429574154211}
+  m_Layer: 0
+  m_Name: T2_Cape_r_ctrl_002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1873963429574154211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8463358716069024755}
+  m_LocalRotation: {x: -6.476004e-17, y: -5.748857e-17, z: -0.059376054, w: 0.9982357}
+  m_LocalPosition: {x: -3.551207, y: 0.00000333786, z: 0}
+  m_LocalScale: {x: 0.6526883, y: 0.6526883, z: 0.6526883}
+  m_Children:
+  - {fileID: 6246529697511726224}
+  m_Father: {fileID: 4940742978569659134}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8510571242787019479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6921133377358456011}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_fingerA_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6921133377358456011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8510571242787019479}
+  m_LocalRotation: {x: -0.00000026329565, y: 0.70710665, z: 0.00000026329556, w: 0.70710695}
+  m_LocalPosition: {x: -0.000001907349, y: 0, z: 0}
+  m_LocalScale: {x: 0.5962143, y: 0.5962142, z: 0.5962141}
+  m_Children:
+  - {fileID: 2418305627648593505}
+  m_Father: {fileID: 96284583175204415}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8550560316777875475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3134630039776406619}
+  m_Layer: 0
+  m_Name: T2_Cape_l_bone_02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3134630039776406619
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8550560316777875475}
+  m_LocalRotation: {x: 0.000000012157267, y: -0.0000000121572645, z: 0.000000058354875,
+    w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5321248, y: 1.5321252, z: 1.5321249}
+  m_Children:
+  - {fileID: 4227175763524797455}
+  m_Father: {fileID: 946274198543302738}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8588776796055038806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1595317777357424676}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_foot_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1595317777357424676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8588776796055038806}
+  m_LocalRotation: {x: 0.00000001490117, y: 0.00000024586916, z: -0.000000044703487,
+    w: 1}
+  m_LocalPosition: {x: -0, y: -0.0000004768372, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6113497518429107020}
+  m_Father: {fileID: 6934766778618467332}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8597907536757254507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1190239435705717270}
+  m_Layer: 0
+  m_Name: T2_CapeBack_bone_02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1190239435705717270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8597907536757254507}
+  m_LocalRotation: {x: 0.00000003220466, y: -0.000000004429316, z: 1.4264462e-16,
+    w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: -4.5474735e-13}
+  m_LocalScale: {x: 1.532125, y: 1.532125, z: 1.5321249}
+  m_Children:
+  - {fileID: 8462036988567448407}
+  m_Father: {fileID: 5323438531098178687}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8615475466114205087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7309673521979941189}
+  m_Layer: 0
+  m_Name: T2_CapeBack_bone_10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7309673521979941189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8615475466114205087}
+  m_LocalRotation: {x: 0.000000037251546, y: -0.000000022165766, z: 0.000000009725812,
+    w: 1}
+  m_LocalPosition: {x: 0.0000019073486, y: 0.0000019073486, z: 0}
+  m_LocalScale: {x: 1.5321252, y: 1.5321252, z: 1.5321249}
+  m_Children:
+  - {fileID: 1179204327704137745}
+  m_Father: {fileID: 5656658673215606988}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8659137174747567356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2559564296833000930}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_clav_ctrl 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2559564296833000930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8659137174747567356}
+  m_LocalRotation: {x: -0.5110968, y: 0.53186315, z: -0.48398894, w: -0.470804}
+  m_LocalPosition: {x: -5.588741, y: -0.2771533, z: 1.065061}
+  m_LocalScale: {x: 0.9999996, y: 1, z: 0.9999999}
+  m_Children:
+  - {fileID: 6275037361760451022}
+  m_Father: {fileID: 7425986900212764240}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8695772413566050492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8542600276325129406}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_leg_ikChain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8542600276325129406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8695772413566050492}
+  m_LocalRotation: {x: -0.5236063, y: 0.41929948, z: 0.6643664, w: 0.32960838}
+  m_LocalPosition: {x: 0.0000002384186, y: -0.000001907349, z: 0}
+  m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6113497518429107020}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8732007226559211846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6050737233577870800}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_handEnd_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6050737233577870800
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8732007226559211846}
+  m_LocalRotation: {x: -0.0000000116415375, y: -0.000000029802315, z: -0.0000002365559,
+    w: 1}
+  m_LocalPosition: {x: -4.4326916, y: 0.0000019073486, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6055931324986112839}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8745493199089192441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2343226676448163409}
+  m_Layer: 0
+  m_Name: T2_Vampire_head_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2343226676448163409
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8745493199089192441}
+  m_LocalRotation: {x: 0.1303665, y: 0.6949853, z: -0.00041890674, w: 0.7071067}
+  m_LocalPosition: {x: -3.379181, y: 0, z: 0.00000000372529}
+  m_LocalScale: {x: 1.40635, y: 1.40635, z: 1.40635}
+  m_Children:
+  - {fileID: 3219936499347895061}
+  m_Father: {fileID: 7438620121869206236}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8870107672413640335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2186741062084638404}
+  m_Layer: 0
+  m_Name: T2_Cape_r_ctrl_004
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2186741062084638404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8870107672413640335}
+  m_LocalRotation: {x: 0.0014673657, y: 0.035869073, z: -0.040843595, w: 0.99852043}
+  m_LocalPosition: {x: -6.042847, y: -0.000003814697, z: 0}
+  m_LocalScale: {x: 0.6526882, y: 0.6526881, z: 0.6526883}
+  m_Children:
+  - {fileID: 5209377991042598133}
+  m_Father: {fileID: 4890647787625292772}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8870477417348395876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2114432493819968108}
+  m_Layer: 0
+  m_Name: T2_Cape_r_bone_08
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2114432493819968108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8870477417348395876}
+  m_LocalRotation: {x: 0.000000019451628, y: 0.000000009725813, z: -0.000000034040347,
+    w: 1}
+  m_LocalPosition: {x: -0.0000019073486, y: 0, z: -0.00000047683716}
+  m_LocalScale: {x: 1.532125, y: 1.5321249, z: 1.5321249}
+  m_Children:
+  - {fileID: 741219041414144053}
+  m_Father: {fileID: 9155657521573532587}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8879036638474243664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1869930406622427919}
+  m_Layer: 0
+  m_Name: T2_Vampire_spineD_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1869930406622427919
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8879036638474243664}
+  m_LocalRotation: {x: -0.0054895873, y: -0.71913546, z: -0.0060593737, w: 0.6948218}
+  m_LocalPosition: {x: -4.647659, y: 0.0000795126, z: -0.318699}
+  m_LocalScale: {x: 0.9999997, y: 0.9999993, z: 0.9999995}
+  m_Children:
+  - {fileID: 7425986900212764240}
+  m_Father: {fileID: 5583194872285650555}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8952265661263561204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4227175763524797455}
+  m_Layer: 0
+  m_Name: T2_Cape_l_ctrl_003
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4227175763524797455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8952265661263561204}
+  m_LocalRotation: {x: 0.000000052192117, y: 0.000000007945037, z: 0.15049306, w: 0.9886111}
+  m_LocalPosition: {x: -4.231485, y: -0.00001335144, z: 0.00001525879}
+  m_LocalScale: {x: 0.6526881, y: 0.6526883, z: 0.6526883}
+  m_Children:
+  - {fileID: 8578256994173131931}
+  m_Father: {fileID: 3134630039776406619}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8970913267239964085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7649276945917183781}
+  m_Layer: 0
+  m_Name: T2_Vampire_r_foot_ctrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7649276945917183781
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970913267239964085}
+  m_LocalRotation: {x: 0, y: 0, z: 0.087155744, w: 0.9961947}
+  m_LocalPosition: {x: 8.112633, y: -1.332825, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6395422702468562050}
+  - {fileID: 1248160483275008363}
+  m_Father: {fileID: 2895335230273668587}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9076204426220594134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7640327318449768830}
+  m_Layer: 0
+  m_Name: T2_Cape_l_ctrl_005
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7640327318449768830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9076204426220594134}
+  m_LocalRotation: {x: 0.00000004135769, y: -0.000000022865075, z: -0.032961115, w: 0.99945664}
+  m_LocalPosition: {x: -6.200102, y: 0.0000004768372, z: 0.000007629395}
+  m_LocalScale: {x: 0.6526883, y: 0.6526883, z: 0.6526883}
+  m_Children:
+  - {fileID: 2052951364426957867}
+  m_Father: {fileID: 5497626285717863019}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9134309367600970270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 321787716905042455}
+  m_Layer: 0
+  m_Name: T2_CapeBack_bone_08
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &321787716905042455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9134309367600970270}
+  m_LocalRotation: {x: 0.0000000374571, y: -0.000000022571095, z: 8.454478e-16, w: 1}
+  m_LocalPosition: {x: -0.0000038146973, y: 0, z: 0}
+  m_LocalScale: {x: 1.5321254, y: 1.5321254, z: 1.532125}
+  m_Children:
+  - {fileID: 280143408273902499}
+  m_Father: {fileID: 4448335503865334771}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9142602909313189301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2456113290632144164}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_FingerEnd_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2456113290632144164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9142602909313189301}
+  m_LocalRotation: {x: 0.0000002421439, y: 0.000000067055254, z: 0.000000014901151,
+    w: 1}
+  m_LocalPosition: {x: -2.6186962, y: -0.0000009536743, z: 0.000009536743}
+  m_LocalScale: {x: 0.99999964, y: 1, z: 0.9999998}
+  m_Children: []
+  m_Father: {fileID: 1380266977358466782}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9173640602088636097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6329061295239957531}
+  m_Layer: 0
+  m_Name: T2_CapeBack_bone_04
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6329061295239957531
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9173640602088636097}
+  m_LocalRotation: {x: 0.000000036724245, y: -0.00000002108123, z: 7.7419224e-16,
+    w: 1}
+  m_LocalPosition: {x: -0, y: 0.0000019073486, z: 0}
+  m_LocalScale: {x: 1.532125, y: 1.532125, z: 1.5321251}
+  m_Children:
+  - {fileID: 6338301250498553558}
+  m_Father: {fileID: 7095347896717826302}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9180625226904991060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1380266977358466782}
+  m_Layer: 0
+  m_Name: T2_Vampire_l_fingerB_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1380266977358466782
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9180625226904991060}
+  m_LocalRotation: {x: -0.000000004418174, y: 0.70710665, z: 0.0000000044181725, w: 0.7071069}
+  m_LocalPosition: {x: -0, y: 0.0000019073486, z: 0.0000019073486}
+  m_LocalScale: {x: 0.5962142, y: 0.5962141, z: 0.59621423}
+  m_Children:
+  - {fileID: 2456113290632144164}
+  m_Father: {fileID: 7825223800875851268}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9185098076564536664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6964524992981048078}
+  m_Layer: 0
+  m_Name: T2_Vampire_headEnd_bone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6964524992981048078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9185098076564536664}
+  m_LocalRotation: {x: 0.00000007549792, y: -0.000000043711413, z: 0.00000019371511,
+    w: 1}
+  m_LocalPosition: {x: -10.249546, y: -0.000005722046, z: 0.0000076293945}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3219936499347895061}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
