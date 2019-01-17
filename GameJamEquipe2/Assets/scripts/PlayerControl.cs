@@ -41,12 +41,18 @@ public class PlayerControl : MonoBehaviour
 
     public List<GameObject> gameObjectsInterractable;
 
+
+    public AudioClip audioWalk;
+    public AudioClip audioRun;
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
         initialSpeed = movementSpeed;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -98,7 +104,21 @@ public class PlayerControl : MonoBehaviour
        movementVector.y -= gravity * Time.deltaTime;
 
 
-       characterController.Move(movementVector * Time.deltaTime * movementSpeed);
+        characterController.Move(movementVector * Time.deltaTime * movementSpeed);
+        
+        
+        if (characterController.velocity != Vector3.zero)
+        {
+            if (isDashing)
+            {
+                audioSource.clip = audioRun;
+            }
+            else
+            {
+                audioSource.clip = audioWalk;
+            }
+        }
+
 
         if (horizontalInput != 0 || verticalInput != 0)
         {
@@ -318,7 +338,10 @@ public class PlayerControl : MonoBehaviour
         movementSpeed = initialSpeed;
 
         if (movementSpeed < initialSpeed)
+        {
             movementSpeed = initialSpeed;
+            isDashing = false;
+        }
         /*if(movementSpeed > initialSpeed)
             StartCoroutine(Dash(0.25f));*/
 

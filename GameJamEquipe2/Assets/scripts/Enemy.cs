@@ -90,7 +90,7 @@ public abstract class Enemy : MonoBehaviour
 
     }
 
-    protected void death()
+    protected virtual void death()
     {
         Destroy(this.gameObject);
     }

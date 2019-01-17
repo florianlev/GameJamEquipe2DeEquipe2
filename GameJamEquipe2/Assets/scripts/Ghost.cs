@@ -10,6 +10,17 @@ public class Ghost : Enemy
     public Transform destination;
     private Vector3 lookDirection;
 
+    private AudioSource audioSource;
+    public AudioClip ghostHowl;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = ghostHowl;
+
+        audioSource.Play();
+    }
+
 
     // Update is called once per frame
     void Update()
