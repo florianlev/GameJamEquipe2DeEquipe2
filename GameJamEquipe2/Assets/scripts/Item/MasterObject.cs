@@ -7,10 +7,11 @@ public class MasterObject : MonoBehaviour
 
     public int numberCharge;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -27,6 +28,7 @@ public class MasterObject : MonoBehaviour
     public void SetParent(Transform transformParent)
     {
         this.gameObject.transform.parent = transformParent;
+        this.gameObject.transform.localScale = new Vector3(1, 1, 1);
         if (transformParent != null)
         {
             this.GetComponent<Rigidbody>().isKinematic = true;

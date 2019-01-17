@@ -37,6 +37,7 @@ public class Table : MonoBehaviour
         objectOnTable = newObjectOnTable;
         //objectOnTable.PlaceOnTable(transformPointForObject);
         objectOnTable.transform.position = transformPointForObject.position;
+        objectOnTable.transform.rotation = transformPointForObject.rotation;
         objectOnTable.SetParent(transformPointForObject);
     }
 
