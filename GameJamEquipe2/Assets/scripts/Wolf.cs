@@ -8,10 +8,18 @@ public class Wolf : Enemy
 
     private float timeBeforeDestruction = 4f;
 
+    public AudioClip audioHowl;
+    public AudioClip audioDeathHowl;
+
+    private AudioSource audioSource;
+
 
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
+
+        audioSource.clip = audioHowl;
+        audioSource.Play();
     }
 
     // Update is called once per frame
@@ -31,6 +39,13 @@ public class Wolf : Enemy
 
         }
 
+    }
+
+    protected override void death()
+    {
+        audioSource.clip = audioDeathHowl;
+        audioSource.Play();
+        base.death();
     }
 
 
