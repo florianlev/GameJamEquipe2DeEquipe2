@@ -15,9 +15,12 @@ public class Ghost : Enemy
     void Update()
     {
         float step = speed * Time.deltaTime;
+        Vector3 relativePos = destination.position - transform.position;
 
         transform.position = Vector3.MoveTowards(transform.position, destination.position, step);
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(destination.position), 0.3f);
+        Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
+
+        transform.rotation = rotation;
 
     }
 
@@ -37,7 +40,6 @@ public class Ghost : Enemy
 
         if (interractedObject.GetType() == typeof(Cross))
         {
-
             StartCoroutine(delaySpawnParticle());
 
         }

@@ -174,7 +174,7 @@ public class PlayerControl : MonoBehaviour
                 }
                 else
                 {
-                    if (gameObject.GetComponent<Enemy>())
+                    if (gameObject.GetComponent<Enemy>() && !gameObject.GetComponent<Enemy>().isDead)
                     {
                         animator.SetTrigger("attack");
                         Debug.Log("object have Enemy");

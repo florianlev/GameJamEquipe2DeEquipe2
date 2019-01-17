@@ -16,6 +16,8 @@ public abstract class Enemy : MonoBehaviour
     public float timeBeforeHiddenMesh = 3;
     public float timeBeforeDestroyObject = 4;
 
+    public bool isDead = false;
+
 
 
     // Start is called before the first frame update
@@ -45,6 +47,7 @@ public abstract class Enemy : MonoBehaviour
      
         if (collider.gameObject.tag == "zone1")
         {
+
             stressManager.SlowStressIncrease(power);
         }
     }
@@ -64,6 +67,7 @@ public abstract class Enemy : MonoBehaviour
 
     public IEnumerator delaySpawnParticle()
     {
+        isDead = true;
         GameObject particle = Instantiate(particleDeath, transform.position, transform.rotation);
         var emission = particle.GetComponent<ParticleSystem>().emission;
 
@@ -77,6 +81,8 @@ public abstract class Enemy : MonoBehaviour
         yield return new WaitForSeconds(timeBeforeDestroyObject);
         Destroy(particle);
         death();
+
+
     }
 
     void attack()

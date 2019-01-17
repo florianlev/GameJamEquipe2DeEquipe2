@@ -57,7 +57,7 @@ public class StressManager : MonoBehaviour
             aiObject = GameObject.FindWithTag("client");
             Ai = aiObject.GetComponent<AI>();
             Ai.setDestination();
-            //SceneManager.LoadScene("GameOver");
+            StartCoroutine(gameOver());
         }
 
     }
@@ -74,6 +74,14 @@ public class StressManager : MonoBehaviour
     }
 
 
-    
+    IEnumerator gameOver()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("GameOver");
+
+    }
+
+
+
 
 }

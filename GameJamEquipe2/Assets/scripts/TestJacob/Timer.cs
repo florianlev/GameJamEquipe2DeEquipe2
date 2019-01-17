@@ -13,7 +13,6 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TimeText = GetComponentInChildren<Text>();
         DontDestroyOnLoad(this.gameObject);
     }
 
