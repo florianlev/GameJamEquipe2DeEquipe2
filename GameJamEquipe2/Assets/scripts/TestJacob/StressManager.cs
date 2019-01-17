@@ -19,6 +19,10 @@ public class StressManager : MonoBehaviour
     GameObject aiObject;
     private AI Ai;
 
+    public AudioClip audioClip50Percent;
+    public AudioClip audioClip75Percent;
+    private AudioSource audioSource;
+
 
 
     // Update is called once per frame
@@ -28,6 +32,7 @@ public class StressManager : MonoBehaviour
         timer = FindObjectOfType<Timer>();
         stressBar.value = calculateStress();
         animator = gameObject.GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -36,6 +41,20 @@ public class StressManager : MonoBehaviour
         {
             CurrentStress -= Time.deltaTime / StressReductionRate;
             stressBar.value = calculateStress();
+            if (stressBar.value >= 75)
+            {
+                audioSource.clip = audioClip75Percent;
+                audioSource.Play();
+            }
+            else if (stressBar.value >= 50)
+            {
+                audioSource.clip = audioClip50Percent;
+                audioSource.Play();
+            }
+            else
+            {
+                audioSource.Stop();
+            }
 
         }
 
