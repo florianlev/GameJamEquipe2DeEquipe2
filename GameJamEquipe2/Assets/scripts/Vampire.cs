@@ -15,10 +15,9 @@ public class Vampire : Enemy
     void Start()
     {
         _navMeshAgent = this.GetComponent<NavMeshAgent>();
-        if (_navMeshAgent.speed > 0)
-        {
-            this.gameObject.GetComponent<Animator>().SetBool("isWalk", true);
-        }
+
+        this.gameObject.GetComponent<Animator>().SetBool("isWalk", true);
+       
 
     }
 
