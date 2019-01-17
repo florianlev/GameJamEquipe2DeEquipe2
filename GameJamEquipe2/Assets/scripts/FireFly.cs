@@ -16,7 +16,8 @@ public class FireFly : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "aubergiste")
+        Debug.Log("allo?");
+        if (other.gameObject.tag == "Player")
         {
             audioSource.clip = audioClipFireFly;
             audioSource.Play();
@@ -25,7 +26,7 @@ public class FireFly : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == "aubergiste")
+        if (other.gameObject.tag == "Player")
         {
             audioSource.Stop();
         }
