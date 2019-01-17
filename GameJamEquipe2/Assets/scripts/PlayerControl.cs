@@ -123,6 +123,11 @@ public class PlayerControl : MonoBehaviour
             }
         }
 
+        else if (characterController.velocity == Vector3.zero && audioSource.clip != audioRun)
+        {
+            audioSource.Stop();
+        }
+
 
         if (horizontalInput != 0 || verticalInput != 0)
         {
