@@ -796,18 +796,14 @@ MonoBehaviour:
   - {fileID: 161796853}
   - {fileID: 108869063}
   - {fileID: 747070004}
-  - {fileID: 1326489737}
-  - {fileID: 1439251177}
-  - {fileID: 565667580}
-  - {fileID: 1502126834}
-  - {fileID: 275791201}
   wolfSpawns:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  vampireSpawns: []
+  vampireSpawns:
+  - {fileID: 1414572575}
   initialWolfSpawnTime: 120
-  initialVampireSpawnTime: 240
+  initialVampireSpawnTime: 4
   ghostMinSpawnTime: 2
   ghostMaxSpawnTime: 4
   wolfMinSpawnTime: 2
@@ -817,7 +813,7 @@ MonoBehaviour:
   ghostPrefab: {fileID: 3955581832342799571, guid: 960bc3ba63a542e47bcaeb33b9041121,
     type: 3}
   wolfPrefab: {fileID: 809272690, guid: 88b71eab58fbd1045aeb8917b27c76e0, type: 3}
-  vampirePrefab: {fileID: 0}
+  vampirePrefab: {fileID: 176058624, guid: 2a7b8359c2174c54fb9ab86fa5ad63e3, type: 3}
 --- !u!4 &51038735
 Transform:
   m_ObjectHideFlags: 0
@@ -830,6 +826,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1151662556}
+  - {fileID: 323842026}
   m_Father: {fileID: 49870468}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6416,6 +6413,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 8a3afaeccb2ddc1439ce3463f2ae51b3, type: 3}
+--- !u!1 &323842025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 323842026}
+  m_Layer: 0
+  m_Name: Vampire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &323842026
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323842025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1414572576}
+  m_Father: {fileID: 51038735}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &339396057
 GameObject:
   m_ObjectHideFlags: 0
@@ -88176,6 +88204,36 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: b38d92375f3920948893ff98b8ef1df4, type: 3}
+--- !u!1 &1414572575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1414572576}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1414572576
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414572575}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.881, y: 59.87, z: -94.031}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 323842026}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1416919297
 GameObject:
   m_ObjectHideFlags: 0

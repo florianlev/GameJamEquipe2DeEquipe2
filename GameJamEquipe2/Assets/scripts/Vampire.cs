@@ -9,13 +9,13 @@ public class Vampire : Enemy
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public override void Interracted(MasterObject interractedObject)

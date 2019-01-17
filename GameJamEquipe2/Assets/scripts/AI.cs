@@ -12,19 +12,23 @@ public class AI : MonoBehaviour
     Transform _destination;
 
     NavMeshAgent _navMeshAgent;
+    private Animator animator;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
         _navMeshAgent = this.GetComponent<NavMeshAgent>();
-
-        if(_navMeshAgent == null)
+        animator = gameObject.GetComponent<Animator>();
+        animator.SetBool("isWalk", true);
+        if (_navMeshAgent == null)
         {
             Debug.LogError("Le nav mesh n'est pas attacher a : " + gameObject.name);
         }
         else if(gameObject.tag != "client")
         {
+
             setDestination();
         }
     }

@@ -35,14 +35,7 @@ public class Ghost : Enemy
 
     }
 
-    void OnTriggerEnter(Collider collider)
-    {
-        if (collider.gameObject.name == "zoneLit")
-        {
-
-            speed = 0;
-        }
-    }
+   
 
 
     public override void Interracted(MasterObject interractedObject)
