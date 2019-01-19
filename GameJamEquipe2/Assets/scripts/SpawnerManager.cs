@@ -12,13 +12,13 @@ public class SpawnerManager : MonoBehaviour
     public float initialVampireSpawnTime = 240;
 
     public float ghostMinSpawnTime = 2;
-    public float ghostMaxSpawnTime = 4;
+    public float ghostMaxSpawnTime = 7;
 
     public float wolfMinSpawnTime = 2;
-    public float wolfMaxSpawnTime = 4;
+    public float wolfMaxSpawnTime = 5;
 
     public float vampireMinSpawnTime = 2;
-    public float vampireMaxSpawnTime = 4;
+    public float vampireMaxSpawnTime = 7;
 
 
     public GameObject ghostPrefab;
@@ -37,6 +37,7 @@ public class SpawnerManager : MonoBehaviour
 
     private IEnumerator spawnGhost(float a_Delay)
     {
+
         yield return new WaitForSeconds(a_Delay);
         float t_NewDelay = Random.Range(ghostMinSpawnTime, ghostMaxSpawnTime);
         int t_SpawnPoint = Random.Range(0, ghostSpawns.Count);
@@ -65,4 +66,9 @@ public class SpawnerManager : MonoBehaviour
         StartCoroutine(spawnVampire(t_NewDelay));
     }
 
+    public void raiseTimeSpawn()
+    {
+        ghostMinSpawnTime++;
+        vampireMinSpawnTime++;
+    }
 }
