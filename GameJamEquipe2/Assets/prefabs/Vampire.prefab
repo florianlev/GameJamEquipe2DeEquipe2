@@ -136,8 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f198ca09f2b5dc04781e4a468942d78d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  power: 3
+  speed: 2
+  power: 2.5
   particleDeath: {fileID: 1000010823978654, guid: 3228a22491941734bb83ad691d17fcb9,
     type: 3}
   timeBeforeHiddenMesh: 0.23

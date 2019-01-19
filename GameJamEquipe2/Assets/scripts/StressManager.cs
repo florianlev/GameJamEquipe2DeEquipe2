@@ -37,6 +37,7 @@ public class StressManager : MonoBehaviour
 
     void Update()
     {
+
         if (!IsStressing && CurrentStress >= 0)
         {
             CurrentStress -= Time.deltaTime / StressReductionRate;

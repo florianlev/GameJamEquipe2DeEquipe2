@@ -55,6 +55,11 @@ public abstract class Enemy : MonoBehaviour
 
             stressManager.SlowStressIncrease(power);
         }
+        else
+        {
+            stressManager.onExitZoneStress();
+
+        }
     }
 
     void OnTriggerExit(Collider other)
@@ -62,6 +67,7 @@ public abstract class Enemy : MonoBehaviour
         stressManager.onExitZoneStress();
 
     }
+
 
  
 
