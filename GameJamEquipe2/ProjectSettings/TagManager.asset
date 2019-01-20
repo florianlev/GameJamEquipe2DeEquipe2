@@ -12,6 +12,8 @@ TagManager:
   - client
   - Spawner
   - table
+  - bomb
+  - player
   layers:
   - Default
   - TransparentFX

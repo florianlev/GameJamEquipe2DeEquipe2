@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
-
-    public GameObject bomb;
-
     void Start()
     {
         
@@ -17,8 +14,16 @@ public class Bomb : MonoBehaviour
         
     }
 
-    public void spawnBomb() {
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "player") {
+            Destroy(this.gameObject);
+        }
+    }
+
+    void killAllEnemy() {
 
     }
+
 
 }

@@ -21,9 +21,7 @@ public class SpawnerManager : MonoBehaviour
     public float vampireMinSpawnTime = 2;
     public float vampireMaxSpawnTime = 7;
 
-    public float spawnTimeBomb = 230;
-
-
+    public float spawnTimeBomb = 1;
 
     public GameObject ghostPrefab;
     public GameObject wolfPrefab;
@@ -76,9 +74,10 @@ public class SpawnerManager : MonoBehaviour
 
     private IEnumerator spawnBomb(float a_Delay) {
         yield return new WaitForSeconds(a_Delay);
+        Debug.Log("BOMB");
         float t_NewDelay = a_Delay + 60;
         Instantiate(bombPrefab, bombSpawn.transform.position, Quaternion.identity);
-
+        StartCoroutine(spawnBomb(t_NewDelay));
 
     }
 
