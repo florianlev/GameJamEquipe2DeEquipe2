@@ -7,20 +7,27 @@ public class Bomb : MonoBehaviour
 
     public Transform destination;
     GameObject camera;
-    float yDestination = 58;
+    float yDestination = 50;
     GameObject lightBomb;
     GameObject lightClientSpawn;
 
     private GameObject[] listParticles;
 
+    public AudioClip songGregorien;
+    private AudioSource audioSource;
 
-    private float speed = 0.2f;
+
+    private float speed = 0.4f;
 
     private void Start()
     {
         camera = GameObject.FindGameObjectWithTag("MainCamera");
         lightBomb = GameObject.FindGameObjectWithTag("LightBomb");
         lightClientSpawn = GameObject.FindGameObjectWithTag("light");
+        audioSource = GetComponent<AudioSource>();
+
+        audioSource.clip = songGregorien;
+        audioSource.Play();
 
     }
     void Update()
