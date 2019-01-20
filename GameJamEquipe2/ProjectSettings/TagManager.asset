@@ -11,6 +11,7 @@ TagManager:
   - zoneLit
   - client
   - Spawner
+  - table
   layers:
   - Default
   - TransparentFX
