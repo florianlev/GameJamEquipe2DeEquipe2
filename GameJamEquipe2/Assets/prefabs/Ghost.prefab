@@ -648,7 +648,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3955581832342799571}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.8603288
   m_Height: 2.4157078
@@ -970,7 +970,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5002073563282346086}
   - component: {fileID: 5170497923206947045}
-  m_Layer: 0
+  - component: {fileID: 9169045261368693933}
+  m_Layer: 13
   m_Name: T2_Ghost_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1060,6 +1061,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.514433, y: -0.08312106, z: -0.06027156}
     m_Extent: {x: 0.9328649, y: 1.1327755, z: 0.7338446}
   m_DirtyAABB: 0
+--- !u!136 &9169045261368693933
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4464684325436233557}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.7875044
+  m_Height: 5.637996
+  m_Direction: 1
+  m_Center: {x: -0.09524976, y: 2.92143, z: 0.13893698}
 --- !u!1 &4466750680385689517
 GameObject:
   m_ObjectHideFlags: 0
