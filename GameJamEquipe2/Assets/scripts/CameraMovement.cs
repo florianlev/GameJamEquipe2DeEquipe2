@@ -12,6 +12,8 @@ public class CameraMovement : MonoBehaviour
     public float zBias;
     public float speed;
 
+    private bool bombInExplosion = false;
+
 
     private void Start()
     {
@@ -59,7 +61,27 @@ public class CameraMovement : MonoBehaviour
         float step = speed * Time.deltaTime;
 
         // Move our position a step closer to the target.
-        transform.position = Vector3.MoveTowards(transform.position, new Vector3(middle.x, yBias, middle.z), step);
+        if (!bombInExplosion)
+        {
+            Debug.Log("CAMERAMOUVEMENTPLAYER");
+
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(middle.x, yBias, middle.z), step);
+
+        }
+        else if(bombInExplosion)
+        {
+            Debug.Log("CAMERAMOUVEMENT");
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, 7.1f, -10.57f), step);
+        }
+
+
+
+
+    }
+
+    public void moveCameraOnClient()
+    {
+        bombInExplosion = true;
     }
 
 
