@@ -6,6 +6,7 @@ public class Bomb : MonoBehaviour
 {
 
     public Transform destination;
+    public List<GameObject> enemyDeath;
     float yDestination = 58;
 
     private float speed = 0.2f;
