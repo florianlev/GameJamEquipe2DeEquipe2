@@ -8,6 +8,7 @@ public class SpawnerManager : MonoBehaviour
     public List<GameObject> wolfSpawns;
     public List<GameObject> vampireSpawns;
     public GameObject bombSpawn;
+    public Light lightBomb;
 
     public float initialWolfSpawnTime = 120;
     public float initialVampireSpawnTime = 240;
@@ -77,6 +78,8 @@ public class SpawnerManager : MonoBehaviour
         Debug.Log("BOMB");
         float t_NewDelay = a_Delay + 60;
         Instantiate(bombPrefab, bombSpawn.transform.position, Quaternion.identity);
+        Instantiate(lightBomb, bombSpawn.transform.position, Quaternion.Euler(90, 0, 0));
+
         StartCoroutine(spawnBomb(t_NewDelay));
 
     }
