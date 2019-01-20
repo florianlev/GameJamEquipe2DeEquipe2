@@ -9,6 +9,8 @@ public class Timer : MonoBehaviour
     public int seconds = 0;
     public int minutes = 0;
     float timeRise = 0;
+
+    
     public Text TimeText;
     public bool playerIsAlive = true;
     GameObject spawnerManagerObject;
@@ -38,10 +40,9 @@ public class Timer : MonoBehaviour
         seconds = (int)Survivaltime % 60;
         TimeText.text = "Time : " + minutes + " : " + seconds;
 
-        Debug.Log(timeRise);
+
         if(minutes == timeRise + 1)
         {
-            Debug.Log("TEST");
             timeRise++;
             spawnerManager.raiseTimeSpawn();
         }

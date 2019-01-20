@@ -7,6 +7,7 @@ public class SpawnerManager : MonoBehaviour
     public List<GameObject> ghostSpawns;
     public List<GameObject> wolfSpawns;
     public List<GameObject> vampireSpawns;
+    public GameObject bombSpawn;
 
     public float initialWolfSpawnTime = 120;
     public float initialVampireSpawnTime = 240;
@@ -20,10 +21,15 @@ public class SpawnerManager : MonoBehaviour
     public float vampireMinSpawnTime = 2;
     public float vampireMaxSpawnTime = 7;
 
+    public float spawnTimeBomb = 230;
+
+
 
     public GameObject ghostPrefab;
     public GameObject wolfPrefab;
     public GameObject vampirePrefab;
+
+    public GameObject bombPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +39,8 @@ public class SpawnerManager : MonoBehaviour
         StartCoroutine(spawnGhost(5));
         StartCoroutine(spawnWolf(initialWolfSpawnTime));
         StartCoroutine(spawnVampire(initialVampireSpawnTime));
+        StartCoroutine(spawnBomb(spawnTimeBomb));
+
     }
 
     private IEnumerator spawnGhost(float a_Delay)
@@ -64,6 +72,14 @@ public class SpawnerManager : MonoBehaviour
         Instantiate(vampirePrefab, vampireSpawns[t_SpawnPoint].transform.position, Quaternion.identity);
 
         StartCoroutine(spawnVampire(t_NewDelay));
+    }
+
+    private IEnumerator spawnBomb(float a_Delay) {
+        yield return new WaitForSeconds(a_Delay);
+        float t_NewDelay = a_Delay + 60;
+        Instantiate(bombPrefab, bombSpawn.transform.position, Quaternion.identity);
+
+
     }
 
     public void raiseTimeSpawn()
