@@ -33,8 +33,6 @@ public class SpawnerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
         StartCoroutine(spawnGhost(5));
         StartCoroutine(spawnWolf(initialWolfSpawnTime));
         StartCoroutine(spawnVampire(initialVampireSpawnTime));
@@ -60,7 +58,6 @@ public class SpawnerManager : MonoBehaviour
         int t_SpawnPoint = Random.Range(0, wolfSpawns.Count);
         
         Instantiate(wolfPrefab, wolfSpawns[t_SpawnPoint].transform.position, Quaternion.identity);
-
         StartCoroutine(spawnWolf(t_NewDelay));
     }
     private IEnumerator spawnVampire(float a_Delay)
