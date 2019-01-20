@@ -15,6 +15,9 @@ TagManager:
   - bomb
   - player
   - enemy
+  - LightBomb
+  - particle
+  - light
   layers:
   - Default
   - TransparentFX

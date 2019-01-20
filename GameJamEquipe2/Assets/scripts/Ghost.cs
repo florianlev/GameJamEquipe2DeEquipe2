@@ -12,6 +12,7 @@ public class Ghost : Enemy
 
     private AudioSource audioSource;
     public AudioClip ghostHowl;
+    private GameObject particle;
 
 
     private void Start()
@@ -65,10 +66,12 @@ public class Ghost : Enemy
 
     }
 
+
+
     IEnumerator delaySpawnParticle()
     {
         isDead = true;
-        GameObject particle = Instantiate(particleDeath, transform.position, transform.rotation);
+        particle = Instantiate(particleDeath, transform.position, transform.rotation);
         var emission = particle.GetComponent<ParticleSystem>().emission;
 
 

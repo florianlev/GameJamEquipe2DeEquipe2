@@ -78,6 +78,7 @@ public abstract class Enemy : MonoBehaviour
 
     }
 
+
     /*public IEnumerator delaySpawnParticle()
     {
         isDead = true;

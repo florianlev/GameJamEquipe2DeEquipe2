@@ -106,4 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 275806371070918833, guid: 9eeb04eace942f440aa51e83ba3f8743,
     type: 3}
-  camera: {fileID: 6518603457992584914, guid: 3c5af6ba4fb90b54f842b19fb7f6cbac, type: 3}
+  lightBomb: {fileID: 7733742250816278533, guid: edf6dd00dfc823044b95633dbef767fb,
+    type: 3}
+  bombSpawn: {fileID: 3146286303766620011, guid: 9b6fd141aca12b9409dbd41b9765e8f1,
+    type: 3}

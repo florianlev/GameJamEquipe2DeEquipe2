@@ -63,14 +63,13 @@ public class CameraMovement : MonoBehaviour
         // Move our position a step closer to the target.
         if (!bombInExplosion)
         {
-            Debug.Log("CAMERAMOUVEMENTPLAYER");
-
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(middle.x, yBias, middle.z), step);
 
         }
+
+        //If bomb explosion move camera to client
         else if(bombInExplosion)
         {
-            Debug.Log("CAMERAMOUVEMENT");
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, 7.1f, -10.57f), step);
         }
 
@@ -79,9 +78,9 @@ public class CameraMovement : MonoBehaviour
 
     }
 
-    public void moveCameraOnClient()
+    public void moveCameraOnClient(bool explosion)
     {
-        bombInExplosion = true;
+        bombInExplosion = explosion;
     }
 
 
