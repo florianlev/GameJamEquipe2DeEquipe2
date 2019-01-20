@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
+
+    public Transform destination;
+    float yDestination = 58;
+
+    private float speed = 0.2f;
+
 
     void Update()
     {
-        
+        if (this.gameObject.transform.position.y != yDestination)
+        {
+            float step = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, destination.position, step);
+
+
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
