@@ -64,7 +64,12 @@ public class Wolf : Enemy
 
     }
 
-    
+    public override void deathBomb()
+    {
+        StartCoroutine(delaySpawnParticle());
+
+    }
+
 
     IEnumerator delaySpawnParticle()
     {

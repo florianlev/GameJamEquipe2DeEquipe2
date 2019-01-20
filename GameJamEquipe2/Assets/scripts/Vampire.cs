@@ -57,7 +57,11 @@ public class Vampire : Enemy
         }
 
     }
+    public override void deathBomb()
+    {
+        StartCoroutine(delaySpawnParticle());
 
+    }
     IEnumerator delaySpawnParticle()
     {
         isDead = true;

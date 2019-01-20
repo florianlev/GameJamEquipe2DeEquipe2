@@ -53,15 +53,15 @@ public class Bomb : MonoBehaviour
     }
 
     IEnumerator killAllEnemy() {
-        GameObject[] listEnemy;
         GameObject lightClient = Instantiate(lightBomb, lightClientSpawn.transform.position, Quaternion.Euler(90, 0, 0));
         camera.GetComponent<CameraMovement>().moveCameraOnClient(true);
         yield return new WaitForSeconds(3);
-
+        GameObject[] listEnemy;
         listEnemy = GameObject.FindGameObjectsWithTag("enemy");
-
+        Debug.Log("nombreEnnemy : " + listEnemy.Length);
         for (int i =0; i<listEnemy.Length; i++)
         {
+            Debug.Log(listEnemy[i].gameObject.name);
             listEnemy[i].gameObject.GetComponent<Enemy>().deathBomb();
             yield return new WaitForSeconds(1);
 
