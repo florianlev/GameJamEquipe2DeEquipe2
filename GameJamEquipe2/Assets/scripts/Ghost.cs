@@ -59,6 +59,12 @@ public class Ghost : Enemy
 
     }
 
+    public override void deathBomb()
+    {
+        StartCoroutine(delaySpawnParticle());
+
+    }
+
     IEnumerator delaySpawnParticle()
     {
         isDead = true;

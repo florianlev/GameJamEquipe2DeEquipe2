@@ -6,11 +6,22 @@ public class Bomb : MonoBehaviour
 {
 
     public Transform destination;
-    public List<GameObject> enemyDeath;
     float yDestination = 58;
+
+    private Enemy enemy;
+    GameObject enemyObject;
+
 
     private float speed = 0.2f;
 
+    void Start()
+    {
+        if (enemyObject == null)
+        {
+            enemyObject = GameObject.FindWithTag("enemy");
+            enemy = enemyObject.GetComponent<Enemy>();
+        }
+    }
 
     void Update()
     {
@@ -27,11 +38,19 @@ public class Bomb : MonoBehaviour
     {
         if (collision.gameObject.tag == "player") {
             Destroy(this.gameObject);
+            killAllEnemy();
         }
     }
 
-    void killAllEnemy() {
+    private void killAllEnemy() {
+        GameObject[] listEnemy;
 
+        listEnemy = GameObject.FindGameObjectsWithTag("enemy");
+        for(int i =0; i<listEnemy.Length; i++)
+        {
+            listEnemy[i].gameObject.GetComponent<Enemy>().deathBomb();
+        }
+        Debug.Log(listEnemy[0].name);
     }
 
 

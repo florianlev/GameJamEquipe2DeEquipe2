@@ -29,8 +29,6 @@ public class PlayerControl : MonoBehaviour
     private float gravity = 40;
     private bool isDashing = false;
 
-
-
     public Table tableInteractable;
     public MasterObject objectInHand;
     public Transform transformObjectInHand;
@@ -355,8 +353,6 @@ public class PlayerControl : MonoBehaviour
             StartCoroutine(Dash(0.25f));*/
 
         animator.SetBool("isRun", false);
-
-
 
     }
 

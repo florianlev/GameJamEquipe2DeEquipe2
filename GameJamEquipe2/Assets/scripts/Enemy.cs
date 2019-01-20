@@ -107,6 +107,11 @@ public abstract class Enemy : MonoBehaviour
 
     }
 
+    public virtual void deathBomb()
+    {
+      
+    }
+
     protected virtual void death()
     {
         Destroy(this.gameObject);
