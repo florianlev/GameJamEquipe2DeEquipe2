@@ -14,6 +14,8 @@ public class Bomb : MonoBehaviour
     private GameObject[] listParticles;
 
     public AudioClip songGregorien;
+    public AudioClip halleluja;
+
     private AudioSource audioSource;
 
 
@@ -44,6 +46,8 @@ public class Bomb : MonoBehaviour
     {
         if (collision.gameObject.tag == "player") {
             this.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            audioSource.clip = halleluja;
+            audioSource.Play();
             StartCoroutine(killAllEnemy());
         }
     }

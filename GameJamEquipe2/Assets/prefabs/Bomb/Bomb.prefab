@@ -108,6 +108,7 @@ MonoBehaviour:
   destination: {fileID: 5449078873206076063, guid: a0831351e315557408669f5b7bd3ebf5,
     type: 3}
   songGregorien: {fileID: 8300000, guid: 7ba0af2d4eebfd14c84031bb9c0bec2a, type: 3}
+  halleluja: {fileID: 8300000, guid: de3292bcab43ef94c923995ea26431a3, type: 3}
 --- !u!82 &6414114012677680693
 AudioSource:
   m_ObjectHideFlags: 0
