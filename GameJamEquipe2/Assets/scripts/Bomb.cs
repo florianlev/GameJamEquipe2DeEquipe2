@@ -6,23 +6,18 @@ public class Bomb : MonoBehaviour
 {
 
     public Transform destination;
+    public Camera camera;
     float yDestination = 58;
 
-    private Enemy enemy;
-    GameObject enemyObject;
-
-
     private float speed = 0.2f;
+    GameObject client;
+    private bool inDeath = false;
 
-    void Start()
+    private void Start()
     {
-        if (enemyObject == null)
-        {
-            enemyObject = GameObject.FindWithTag("enemy");
-            enemy = enemyObject.GetComponent<Enemy>();
-        }
-    }
+        client = GameObject.FindGameObjectWithTag("client");
 
+    }
     void Update()
     {
         if (this.gameObject.transform.position.y != yDestination)
@@ -30,6 +25,11 @@ public class Bomb : MonoBehaviour
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, destination.position, step);
 
+        }
+
+        if (inDeath)
+        {
+            camera.transform.position = client.transform.position;
 
         }
     }
@@ -38,18 +38,27 @@ public class Bomb : MonoBehaviour
     {
         if (collision.gameObject.tag == "player") {
             Destroy(this.gameObject);
-            killAllEnemy();
+            inDeath = true;
+            StartCoroutine(killAllEnemy());
         }
     }
 
-    private void killAllEnemy() {
+    IEnumerator killAllEnemy() {
         GameObject[] listEnemy;
 
         listEnemy = GameObject.FindGameObjectsWithTag("enemy");
-        for(int i =0; i<listEnemy.Length; i++)
+        yield return new WaitForSeconds(1);
+
+        for (int i =0; i<listEnemy.Length; i++)
         {
+
             listEnemy[i].gameObject.GetComponent<Enemy>().deathBomb();
+            StartCoroutine(killAllEnemy());
+
         }
+        inDeath = false;
+        camera.transform.position = Vector3.MoveTowards(client.transform.position, transform.position, 1 * Time.deltaTime);
+
         Debug.Log(listEnemy[0].name);
     }
 
