@@ -14,6 +14,7 @@ public class MenuController : MonoBehaviour
     public GameObject creditsMenu;
     public GameObject logo;
     public GameObject story;
+    public GameObject fondSoleil;
     private Button previousButton;
 
     private bool inMainMenu = true;
@@ -24,9 +25,11 @@ public class MenuController : MonoBehaviour
     {
         if (Input.GetButtonDown("cancel") && !inMainMenu)
         {
+            mainMenu.gameObject.SetActive(true);
+
             controlsMenu.gameObject.SetActive(false);
             creditsMenu.gameObject.SetActive(false);
-            mainMenu.gameObject.SetActive(true);
+            fondSoleil.gameObject.SetActive(false);
         }
 
         if(Input.GetButtonDown("Take_P1") && inStory)
