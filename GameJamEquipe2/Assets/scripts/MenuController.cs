@@ -10,5 +10,10 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
 
+    public void controls()
+    {
+        SceneManager.LoadScene("MainScene");
+
+    }
 
 }
