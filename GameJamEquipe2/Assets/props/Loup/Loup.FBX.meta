@@ -1,156 +1,10 @@
 fileFormatVersion: 2
-guid: 04ce4b7042031e941b48fafeb837b6cf
+guid: a31a07c20e75c234dab5e417786b8016
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Bone001
-    100002: Bone001(mirrored)
-    100004: Bone002
-    100006: Bone002(mirrored)
-    100008: Bone003
-    100010: Bone003(mirrored)
-    100012: Bone004
-    100014: Bone004(mirrored)
-    100016: Bone005
-    100018: Bone005(mirrored)
-    100020: Bone007
-    100022: Bone007(mirrored)
-    100024: Bone008
-    100026: Bone008(mirrored)
-    100028: Bone009
-    100030: Bone010
-    100032: Bone011
-    100034: Bone012
-    100036: Bone013
-    100038: Bone014
-    100040: Bone015
-    100042: Bone016
-    100044: Bone017
-    100046: Bone018
-    100048: Bone019
-    100050: Bone019(mirrored)
-    100052: Bone020
-    100054: Bone020(mirrored)
-    100056: Bone021
-    100058: Bone021(mirrored)
-    100060: Bone022
-    100062: Bone022(mirrored)
-    100064: Bone023
-    100066: Bone023(mirrored)
-    100068: Bone024
-    100070: Bone024(mirrored)
-    100072: Bone025
-    100074: Bone025(mirrored)
-    100076: Bone026
-    100078: Bone026(mirrored)
-    100080: Circle001
-    100082: Circle002
-    100084: Circle003
-    100086: Circle004
-    100088: Circle005
-    100090: Circle006
-    100092: Circle007
-    100094: Circle008
-    100096: Circle009
-    100098: Circle010
-    100100: Circle011
-    100102: Circle012
-    100104: Circle013
-    100106: Circle014
-    100108: Circle015
-    100110: Circle016
-    100112: Circle017
-    100114: IK Chain001
-    100116: IK Chain002
-    100118: IK Chain003
-    100120: IK Chain004
-    100122: //RootNode
-    100124: Rectangle001
-    100126: Rectangle002
-    100128: T2_Loup_cog_ctrl
-    100130: T2_Loup_GlobalSRT
-    100132: T2_Loup_mesh
-    100134: T2_Loup_SpineA_ctrl
-    100136: T2_Loup_SpineB_ctrl
-    100138: T2_Loup_SpineC_ctrl
-    400000: Bone001
-    400002: Bone001(mirrored)
-    400004: Bone002
-    400006: Bone002(mirrored)
-    400008: Bone003
-    400010: Bone003(mirrored)
-    400012: Bone004
-    400014: Bone004(mirrored)
-    400016: Bone005
-    400018: Bone005(mirrored)
-    400020: Bone007
-    400022: Bone007(mirrored)
-    400024: Bone008
-    400026: Bone008(mirrored)
-    400028: Bone009
-    400030: Bone010
-    400032: Bone011
-    400034: Bone012
-    400036: Bone013
-    400038: Bone014
-    400040: Bone015
-    400042: Bone016
-    400044: Bone017
-    400046: Bone018
-    400048: Bone019
-    400050: Bone019(mirrored)
-    400052: Bone020
-    400054: Bone020(mirrored)
-    400056: Bone021
-    400058: Bone021(mirrored)
-    400060: Bone022
-    400062: Bone022(mirrored)
-    400064: Bone023
-    400066: Bone023(mirrored)
-    400068: Bone024
-    400070: Bone024(mirrored)
-    400072: Bone025
-    400074: Bone025(mirrored)
-    400076: Bone026
-    400078: Bone026(mirrored)
-    400080: Circle001
-    400082: Circle002
-    400084: Circle003
-    400086: Circle004
-    400088: Circle005
-    400090: Circle006
-    400092: Circle007
-    400094: Circle008
-    400096: Circle009
-    400098: Circle010
-    400100: Circle011
-    400102: Circle012
-    400104: Circle013
-    400106: Circle014
-    400108: Circle015
-    400110: Circle016
-    400112: Circle017
-    400114: IK Chain001
-    400116: IK Chain002
-    400118: IK Chain003
-    400120: IK Chain004
-    400122: //RootNode
-    400124: Rectangle001
-    400126: Rectangle002
-    400128: T2_Loup_cog_ctrl
-    400130: T2_Loup_GlobalSRT
-    400132: T2_Loup_mesh
-    400134: T2_Loup_SpineA_ctrl
-    400136: T2_Loup_SpineB_ctrl
-    400138: T2_Loup_SpineC_ctrl
-    2100000: 'Material #14'
-    2100002: 'Material #15'
-    2100004: 'Material #13'
-    4300000: T2_Loup_mesh
-    7400000: Idle
-    7400002: Walk
-    9500000: //RootNode
-    13700000: T2_Loup_mesh
+    100000: //RootNode
+    400000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -178,63 +32,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Idle
-      takeName: Idle
-      firstFrame: 0
-      lastFrame: 150
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Walk
-      takeName: Walk
-      firstFrame: 151
-      lastFrame: 171
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -260,7 +58,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -287,7 +85,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

@@ -68,6 +68,7 @@ public class Vampire : Enemy
         GameObject particle = Instantiate(particleDeath, transform.position, transform.rotation);
         var emission = particle.GetComponent<ParticleSystem>().emission;
 
+        this.gameObject.GetComponent<Animator>().SetTrigger("death");
 
         this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
 

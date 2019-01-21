@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dd74244a1f544c34a946b61f12567395
+guid: de01ce92ba5f0e1478eaad3703c48526
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -309,6 +309,7 @@ ModelImporter:
     4300000: T2_Vampire_mesh
     7400000: Idle
     7400002: Walk
+    7400004: Death
     9500000: //RootNode
     13700000: T2_Vampire_mesh
   externalObjects: {}
@@ -380,6 +381,34 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Death
+      takeName: Death
+      firstFrame: 53
+      lastFrame: 82
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
