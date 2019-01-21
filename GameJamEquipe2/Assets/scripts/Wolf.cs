@@ -23,7 +23,7 @@ public class Wolf : Enemy
 
         audioSource.clip = audioHowl;
         audioSource.Play();
-           animator = gameObject.GetComponent<Animator>();
+        animator = gameObject.GetComponent<Animator>();
 
        _navMeshAgent = this.GetComponent<NavMeshAgent>();
         Debug.Log(animator);
@@ -77,6 +77,7 @@ public class Wolf : Enemy
         GameObject particle = Instantiate(particleDeath, transform.position, transform.rotation);
         var emission = particle.GetComponent<ParticleSystem>().emission;
 
+        this.gameObject.GetComponent<Animator>().SetTrigger("death");
 
         this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
 
