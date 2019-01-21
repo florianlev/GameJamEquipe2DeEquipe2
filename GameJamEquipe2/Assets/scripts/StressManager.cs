@@ -89,7 +89,7 @@ public class StressManager : MonoBehaviour
 
     public void downStressBar()
     {
-        CurrentStress -= 40;
+        CurrentStress -= 100;
     }
     
 
