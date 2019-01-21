@@ -6,24 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class GameOverCtrl : MonoBehaviour
 {
-    private Timer timer;
     public Text timeText;
     private int minutes;
     private int secondes;
     // Start is called before the first frame update
     void Start()
     {
-        timer = FindObjectOfType<Timer>();
-        
-        if (timer == null)
-            Debug.Log("How di you get there ?!?!?!?");
-    }
-
-    private void Update()
-    {
-        timeText.text = "Your client Survived : " + timer.minutes + " : " + timer.seconds;
-        Destroy(timer.gameObject);
-
+        int minutes = PlayerPrefs.GetInt("minutes");
+        int seconds = PlayerPrefs.GetInt("seconds");
+        timeText.text = "Your client slept : " + minutes + " : " + seconds;
     }
 
     public void Retry()

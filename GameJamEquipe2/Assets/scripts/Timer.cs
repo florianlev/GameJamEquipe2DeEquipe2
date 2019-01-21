@@ -31,13 +31,21 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerIsAlive)
+        minutes = (int)Survivaltime / 60;
+        seconds = (int)Survivaltime % 60;
+
+        if (playerIsAlive)
         {
             Survivaltime += Time.deltaTime; 
         }
+        else
+        {
+            PlayerPrefs.SetInt("minutes", minutes);
+            PlayerPrefs.SetInt("seconds", seconds);
 
-        minutes = (int)Survivaltime / 60;
-        seconds = (int)Survivaltime % 60;
+        }
+
+        
         TimeText.text = "Time : " + minutes + " : " + seconds;
 
 
