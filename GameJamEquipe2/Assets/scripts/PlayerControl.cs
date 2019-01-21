@@ -42,6 +42,8 @@ public class PlayerControl : MonoBehaviour
 
     public AudioClip audioWalk;
     public AudioClip audioRun;
+    public AudioClip audioAttack;
+    public AudioClip audioTake;
     private AudioSource audioSource;
 
     // Start is called before the first frame update
@@ -63,9 +65,9 @@ public class PlayerControl : MonoBehaviour
         //if (Input.GetButtonDown(takeCtrl))
 
         //CoolDown du dash
-        if(currentCooldown < dashCooldownTime)
+        if (currentCooldown < dashCooldownTime)
         {
-            
+
             currentCooldown += Time.deltaTime;
             if (currentCooldown > dashCooldownTime)
                 currentCooldown = dashCooldownTime;
@@ -93,19 +95,19 @@ public class PlayerControl : MonoBehaviour
         movementVector.y = 0;
 
 
-        
+
 
 
         if (movementVector.magnitude > 1)
             movementVector.Normalize();
 
-       movementVector.y -= gravity * Time.deltaTime;
+        movementVector.y -= gravity * Time.deltaTime;
 
 
         characterController.Move(movementVector * Time.deltaTime * movementSpeed);
 
 
-        if (characterController.velocity != Vector3.zero)
+        /*if (characterController.velocity != Vector3.zero)
         {
             if (isDashing && (audioSource.isPlaying == false || audioSource.clip != audioRun))
             {
@@ -124,13 +126,13 @@ public class PlayerControl : MonoBehaviour
         else if (characterController.velocity == Vector3.zero && audioSource.clip != audioRun)
         {
             audioSource.Stop();
-        }
+        }*/
 
 
         if (horizontalInput != 0 || verticalInput != 0)
         {
             animator.SetBool("isWalk", true);
-         
+
 
         }
         else
@@ -144,7 +146,7 @@ public class PlayerControl : MonoBehaviour
 
         if (characterController.velocity.x != 0)
         {
-            lookDirection.x = characterController.velocity.x;    
+            lookDirection.x = characterController.velocity.x;
         }
 
         if (characterController.velocity.z != 0)
@@ -158,6 +160,8 @@ public class PlayerControl : MonoBehaviour
         //take object
         if (Input.GetButtonDown(takeCtrl))
         {
+            audioSource.clip = audioTake;
+            audioSource.Play();
             /**put object from hand on the table*/
             if (objectInHand && tableInteractable && tableInteractable.IsAnyItemOnTable() == false)
             {
@@ -203,12 +207,15 @@ public class PlayerControl : MonoBehaviour
                 {
                     if (gameObject.GetComponent<Enemy>() && !gameObject.GetComponent<Enemy>().isDead)
                     {
+
                         animator.SetTrigger("attack");
                         Debug.Log("object have Enemy");
                         //Debug.Log(objectInHand.GetType());
                         GameObject enemyCopy = gameObject;
                         gameObject.GetComponent<Enemy>().Interracted(objectInHand);
                         objectInHand.Interraction(enemyCopy.GetComponent<Enemy>());
+                        audioSource.clip = audioAttack;
+                        audioSource.Play();
                     }
                 }
             }
@@ -274,7 +281,7 @@ public class PlayerControl : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        
+
         int i = 0;
         foreach (GameObject gameObject in gameObjectsInterractable)
         {
@@ -284,7 +291,7 @@ public class PlayerControl : MonoBehaviour
             }
             i++;
         }
-        
+
         //gameObjectsInterractable.Remove(gameObject);
 
     }

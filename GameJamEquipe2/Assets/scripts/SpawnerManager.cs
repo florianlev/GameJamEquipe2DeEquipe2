@@ -73,7 +73,7 @@ public class SpawnerManager : MonoBehaviour
     private IEnumerator spawnBomb(float a_Delay) {
         yield return new WaitForSeconds(a_Delay);
         Debug.Log("BOMB");
-        float t_NewDelay = a_Delay + 60;
+        float t_NewDelay = 60;
         Instantiate(bombPrefab, bombSpawn.transform.position, Quaternion.Euler(0, 90, 0));
         Instantiate(lightBomb, bombSpawn.transform.position, Quaternion.Euler(110, 0, 0));
 

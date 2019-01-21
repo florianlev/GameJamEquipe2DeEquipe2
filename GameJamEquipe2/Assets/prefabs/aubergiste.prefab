@@ -2331,6 +2331,8 @@ MonoBehaviour:
   gameObjectsInterractable: []
   audioWalk: {fileID: 8300000, guid: feab1b17afb57ad4ab5e6e9f288dd324, type: 3}
   audioRun: {fileID: 8300000, guid: fead46cc7365eb84cb458c4f30723ee6, type: 3}
+  audioAttack: {fileID: 8300000, guid: e7a938b258cdf74498d268997378dd61, type: 3}
+  audioTake: {fileID: 8300000, guid: 20dd91bdde8a6de488c69188fcc8e633, type: 3}
 --- !u!143 &2736072009023589284
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2361,7 +2363,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.41
   m_Pitch: 1
   Loop: 0
   Mute: 0
