@@ -86,6 +86,11 @@ public class StressManager : MonoBehaviour
     {
         IsStressing = false;
     }
+
+    public void downStressBar()
+    {
+        CurrentStress -= 40;
+    }
     
 
     float calculateStress()

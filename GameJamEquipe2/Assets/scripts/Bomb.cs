@@ -48,6 +48,9 @@ public class Bomb : MonoBehaviour
             this.gameObject.GetComponent<MeshRenderer>().enabled = false;
             audioSource.clip = halleluja;
             audioSource.Play();
+            GameObject client = GameObject.FindGameObjectWithTag("client");
+            client.GetComponent<StressManager>().downStressBar();
+
             StartCoroutine(killAllEnemy());
         }
     }

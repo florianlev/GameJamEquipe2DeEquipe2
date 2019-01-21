@@ -74,8 +74,8 @@ public class SpawnerManager : MonoBehaviour
         yield return new WaitForSeconds(a_Delay);
         Debug.Log("BOMB");
         float t_NewDelay = a_Delay + 60;
-        Instantiate(bombPrefab, bombSpawn.transform.position, Quaternion.identity);
-        Instantiate(lightBomb, bombSpawn.transform.position, Quaternion.Euler(90, 0, 0));
+        Instantiate(bombPrefab, bombSpawn.transform.position, Quaternion.Euler(0, 90, 0));
+        Instantiate(lightBomb, bombSpawn.transform.position, Quaternion.Euler(110, 0, 0));
 
         StartCoroutine(spawnBomb(t_NewDelay));
 
