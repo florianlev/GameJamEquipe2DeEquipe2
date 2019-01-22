@@ -42,10 +42,8 @@ public class Timer : MonoBehaviour
         {
             PlayerPrefs.SetInt("minutes", minutes);
             PlayerPrefs.SetInt("seconds", seconds);
-
         }
 
-        
         TimeText.text = "Time : " + minutes + " : " + seconds;
 
 
@@ -54,5 +52,10 @@ public class Timer : MonoBehaviour
             timeRise++;
             spawnerManager.raiseTimeSpawn();
         }
+    }
+
+    public float getTime()
+    {
+        return Survivaltime;
     }
 }

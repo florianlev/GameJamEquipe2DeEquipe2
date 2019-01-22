@@ -23,8 +23,6 @@ public class StressManager : MonoBehaviour
     public AudioClip audioClip75Percent;
     private AudioSource audioSource;
 
-
-
     // Update is called once per frame
 
     void Start()
@@ -89,7 +87,10 @@ public class StressManager : MonoBehaviour
 
     public void downStressBar()
     {
-        CurrentStress -= 100;
+        if (CurrentStress - 100 <= 0)
+            CurrentStress = 0;
+        else
+            CurrentStress -= 100;
     }
     
 

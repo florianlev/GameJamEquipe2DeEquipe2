@@ -14,13 +14,10 @@ public class SpawnerManager : MonoBehaviour
     public float initialVampireSpawnTime = 240;
 
     public float ghostMinSpawnTime = 2;
-    public float ghostMaxSpawnTime = 7;
 
     public float wolfMinSpawnTime = 2;
-    public float wolfMaxSpawnTime = 5;
 
     public float vampireMinSpawnTime = 2;
-    public float vampireMaxSpawnTime = 7;
 
     public float spawnTimeBomb = 1;
 
@@ -44,17 +41,18 @@ public class SpawnerManager : MonoBehaviour
     {
 
         yield return new WaitForSeconds(a_Delay);
-        float t_NewDelay = Random.Range(ghostMinSpawnTime, ghostMaxSpawnTime);
+        float t_NewDelay = ghostMinSpawnTime;
+
         int t_SpawnPoint = Random.Range(0, ghostSpawns.Count);
         Instantiate(ghostPrefab, ghostSpawns[t_SpawnPoint].transform.position, Quaternion.identity);
 
-        StartCoroutine(spawnGhost(t_NewDelay));
+        StartCoroutine(spawnGhost(a_Delay));
     }
     private IEnumerator spawnWolf(float a_Delay)
     {
         yield return new WaitForSeconds(a_Delay);
 
-        float t_NewDelay = Random.Range(wolfMinSpawnTime, wolfMaxSpawnTime);
+        float t_NewDelay = wolfMinSpawnTime;
         int t_SpawnPoint = Random.Range(0, wolfSpawns.Count);
         
         Instantiate(wolfPrefab, wolfSpawns[t_SpawnPoint].transform.position, Quaternion.identity);
@@ -63,7 +61,7 @@ public class SpawnerManager : MonoBehaviour
     private IEnumerator spawnVampire(float a_Delay)
     {
         yield return new WaitForSeconds(a_Delay);
-        float t_NewDelay = Random.Range(vampireMinSpawnTime, vampireMaxSpawnTime);
+        float t_NewDelay = vampireMinSpawnTime;
         int t_SpawnPoint = Random.Range(0, vampireSpawns.Count);
         Instantiate(vampirePrefab, vampireSpawns[t_SpawnPoint].transform.position, Quaternion.identity);
 
@@ -83,7 +81,7 @@ public class SpawnerManager : MonoBehaviour
 
     public void raiseTimeSpawn()
     {
-        ghostMinSpawnTime++;
-        vampireMinSpawnTime++;
+        ghostMinSpawnTime--;
+        vampireMinSpawnTime--;
     }
 }

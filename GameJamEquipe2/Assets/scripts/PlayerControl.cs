@@ -58,11 +58,6 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetButtonDown(dashCtrl))
-            Debug.Log("DAHSHS");*/
-
-
-        //if (Input.GetButtonDown(takeCtrl))
 
         //CoolDown du dash
         if (currentCooldown < dashCooldownTime)
@@ -106,29 +101,6 @@ public class PlayerControl : MonoBehaviour
 
         characterController.Move(movementVector * Time.deltaTime * movementSpeed);
 
-
-        /*if (characterController.velocity != Vector3.zero)
-        {
-            if (isDashing && (audioSource.isPlaying == false || audioSource.clip != audioRun))
-            {
-                audioSource.clip = audioRun;
-                audioSource.Play();
-
-            }
-            else if (isDashing == false && (audioSource.isPlaying == false || audioSource.clip != audioWalk))
-            {
-                audioSource.clip = audioWalk;
-                audioSource.Play();
-
-            }
-        }
-
-        else if (characterController.velocity == Vector3.zero && audioSource.clip != audioRun)
-        {
-            audioSource.Stop();
-        }*/
-
-
         if (horizontalInput != 0 || verticalInput != 0)
         {
             animator.SetBool("isWalk", true);
@@ -142,8 +114,7 @@ public class PlayerControl : MonoBehaviour
         }
 
         //rotation
-
-
+    
         if (characterController.velocity.x != 0)
         {
             lookDirection.x = characterController.velocity.x;
@@ -175,11 +146,7 @@ public class PlayerControl : MonoBehaviour
             }
 
             /**pickup object from source table*/
-            /*else if (objectInHand == null && tableInteractable.GetType() == typeof(SourceTable))
-            {
-                SourceTable copyTable = (SourceTable)tableInteractable;
-                objectInHand = copyTable.PickRessourceObject();
-            }*/
+
 
             //drop floor
             else if (objectInHand != null && tableInteractable == null)
@@ -196,7 +163,6 @@ public class PlayerControl : MonoBehaviour
         //use object
         if (Input.GetButtonDown(interractionCtrl))
         {
-            Debug.Log("use");
             foreach (GameObject gameObject in gameObjectsInterractable)
             {
                 if (gameObject == null)
@@ -210,7 +176,6 @@ public class PlayerControl : MonoBehaviour
 
                         animator.SetTrigger("attack");
                         Debug.Log("object have Enemy");
-                        //Debug.Log(objectInHand.GetType());
                         GameObject enemyCopy = gameObject;
                         gameObject.GetComponent<Enemy>().Interracted(objectInHand);
                         objectInHand.Interraction(enemyCopy.GetComponent<Enemy>());
@@ -220,7 +185,6 @@ public class PlayerControl : MonoBehaviour
                 }
             }
         }
-
     }
 
     private void PutObjectFromFloor()
@@ -233,12 +197,10 @@ public class PlayerControl : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log("enter collision with " + collision.gameObject.name);
 
         if (collision.gameObject.GetComponent<Table>())
         {
             tableInteractable = collision.gameObject.GetComponent<Table>();
-            //tableInteractable.EnterInteractable();
         }
 
         if (collision.gameObject.GetComponent<MasterObject>())
@@ -256,7 +218,6 @@ public class PlayerControl : MonoBehaviour
                 if (tableInteractable.gameObject == collision.gameObject)
                 {
                     tableInteractable = null;
-                    //collision.gameObject.GetComponent<Table>().ExitInteractable();
                 }
             }
         }
@@ -268,7 +229,6 @@ public class PlayerControl : MonoBehaviour
                 if (objectOnFloorInteractable.gameObject == collision.gameObject)
                 {
                     objectOnFloorInteractable = null;
-                    //collision.gameObject.GetComponent<Table>().ExitInteractable();
                 }
             }
         }
@@ -291,9 +251,6 @@ public class PlayerControl : MonoBehaviour
             }
             i++;
         }
-
-        //gameObjectsInterractable.Remove(gameObject);
-
     }
 
 
@@ -327,7 +284,6 @@ public class PlayerControl : MonoBehaviour
         objectInHand.transform.position = transformObjectInHand.position;
         objectInHand.transform.rotation = transformObjectInHand.rotation;
         objectInHand.SetParent(transformObjectInHand);
-        //objectInHand.transform.parent = transformObjectInHand;
     }
 
     private void PickupObjectFromFloor()
@@ -356,8 +312,6 @@ public class PlayerControl : MonoBehaviour
             movementSpeed = initialSpeed;
             isDashing = false;
         }
-        /*if(movementSpeed > initialSpeed)
-            StartCoroutine(Dash(0.25f));*/
 
         animator.SetBool("isRun", false);
 
