@@ -32,6 +32,7 @@ public class StressManager : MonoBehaviour
         stressBar.value = calculateStress();
         animator = gameObject.GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
         
     }
 
@@ -58,11 +59,7 @@ public class StressManager : MonoBehaviour
             }*/
 
         }
-        if (!timer.playerIsAlive)
-        {
-            audioSource.clip = audioScarred;
-            audioSource.Play();
-        }
+ 
 
     }
 
@@ -74,10 +71,14 @@ public class StressManager : MonoBehaviour
         CurrentStress += Time.deltaTime * newStress;
 
         stressBar.value = calculateStress();
-
-        if(CurrentStress >= 100)
+       
+        if (CurrentStress >= 100)
         {
-            
+            Debug.Log(audioSource.isPlaying);
+
+            audioSource.clip = audioScarred;
+            audioSource.Play();
+            Debug.Log(audioSource.isPlaying);
             timer.playerIsAlive = false;
             animator.SetTrigger("wakeUp");
             aiObject = GameObject.FindWithTag("client");
