@@ -13,11 +13,11 @@ public class SpawnerManager : MonoBehaviour
     public float initialWolfSpawnTime = 120;
     public float initialVampireSpawnTime = 240;
 
-    public float ghostMinSpawnTime = 2;
+    public float ghostSpawnTime = 2;
 
-    public float wolfMinSpawnTime = 2;
+    public float wolfSpawnTime = 2;
 
-    public float vampireMinSpawnTime = 2;
+    public float vampireSpawnTime = 2;
 
     public float spawnTimeBomb = 1;
 
@@ -41,7 +41,7 @@ public class SpawnerManager : MonoBehaviour
     {
 
         yield return new WaitForSeconds(a_Delay);
-        float t_NewDelay = ghostMinSpawnTime;
+        float t_NewDelay = ghostSpawnTime;
 
         int t_SpawnPoint = Random.Range(0, ghostSpawns.Count);
         Instantiate(ghostPrefab, ghostSpawns[t_SpawnPoint].transform.position, Quaternion.identity);
@@ -52,7 +52,7 @@ public class SpawnerManager : MonoBehaviour
     {
         yield return new WaitForSeconds(a_Delay);
 
-        float t_NewDelay = wolfMinSpawnTime;
+        float t_NewDelay = wolfSpawnTime;
         int t_SpawnPoint = Random.Range(0, wolfSpawns.Count);
         
         Instantiate(wolfPrefab, wolfSpawns[t_SpawnPoint].transform.position, Quaternion.identity);
@@ -61,7 +61,7 @@ public class SpawnerManager : MonoBehaviour
     private IEnumerator spawnVampire(float a_Delay)
     {
         yield return new WaitForSeconds(a_Delay);
-        float t_NewDelay = vampireMinSpawnTime;
+        float t_NewDelay = vampireSpawnTime;
         int t_SpawnPoint = Random.Range(0, vampireSpawns.Count);
         Instantiate(vampirePrefab, vampireSpawns[t_SpawnPoint].transform.position, Quaternion.identity);
 
@@ -81,7 +81,7 @@ public class SpawnerManager : MonoBehaviour
 
     public void raiseTimeSpawn()
     {
-        ghostMinSpawnTime--;
-        vampireMinSpawnTime--;
+        ghostSpawnTime--;
+        vampireSpawnTime--;
     }
 }
