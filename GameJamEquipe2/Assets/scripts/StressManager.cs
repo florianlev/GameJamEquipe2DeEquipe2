@@ -21,6 +21,7 @@ public class StressManager : MonoBehaviour
 
     public AudioClip audioClip50Percent;
     public AudioClip audioClip75Percent;
+    public AudioClip audioScarred;
     private AudioSource audioSource;
 
     // Update is called once per frame
@@ -31,6 +32,7 @@ public class StressManager : MonoBehaviour
         stressBar.value = calculateStress();
         animator = gameObject.GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        
     }
 
     void Update()
@@ -40,7 +42,7 @@ public class StressManager : MonoBehaviour
         {
             CurrentStress -= Time.deltaTime / StressReductionRate;
             stressBar.value = calculateStress();
-            if (stressBar.value >= 75)
+            /*if (stressBar.value >= 75)
             {
                 audioSource.clip = audioClip75Percent;
                 audioSource.Play();
@@ -52,9 +54,14 @@ public class StressManager : MonoBehaviour
             }
             else
             {
-                audioSource.Stop();
-            }
+                //audioSource.Stop();
+            }*/
 
+        }
+        if (!timer.playerIsAlive)
+        {
+            audioSource.clip = audioScarred;
+            audioSource.Play();
         }
 
     }
@@ -70,6 +77,7 @@ public class StressManager : MonoBehaviour
 
         if(CurrentStress >= 100)
         {
+            
             timer.playerIsAlive = false;
             animator.SetTrigger("wakeUp");
             aiObject = GameObject.FindWithTag("client");
@@ -102,12 +110,10 @@ public class StressManager : MonoBehaviour
 
     IEnumerator gameOver()
     {
+        
         yield return new WaitForSeconds(5);
         SceneManager.LoadScene("GameOver");
 
     }
-
-
-
 
 }
