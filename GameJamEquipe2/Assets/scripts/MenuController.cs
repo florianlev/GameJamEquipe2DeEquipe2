@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.EventSystems;
 
 using UnityEngine.UI;
 
@@ -50,7 +49,13 @@ public class MenuController : MonoBehaviour
 
     public void StartGame()
     {
+        SceneManager.LoadScene("Cinématique");
+    }
+
+    public void restart()
+    {
         SceneManager.LoadScene("MainScene");
+
     }
 
     public void QuitGame()
