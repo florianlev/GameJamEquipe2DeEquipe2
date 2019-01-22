@@ -15,12 +15,12 @@ public class Timer : MonoBehaviour
     public bool playerIsAlive = true;
     GameObject spawnerManagerObject;
     private SpawnerManager spawnerManager;
+  
 
 
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
         if (spawnerManagerObject == null)
         {
             spawnerManagerObject = GameObject.FindWithTag("Spawner");
