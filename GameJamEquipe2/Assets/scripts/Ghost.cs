@@ -54,7 +54,7 @@ public class Ghost : Enemy
 
         if (interractedObject.GetType() == typeof(Cross))
         {
-            StartCoroutine(delaySpawnParticle());
+            StartCoroutine(delaySpawnParticle());   
 
         }
 

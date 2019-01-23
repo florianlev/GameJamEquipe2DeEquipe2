@@ -83,5 +83,20 @@ public class SpawnerManager : MonoBehaviour
     {
         ghostSpawnTime--;
         vampireSpawnTime--;
+
+        if (ghostSpawnTime <= 0)
+        {
+            ghostSpawnTime = 0;
+        }
+        if (vampireSpawnTime <= 0)
+        {
+            vampireSpawnTime = 0;
+        }
+        
+            
+       
+        
+
+        
     }
 }

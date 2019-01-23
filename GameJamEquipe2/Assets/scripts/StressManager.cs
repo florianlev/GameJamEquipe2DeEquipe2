@@ -23,6 +23,7 @@ public class StressManager : MonoBehaviour
     public AudioClip audioClip75Percent;
     public AudioClip audioScarred;
     private AudioSource audioSource;
+    private bool isPlayingSound = false;
 
     // Update is called once per frame
 
@@ -42,20 +43,24 @@ public class StressManager : MonoBehaviour
         {
             CurrentStress -= Time.deltaTime / StressReductionRate;
             stressBar.value = calculateStress();
-            /*if (stressBar.value >= 75)
+            if (stressBar.value >= 75)
             {
-                audioSource.clip = audioClip75Percent;
-                audioSource.Play();
+                /*audioSource.clip = audioClip75Percent;
+                audioSource.Play();*/
+                //audioSource.PlayOneShot(audioClip75Percent);
+
             }
             else if (stressBar.value >= 50)
             {
-                audioSource.clip = audioClip50Percent;
-                audioSource.Play();
+                /*audioSource.clip = audioClip50Percent;
+                audioSource.Play();*/
+                //audioSource.PlayOneShot(audioClip75Percent);
+
             }
             else
             {
                 //audioSource.Stop();
-            }*/
+            }
 
         }
 
@@ -71,15 +76,13 @@ public class StressManager : MonoBehaviour
 
         stressBar.value = calculateStress();
 
-        if(CurrentStress >= 100)
+        if(CurrentStress >= 100 && !isPlayingSound)
         {
-            audioSource.clip = audioScarred;
-            audioSource.Play();
-            timer.playerIsAlive = false;
-            animator.SetTrigger("wakeUp");
-            aiObject = GameObject.FindWithTag("client");
-            Ai = aiObject.GetComponent<AI>();
-            Ai.setDestination();
+            isPlayingSound = true;
+            Debug.Log("testt");
+            audioSource.PlayOneShot(audioScarred);
+            
+
             StartCoroutine(gameOver());
         }
 
@@ -107,7 +110,17 @@ public class StressManager : MonoBehaviour
 
     IEnumerator gameOver()
     {
-        
+        timer.playerIsAlive = false;
+   
+        animator.SetTrigger("wakeUp");
+        aiObject = GameObject.FindWithTag("client");
+        Ai = aiObject.GetComponent<AI>();
+        Ai.setDestination();
+        yield return new WaitForSeconds(0.12f);
+
+        animator.SetTrigger("run");
+
+
         yield return new WaitForSeconds(5);
         SceneManager.LoadScene("GameOver");
 

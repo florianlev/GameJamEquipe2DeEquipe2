@@ -12,13 +12,16 @@ public class Vampire : Enemy
 
     NavMeshAgent _navMeshAgent;
 
+
+    private AudioSource audioSource;
+    public AudioClip laughtVampire;
+
     void Start()
     {
         _navMeshAgent = this.GetComponent<NavMeshAgent>();
-
         this.gameObject.GetComponent<Animator>().SetBool("isWalk", true);
-       
-
+        audioSource = GetComponentInChildren<AudioSource>();
+        audioSource.PlayOneShot(laughtVampire);
     }
 
     // Update is called once per frame
