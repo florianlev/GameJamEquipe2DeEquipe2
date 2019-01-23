@@ -10,7 +10,7 @@ public class StressManager : MonoBehaviour
     public float CurrentStress = 0;
     public float MaxStress = 100;
     public float stressFactor = 0;
-    public float StressReductionRate = 0.5f;
+    public float StressReductionRate = 0.99f;
     public bool IsStressing = false;
 
     private Timer timer;
