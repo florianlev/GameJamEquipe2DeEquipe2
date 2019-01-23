@@ -25,6 +25,7 @@ public class MenuController : MonoBehaviour
         if (Input.GetButtonDown("cancel") && !inMainMenu)
         {
             mainMenu.gameObject.SetActive(true);
+            logo.gameObject.SetActive(true);
 
             controlsMenu.gameObject.SetActive(false);
             creditsMenu.gameObject.SetActive(false);
