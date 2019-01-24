@@ -49,7 +49,6 @@ public class MenuController : MonoBehaviour
         if (Input.GetButtonDown("Take_P1") && inTuto)
         {
             inTuto = false;
-            tutoMenu.gameObject.SetActive(false);
             StartGame();
         }
 
